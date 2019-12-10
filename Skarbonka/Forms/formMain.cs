@@ -1,0 +1,515 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using LiteDB;
+using Skarbonka.Modele;
+using System.IO;
+using Skarbonka.Forms;
+
+namespace Skarbonka
+{
+
+    public partial class formMain : Form
+    {
+        public formMain()
+        {
+
+
+
+            File.AppendAllText("przychod.txt", "");
+            File.AppendAllText("wydatek.txt", "");
+          //  File.AppendAllText("login.txt", "");
+
+            InitializeComponent();
+        //    new Helper.Popup.transparentBg(this, new Forms.login());
+
+            ApplyGridTheme(gridPrzychody);
+            ApplyGridTheme(gridWydatki);
+            ApplyGridTheme(gridZPrzychod);
+            ApplyGridTheme(gridZKonta);
+            ApplyGridTheme(gridWydatki);
+            ApplyGridTheme(gridZWydatki);
+
+            bunifuDataViz1.colorSet.Add(col1.BackColor);
+            bunifuDataViz1.colorSet.Add(col2.BackColor);
+            bunifuDataViz1.colorSet.Add(col3.BackColor);
+
+            klik();
+
+            ReloadIncome();
+            DataTable table = new DataTable();
+            
+
+
+
+
+
+
+        }
+
+
+
+        private void klik()
+        {
+            
+            
+            string[] lines1 = File.ReadAllLines("wydatek.txt");
+            string[] values1;
+
+
+            for (int i = 0; i < lines1.Length; i++)
+            {
+                values1 = lines1[i].ToString().Split(';');
+                string[] row = new string[values1.Length];
+
+                for (int j = 0; j < values1.Length; j++)
+                {
+                    row[j] = values1[j].Trim();
+                }
+                gridWydatki.Rows.Add(row);
+            }
+
+        }
+
+        private void buttonImport_Click_1(object sender, EventArgs e)
+        {
+
+            gridPrzychody.Rows.Clear();
+            string[] lines = File.ReadAllLines(@"przychod.txt");
+            string[] values;
+
+
+            for (int i = 0; i < lines.Length; i++)
+            {
+                values = lines[i].ToString().Split(';');
+                string[] row = new string[values.Length];
+
+                for (int j = 0; j < values.Length; j++)
+                {
+                    row[j] = values[j].Trim();
+                }
+                gridPrzychody.Rows.Add(row);
+            }
+
+
+
+
+
+
+        }
+
+
+        void ReloadIncome()
+        {
+            gridPrzychody.Rows.Clear();
+
+            var przychodTransakcje = DbContext.GetInstance().GetCollection<PrzychodTransakcje>("przychod_transakcja")
+                    .FindAll();
+
+            lblTotoIncome.Text = przychodTransakcje.Sum(r => r.Ilosc).ToString("N0");
+
+            foreach (var item in przychodTransakcje)
+            {
+                gridPrzychody.Rows.Add(new object[]{
+                    "   "+ item.Kod,
+                    item.Od,
+                    item.Opis,
+                    item.Kategoria.Name,
+                    item.Konto.Name,
+                    item.Ilosc.ToString("N0")
+                });
+            }
+                
+         }
+
+        void ApplyGridTheme(Bunifu.UI.WinForms.BunifuDataGridView grid)
+        {
+            grid.ColumnHeadersDefaultCellStyle.BackColor = Color.White;
+            grid.ColumnHeadersDefaultCellStyle.ForeColor = Color.DimGray;
+
+            grid.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.White;
+            grid.ColumnHeadersDefaultCellStyle.SelectionForeColor = Color.DimGray;
+        }
+
+        void MoveIndicator(Control btn)
+        {
+            wskaznik.Left = btn.Left;
+            wskaznik.Width = btn.Width;
+
+        }
+
+        private void formMain_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelTytul_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void przUstawienia_Click(object sender, EventArgs e)
+        {
+            MoveIndicator((Control)sender);
+            Strony.SetPage("Ustawienia");
+
+        }
+
+        private void przRaporty_Click(object sender, EventArgs e)
+        {
+            MoveIndicator((Control)sender);
+            Strony.SetPage("Raporty");
+        }
+
+
+        private void przWydatki_Click(object sender, EventArgs e)
+        {
+            MoveIndicator((Control)sender);
+            Strony.SetPage("Wydatki");
+
+
+        }
+
+        private void przPrzychody_Click(object sender, EventArgs e)
+        {
+            MoveIndicator((Control)sender);
+            Strony.SetPage("Przychody");
+
+
+        }
+
+        private void przDashboard_Click(object sender, EventArgs e)
+        {
+            MoveIndicator((Control)sender);
+            Strony.SetPage("Dashboard");
+        }
+
+        void RenderMonthChart()
+        {
+            Bunifu.DataViz.WinForms.Canvas canvas = new Bunifu.DataViz.WinForms.Canvas();
+
+            Bunifu.DataViz.WinForms.DataPoint przychod = new Bunifu.DataViz.WinForms.DataPoint(Bunifu.DataViz.WinForms.BunifuDataViz._type.Bunifu_column);
+            Bunifu.DataViz.WinForms.DataPoint wydatki = new Bunifu.DataViz.WinForms.DataPoint(Bunifu.DataViz.WinForms.BunifuDataViz._type.Bunifu_column);
+            Bunifu.DataViz.WinForms.DataPoint balans = new Bunifu.DataViz.WinForms.DataPoint(Bunifu.DataViz.WinForms.BunifuDataViz._type.Bunifu_spline);
+
+            //random data
+            Random ran = new Random();
+            for (int i = 0; i <= 30; i++)
+            {
+                przychod.addLabely(i.ToString(), ran.Next(20, 500));
+                wydatki.addLabely(i.ToString(), ran.Next(0, 100));
+                balans.addLabely(i.ToString(), ran.Next(100, 1000));
+            }
+                canvas.addData(przychod);
+                canvas.addData(wydatki);
+                canvas.addData(balans);
+
+                bunifuDataViz1.Render(canvas);
+           
+        }
+
+        void RenderPrzychodChart()
+        {
+            Bunifu.DataViz.WinForms.Canvas canvas = new Bunifu.DataViz.WinForms.Canvas();
+
+            Bunifu.DataViz.WinForms.DataPoint outlook = new Bunifu.DataViz.WinForms.DataPoint(Bunifu.DataViz.WinForms.BunifuDataViz._type.Bunifu_pie);
+
+            //random data
+
+            Double przelewx = 0;
+            Double wyplatax = 0;
+
+
+            foreach (string line in File.ReadLines(@"przychod.txt"))
+            {
+
+                if (line.Contains("Wypłata"))
+                {
+                    string lastWord = line.Split(';').Last();
+                    int ix = System.Convert.ToInt32(lastWord);
+                    wyplatax += ix;
+                }
+
+                if (line.Contains("Przelew"))
+                {
+                    string lastWord = line.Split(';').Last();
+                    int ixc = System.Convert.ToInt32(lastWord);
+                    przelewx += ixc;
+                }
+
+            }
+
+
+
+            outlook.addLabely("Wypłata", wyplatax);
+            outlook.addLabely("Przelew", przelewx);
+
+            canvas.addData(outlook);
+
+            bunifuDataViz3.Render(canvas);
+
+        }
+
+        void RenderWydatkiChart()
+        {
+            Bunifu.DataViz.WinForms.Canvas canvas = new Bunifu.DataViz.WinForms.Canvas();
+
+            Bunifu.DataViz.WinForms.DataPoint outlook = new Bunifu.DataViz.WinForms.DataPoint(Bunifu.DataViz.WinForms.BunifuDataViz._type.Bunifu_pie);
+
+
+            Double zakupyx = 0;
+            Double czynszx = 0;
+            Double oplatyx = 0;
+
+
+
+            foreach (string line in File.ReadLines(@"wydatek.txt"))
+            {
+
+                if (line.Contains("Zakupy"))
+                {
+                    string lastWord = line.Split(';').Last();
+                    int ix = System.Convert.ToInt32(lastWord);
+                    zakupyx += ix;
+                }
+
+                if (line.Contains("Czynsz"))
+                {
+                    string lastWord = line.Split(';').Last();
+                    int ixc = System.Convert.ToInt32(lastWord);
+                    czynszx += ixc;
+                }
+
+                if (line.Contains("Opłaty"))
+                {
+                    string lastWord = line.Split(';').Last();
+                    int ixc = System.Convert.ToInt32(lastWord);
+                    czynszx += ixc;
+                }
+
+
+            }
+
+
+
+            outlook.addLabely("Zakupy", zakupyx);
+            outlook.addLabely("Czynsz", czynszx);
+            outlook.addLabely("Opłaty", oplatyx);
+
+
+
+            canvas.addData(outlook);
+
+            bunifuDataViz2.Render(canvas);
+
+        }
+
+
+
+
+
+
+        private void Timer1_Tick(object sender, EventArgs e)
+        {
+            timer2.Interval = 10000;
+            //RenderMonthChart();
+            RenderPrzychodChart();
+            RenderWydatkiChart();
+        }
+    
+
+        private void bunifuDatepicker1_onValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuSeparator3_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+
+        }
+
+    
+
+    private void tabPage3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Dashboard_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDodajPrzychod_Click(object sender, EventArgs e)
+        {
+
+            new Helper.Popup.transparentBg(this, new Forms.formdodajPrzychod(podajDate.Value));
+
+        }
+
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+            new Helper.Popup.transparentBg(this, new Forms.formdodajWydatek());
+        }
+
+        private void gridWydatki_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        void ReverseDGVRows(DataGridView gridPrzychody)
+        {
+            List<DataGridViewRow> rows = new List<DataGridViewRow>();
+            rows.AddRange(gridPrzychody.Rows.Cast<DataGridViewRow>());
+            rows.Reverse();
+            gridPrzychody.Rows.Clear();
+            gridPrzychody.Rows.AddRange(rows.ToArray());
+        }
+
+
+        private void Timer2_Tick(object sender, EventArgs e)
+        {
+
+            timer2.Interval = 1000;
+            buttonImport.PerformClick();
+            buttonImport2.PerformClick();
+            button12x.PerformClick();
+            
+            double sum = 0;
+            for (int i = 0; i < gridPrzychody.Rows.Count; ++i)
+            {
+                double d = 0;
+                Double.TryParse(gridPrzychody.Rows[i].Cells[5].Value.ToString(), out d);
+                sum += d;
+            }
+
+            lblTotoIncome.Text = sum.ToString();
+
+            double sum1 = 0;
+            for (int li = 0; li < gridWydatki.Rows.Count; ++li)
+            {
+                double d = 0;
+                Double.TryParse(gridWydatki.Rows[li].Cells[5].Value.ToString(), out d);
+                sum1 += d;
+            }
+
+            label22.Text = sum1.ToString();
+            label3.Text = sum.ToString();
+            label4.Text = sum1.ToString();
+            label6.Text = (sum - sum1).ToString();
+
+            ReverseDGVRows(gridPrzychody);
+            ReverseDGVRows(gridWydatki);
+
+
+
+
+        }
+
+        private void buttonImport2_Click(object sender, EventArgs e)
+        {
+            gridWydatki.Rows.Clear();
+
+            string[] lines1 = File.ReadAllLines("wydatek.txt");
+            string[] values1;
+
+
+            for (int i = 0; i < lines1.Length; i++)
+            {
+                values1 = lines1[i].ToString().Split(';');
+                string[] row = new string[values1.Length];
+
+                for (int j = 0; j < values1.Length; j++)
+                {
+                    row[j] = values1[j].Trim();
+                }
+                gridWydatki.Rows.Add(row);
+            }
+
+        }
+
+        private void lblTotoIncome_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button12x_Click(object sender, EventArgs e)
+        {
+            gridPrzychody.Rows.Clear();
+            string[] lines = File.ReadAllLines(@"przychod.txt");
+            string[] values;
+
+
+            for (int i = 0; i < lines.Length; i++)
+            {
+                values = lines[i].ToString().Split(';');
+                string[] row = new string[values.Length];
+
+                for (int j = 0; j < values.Length; j++)
+                {
+                    row[j] = values[j].Trim();
+                }
+                gridPrzychody.Rows.Add(row);
+            }
+
+
+        }
+
+
+        public static void DeleteLastLine(string filepath)
+        {
+            List<string> lines = File.ReadAllLines(filepath).ToList();
+
+            File.WriteAllLines(filepath, lines.GetRange(0, lines.Count - 1).ToArray());
+
+        }
+
+
+        private void bunifuFlatButton2_Click(object sender, EventArgs e)
+        {
+            DeleteLastLine("wydatek.txt");
+        }
+
+        private void buttonUsun_Click(object sender, EventArgs e)
+        {
+            DeleteLastLine("przychod.txt");
+        }
+    }
+}
