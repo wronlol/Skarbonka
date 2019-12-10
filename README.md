@@ -1,0 +1,3 @@
+# Skarbonka
+
+Program Praca grupowa
