@@ -204,21 +204,37 @@ namespace Skarbonka
         {
             Bunifu.DataViz.WinForms.Canvas canvas = new Bunifu.DataViz.WinForms.Canvas();
 
-            Bunifu.DataViz.WinForms.DataPoint przychod = new Bunifu.DataViz.WinForms.DataPoint(Bunifu.DataViz.WinForms.BunifuDataViz._type.Bunifu_column);
-            Bunifu.DataViz.WinForms.DataPoint wydatki = new Bunifu.DataViz.WinForms.DataPoint(Bunifu.DataViz.WinForms.BunifuDataViz._type.Bunifu_column);
-            Bunifu.DataViz.WinForms.DataPoint balans = new Bunifu.DataViz.WinForms.DataPoint(Bunifu.DataViz.WinForms.BunifuDataViz._type.Bunifu_spline);
+            Bunifu.DataViz.WinForms.DataPoint przychod = new Bunifu.DataViz.WinForms.DataPoint(Bunifu.DataViz.WinForms.BunifuDataViz._type.Bunifu_spline);
+            Bunifu.DataViz.WinForms.DataPoint wydatki = new Bunifu.DataViz.WinForms.DataPoint(Bunifu.DataViz.WinForms.BunifuDataViz._type.Bunifu_spline);
+            //Bunifu.DataViz.WinForms.DataPoint balans = new Bunifu.DataViz.WinForms.DataPoint(Bunifu.DataViz.WinForms.BunifuDataViz._type.Bunifu_spline);
 
             //random data
-            Random ran = new Random();
+         /* Random ran = new Random();
             for (int i = 0; i <= 30; i++)
             {
-                przychod.addLabely(i.ToString(), ran.Next(20, 500));
                 wydatki.addLabely(i.ToString(), ran.Next(0, 100));
                 balans.addLabely(i.ToString(), ran.Next(100, 1000));
+            }*/
+
+            
+
+            foreach (string line in File.ReadLines(@"przychod.txt"))
+            {
+                string lastWord = line.Split(';').Last();
+                int ix = System.Convert.ToInt32(lastWord);
+                przychod.addLabely("", ix);
             }
-                canvas.addData(przychod);
-                canvas.addData(wydatki);
-                canvas.addData(balans);
+
+            foreach (string line in File.ReadLines(@"wydatek.txt"))
+            {
+                string lastWord = line.Split(';').Last();
+                int ix = System.Convert.ToInt32(lastWord);
+                wydatki.addLabely("", ix);
+            }
+
+            canvas.addData(przychod);
+            canvas.addData(wydatki);
+          //  canvas.addData(balans);
 
                 bunifuDataViz1.Render(canvas);
            
@@ -300,7 +316,7 @@ namespace Skarbonka
                 {
                     string lastWord = line.Split(';').Last();
                     int ixc = System.Convert.ToInt32(lastWord);
-                    czynszx += ixc;
+                    oplatyx += ixc;
                 }
 
 
@@ -327,8 +343,8 @@ namespace Skarbonka
 
         private void Timer1_Tick(object sender, EventArgs e)
         {
-            timer2.Interval = 10000;
-            //RenderMonthChart();
+            timer1.Interval = 2000;
+            RenderMonthChart();
             RenderPrzychodChart();
             RenderWydatkiChart();
         }
@@ -510,6 +526,11 @@ namespace Skarbonka
         private void buttonUsun_Click(object sender, EventArgs e)
         {
             DeleteLastLine("przychod.txt");
+        }
+
+        private void bunifuDataViz3_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
