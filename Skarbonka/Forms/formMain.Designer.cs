@@ -60,18 +60,13 @@
             this.przDashboard = new Bunifu.Framework.UI.BunifuFlatButton();
             this.Strony = new Bunifu.UI.WinForms.BunifuPages();
             this.Dashboard = new System.Windows.Forms.TabPage();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.bunifuSeparator3 = new Bunifu.Framework.UI.BunifuSeparator();
             this.bunifuDataViz3 = new Bunifu.DataViz.WinForms.BunifuDataViz();
             this.label12 = new System.Windows.Forms.Label();
             this.bunifuDataViz2 = new Bunifu.DataViz.WinForms.BunifuDataViz();
             this.label11 = new System.Windows.Forms.Label();
-            this.col3 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.col2 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.col1 = new System.Windows.Forms.PictureBox();
             this.bunifuDataViz1 = new Bunifu.DataViz.WinForms.BunifuDataViz();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
@@ -85,7 +80,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.bunifuDropdown1 = new Bunifu.Framework.UI.BunifuDropdown();
             this.button12x = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.buttonUsun = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -156,17 +150,17 @@
             this.label15 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.col1 = new System.Windows.Forms.PictureBox();
+            this.col2 = new System.Windows.Forms.PictureBox();
+            this.col3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.panelTytul.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelNaglowek.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.wskaznik)).BeginInit();
             this.Strony.SuspendLayout();
             this.Dashboard.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.col3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.col2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.col1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -180,6 +174,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridZKonta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridZWydatki)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridZPrzychod)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.col1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.col2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.col3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // panelTytul
@@ -191,7 +190,7 @@
             this.panelTytul.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTytul.Location = new System.Drawing.Point(0, 0);
             this.panelTytul.Name = "panelTytul";
-            this.panelTytul.Size = new System.Drawing.Size(1073, 43);
+            this.panelTytul.Size = new System.Drawing.Size(1173, 43);
             this.panelTytul.TabIndex = 0;
             this.panelTytul.Paint += new System.Windows.Forms.PaintEventHandler(this.panelTytul_Paint);
             // 
@@ -248,7 +247,7 @@
             this.panelNaglowek.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelNaglowek.Location = new System.Drawing.Point(0, 43);
             this.panelNaglowek.Name = "panelNaglowek";
-            this.panelNaglowek.Size = new System.Drawing.Size(1073, 63);
+            this.panelNaglowek.Size = new System.Drawing.Size(1173, 63);
             this.panelNaglowek.TabIndex = 1;
             // 
             // przUstawienia
@@ -408,7 +407,7 @@
             this.przDashboard.BackColor = System.Drawing.Color.White;
             this.przDashboard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.przDashboard.BorderRadius = 0;
-            this.przDashboard.ButtonText = "Dashboard";
+            this.przDashboard.ButtonText = "Panel główny";
             this.przDashboard.Cursor = System.Windows.Forms.Cursors.Hand;
             this.przDashboard.DisabledColor = System.Drawing.Color.Gray;
             this.przDashboard.Iconcolor = System.Drawing.Color.Transparent;
@@ -429,9 +428,9 @@
             this.przDashboard.OnHovercolor = System.Drawing.Color.White;
             this.przDashboard.OnHoverTextColor = System.Drawing.Color.SeaGreen;
             this.przDashboard.selected = false;
-            this.przDashboard.Size = new System.Drawing.Size(149, 53);
+            this.przDashboard.Size = new System.Drawing.Size(166, 53);
             this.przDashboard.TabIndex = 3;
-            this.przDashboard.Text = "Dashboard";
+            this.przDashboard.Text = "Panel główny";
             this.przDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.przDashboard.Textcolor = System.Drawing.Color.Gray;
             this.przDashboard.TextFont = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
@@ -450,12 +449,12 @@
             this.Strony.Location = new System.Drawing.Point(0, 106);
             this.Strony.Multiline = true;
             this.Strony.Name = "Strony";
-            this.Strony.Page = this.Dashboard;
-            this.Strony.PageIndex = 0;
-            this.Strony.PageName = "Dashboard";
-            this.Strony.PageTitle = "Dashboard";
+            this.Strony.Page = this.tabPage2;
+            this.Strony.PageIndex = 4;
+            this.Strony.PageName = "tabPage2";
+            this.Strony.PageTitle = "Ustawienia";
             this.Strony.SelectedIndex = 0;
-            this.Strony.Size = new System.Drawing.Size(1073, 758);
+            this.Strony.Size = new System.Drawing.Size(1173, 758);
             this.Strony.TabIndex = 2;
             animation1.AnimateOnlyDifferences = false;
             animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
@@ -493,44 +492,24 @@
             this.Dashboard.Controls.Add(this.col1);
             this.Dashboard.Controls.Add(this.bunifuDataViz1);
             this.Dashboard.Controls.Add(this.panel2);
-            this.Dashboard.Controls.Add(this.bunifuDropdown1);
             this.Dashboard.Controls.Add(this.button12x);
             this.Dashboard.Location = new System.Drawing.Point(4, 4);
             this.Dashboard.Name = "Dashboard";
             this.Dashboard.Padding = new System.Windows.Forms.Padding(3);
-            this.Dashboard.Size = new System.Drawing.Size(1065, 732);
+            this.Dashboard.Size = new System.Drawing.Size(1165, 732);
             this.Dashboard.TabIndex = 0;
             this.Dashboard.Text = "Dashboard";
             this.Dashboard.Click += new System.EventHandler(this.Dashboard_Click);
             // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackColor = System.Drawing.Color.OrangeRed;
-            this.pictureBox6.Location = new System.Drawing.Point(201, 189);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(31, 23);
-            this.pictureBox6.TabIndex = 19;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.Color.SeaGreen;
-            this.pictureBox5.Location = new System.Drawing.Point(80, 189);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(31, 23);
-            this.pictureBox5.TabIndex = 18;
-            this.pictureBox5.TabStop = false;
-            // 
             // bunifuSeparator3
             // 
-            this.bunifuSeparator3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bunifuSeparator3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuSeparator3.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator3.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(211)))), ((int)(((byte)(211)))));
             this.bunifuSeparator3.LineThickness = 1;
-            this.bunifuSeparator3.Location = new System.Drawing.Point(76, 525);
+            this.bunifuSeparator3.Location = new System.Drawing.Point(72, 545);
             this.bunifuSeparator3.Name = "bunifuSeparator3";
-            this.bunifuSeparator3.Size = new System.Drawing.Size(676, 18);
+            this.bunifuSeparator3.Size = new System.Drawing.Size(917, 18);
             this.bunifuSeparator3.TabIndex = 16;
             this.bunifuSeparator3.Transparency = 255;
             this.bunifuSeparator3.Vertical = false;
@@ -538,8 +517,7 @@
             // 
             // bunifuDataViz3
             // 
-            this.bunifuDataViz3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bunifuDataViz3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuDataViz3.animationEnabled = false;
             this.bunifuDataViz3.AxisLineColor = System.Drawing.Color.LightGray;
             this.bunifuDataViz3.AxisXFontColor = System.Drawing.Color.Gray;
@@ -558,9 +536,9 @@
             0});
             this.bunifuDataViz3.BackColor = System.Drawing.Color.White;
             this.bunifuDataViz3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuDataViz3.Location = new System.Drawing.Point(457, 580);
+            this.bunifuDataViz3.Location = new System.Drawing.Point(450, 622);
             this.bunifuDataViz3.Name = "bunifuDataViz3";
-            this.bunifuDataViz3.Size = new System.Drawing.Size(244, 297);
+            this.bunifuDataViz3.Size = new System.Drawing.Size(293, 297);
             this.bunifuDataViz3.TabIndex = 13;
             this.bunifuDataViz3.Theme = Bunifu.DataViz.WinForms.BunifuDataViz._theme.theme1;
             this.bunifuDataViz3.Title = "";
@@ -568,13 +546,12 @@
             // 
             // label12
             // 
-            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label12.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 15F);
             this.label12.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label12.Location = new System.Drawing.Point(68, 546);
+            this.label12.Location = new System.Drawing.Point(67, 581);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(182, 28);
             this.label12.TabIndex = 12;
@@ -582,8 +559,7 @@
             // 
             // bunifuDataViz2
             // 
-            this.bunifuDataViz2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bunifuDataViz2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuDataViz2.animationEnabled = false;
             this.bunifuDataViz2.AxisLineColor = System.Drawing.Color.LightGray;
             this.bunifuDataViz2.AxisXFontColor = System.Drawing.Color.Gray;
@@ -602,37 +578,25 @@
             0});
             this.bunifuDataViz2.BackColor = System.Drawing.Color.White;
             this.bunifuDataViz2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuDataViz2.Location = new System.Drawing.Point(73, 580);
+            this.bunifuDataViz2.Location = new System.Drawing.Point(80, 622);
             this.bunifuDataViz2.Name = "bunifuDataViz2";
-            this.bunifuDataViz2.Size = new System.Drawing.Size(255, 297);
+            this.bunifuDataViz2.Size = new System.Drawing.Size(287, 297);
             this.bunifuDataViz2.TabIndex = 11;
             this.bunifuDataViz2.Theme = Bunifu.DataViz.WinForms.BunifuDataViz._theme.theme1;
             this.bunifuDataViz2.Title = "";
             // 
             // label11
             // 
-            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 15F);
             this.label11.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label11.Location = new System.Drawing.Point(452, 546);
+            this.label11.Location = new System.Drawing.Point(438, 581);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(201, 28);
             this.label11.TabIndex = 10;
             this.label11.Text = "Przegląd przychodów";
-            // 
-            // col3
-            // 
-            this.col3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.col3.BackColor = System.Drawing.Color.DimGray;
-            this.col3.Location = new System.Drawing.Point(332, 191);
-            this.col3.Name = "col3";
-            this.col3.Size = new System.Drawing.Size(0, 21);
-            this.col3.TabIndex = 8;
-            this.col3.TabStop = false;
             // 
             // label9
             // 
@@ -649,17 +613,6 @@
             this.label9.Text = "Wydatek";
             this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
-            // col2
-            // 
-            this.col2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.col2.BackColor = System.Drawing.Color.OrangeRed;
-            this.col2.Location = new System.Drawing.Point(204, 191);
-            this.col2.Name = "col2";
-            this.col2.Size = new System.Drawing.Size(0, 21);
-            this.col2.TabIndex = 6;
-            this.col2.TabStop = false;
-            // 
             // label8
             // 
             this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -674,17 +627,6 @@
             this.label8.TabIndex = 5;
             this.label8.Text = "Przychód";
             this.label8.Click += new System.EventHandler(this.label8_Click);
-            // 
-            // col1
-            // 
-            this.col1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.col1.BackColor = System.Drawing.Color.SeaGreen;
-            this.col1.Location = new System.Drawing.Point(80, 191);
-            this.col1.Name = "col1";
-            this.col1.Size = new System.Drawing.Size(0, 21);
-            this.col1.TabIndex = 4;
-            this.col1.TabStop = false;
             // 
             // bunifuDataViz1
             // 
@@ -710,7 +652,7 @@
             this.bunifuDataViz1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuDataViz1.Location = new System.Drawing.Point(76, 222);
             this.bunifuDataViz1.Name = "bunifuDataViz1";
-            this.bunifuDataViz1.Size = new System.Drawing.Size(865, 297);
+            this.bunifuDataViz1.Size = new System.Drawing.Size(897, 297);
             this.bunifuDataViz1.TabIndex = 3;
             this.bunifuDataViz1.Theme = Bunifu.DataViz.WinForms.BunifuDataViz._theme.theme1;
             this.bunifuDataViz1.Title = "";
@@ -733,16 +675,18 @@
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Location = new System.Drawing.Point(80, 81);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(861, 89);
+            this.panel2.Size = new System.Drawing.Size(893, 89);
             this.panel2.TabIndex = 1;
             // 
             // label6
             // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.White;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label6.Location = new System.Drawing.Point(722, 41);
+            this.label6.Location = new System.Drawing.Point(822, 41);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(39, 20);
             this.label6.TabIndex = 12;
@@ -750,11 +694,13 @@
             // 
             // label7
             // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.White;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.label7.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label7.Location = new System.Drawing.Point(722, 19);
+            this.label7.Location = new System.Drawing.Point(822, 19);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(55, 21);
             this.label7.TabIndex = 11;
@@ -762,10 +708,11 @@
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.BackgroundImage")));
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.Location = new System.Drawing.Point(642, 19);
+            this.pictureBox4.Location = new System.Drawing.Point(734, 19);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(58, 56);
             this.pictureBox4.TabIndex = 10;
@@ -773,6 +720,7 @@
             // 
             // bunifuSeparator2
             // 
+            this.bunifuSeparator2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.bunifuSeparator2.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
             this.bunifuSeparator2.LineThickness = 1;
@@ -785,11 +733,12 @@
             // 
             // label4
             // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.White;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label4.Location = new System.Drawing.Point(441, 41);
+            this.label4.Location = new System.Drawing.Point(431, 41);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(39, 20);
             this.label4.TabIndex = 8;
@@ -797,11 +746,12 @@
             // 
             // label5
             // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.White;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.label5.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label5.Location = new System.Drawing.Point(441, 20);
+            this.label5.Location = new System.Drawing.Point(431, 20);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(136, 21);
             this.label5.TabIndex = 7;
@@ -809,10 +759,10 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(361, 20);
+            this.pictureBox3.Location = new System.Drawing.Point(343, 20);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(58, 56);
             this.pictureBox3.TabIndex = 6;
@@ -820,6 +770,7 @@
             // 
             // bunifuSeparator1
             // 
+            this.bunifuSeparator1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
             this.bunifuSeparator1.LineThickness = 1;
@@ -832,6 +783,8 @@
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.White;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
@@ -844,6 +797,8 @@
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F);
@@ -856,34 +811,15 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(48, 19);
+            this.pictureBox2.Location = new System.Drawing.Point(40, 19);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(58, 56);
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
-            // 
-            // bunifuDropdown1
-            // 
-            this.bunifuDropdown1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuDropdown1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuDropdown1.BorderRadius = 3;
-            this.bunifuDropdown1.ForeColor = System.Drawing.Color.DimGray;
-            this.bunifuDropdown1.Items = new string[] {
-        "Analiza Dzienna",
-        "Analiza Miesięczna",
-        "Analiza Roczna"};
-            this.bunifuDropdown1.Location = new System.Drawing.Point(80, 40);
-            this.bunifuDropdown1.Name = "bunifuDropdown1";
-            this.bunifuDropdown1.NomalColor = System.Drawing.Color.White;
-            this.bunifuDropdown1.onHoverColor = System.Drawing.Color.Silver;
-            this.bunifuDropdown1.selectedIndex = 0;
-            this.bunifuDropdown1.Size = new System.Drawing.Size(99, 35);
-            this.bunifuDropdown1.TabIndex = 0;
-            this.bunifuDropdown1.Visible = false;
             // 
             // button12x
             // 
@@ -897,6 +833,7 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.AutoScroll = true;
             this.tabPage3.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tabPage3.Controls.Add(this.buttonUsun);
             this.tabPage3.Controls.Add(this.label13);
@@ -912,7 +849,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 4);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1065, 732);
+            this.tabPage3.Size = new System.Drawing.Size(1165, 732);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Przychody";
             this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
@@ -941,7 +878,7 @@
             this.buttonUsun.IconVisible = false;
             this.buttonUsun.IconZoom = 90D;
             this.buttonUsun.IsTab = false;
-            this.buttonUsun.Location = new System.Drawing.Point(80, 572);
+            this.buttonUsun.Location = new System.Drawing.Point(180, 572);
             this.buttonUsun.Name = "buttonUsun";
             this.buttonUsun.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.buttonUsun.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(150)))), ((int)(((byte)(128)))));
@@ -961,7 +898,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label13.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label13.Location = new System.Drawing.Point(918, 555);
+            this.label13.Location = new System.Drawing.Point(1018, 555);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(55, 20);
             this.label13.TabIndex = 12;
@@ -1035,7 +972,7 @@
             this.btnDodajPrzychod.IconVisible = false;
             this.btnDodajPrzychod.IconZoom = 90D;
             this.btnDodajPrzychod.IsTab = false;
-            this.btnDodajPrzychod.Location = new System.Drawing.Point(809, 20);
+            this.btnDodajPrzychod.Location = new System.Drawing.Point(909, 20);
             this.btnDodajPrzychod.Name = "btnDodajPrzychod";
             this.btnDodajPrzychod.Normalcolor = System.Drawing.Color.MediumSeaGreen;
             this.btnDodajPrzychod.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
@@ -1057,7 +994,7 @@
             this.lblTotoIncome.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lblTotoIncome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.lblTotoIncome.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblTotoIncome.Location = new System.Drawing.Point(934, 614);
+            this.lblTotoIncome.Location = new System.Drawing.Point(1034, 614);
             this.lblTotoIncome.Name = "lblTotoIncome";
             this.lblTotoIncome.Size = new System.Drawing.Size(39, 20);
             this.lblTotoIncome.TabIndex = 5;
@@ -1218,6 +1155,7 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.AutoScroll = true;
             this.tabPage4.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tabPage4.Controls.Add(this.bunifuFlatButton2);
             this.tabPage4.Controls.Add(this.label22);
@@ -1232,7 +1170,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 4);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1065, 732);
+            this.tabPage4.Size = new System.Drawing.Size(1165, 732);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Wydatki";
             // 
@@ -1334,7 +1272,7 @@
             this.bunifuFlatButton1.IconVisible = false;
             this.bunifuFlatButton1.IconZoom = 90D;
             this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(809, 20);
+            this.bunifuFlatButton1.Location = new System.Drawing.Point(909, 20);
             this.bunifuFlatButton1.Name = "bunifuFlatButton1";
             this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.MediumSeaGreen;
             this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
@@ -1356,7 +1294,7 @@
             this.label14.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label14.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label14.Location = new System.Drawing.Point(918, 555);
+            this.label14.Location = new System.Drawing.Point(1018, 555);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(55, 20);
             this.label14.TabIndex = 13;
@@ -1533,7 +1471,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 4);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1065, 732);
+            this.tabPage1.Size = new System.Drawing.Size(1165, 732);
             this.tabPage1.TabIndex = 5;
             this.tabPage1.Text = "Raporty";
             // 
@@ -1546,7 +1484,7 @@
             this.bunifuSeparator12.LineThickness = 1;
             this.bunifuSeparator12.Location = new System.Drawing.Point(74, 534);
             this.bunifuSeparator12.Name = "bunifuSeparator12";
-            this.bunifuSeparator12.Size = new System.Drawing.Size(438, 15);
+            this.bunifuSeparator12.Size = new System.Drawing.Size(538, 15);
             this.bunifuSeparator12.TabIndex = 30;
             this.bunifuSeparator12.Transparency = 255;
             this.bunifuSeparator12.Vertical = false;
@@ -1631,7 +1569,7 @@
             this.bunifuSeparator11.LineThickness = 1;
             this.bunifuSeparator11.Location = new System.Drawing.Point(80, 320);
             this.bunifuSeparator11.Name = "bunifuSeparator11";
-            this.bunifuSeparator11.Size = new System.Drawing.Size(438, 15);
+            this.bunifuSeparator11.Size = new System.Drawing.Size(538, 15);
             this.bunifuSeparator11.TabIndex = 25;
             this.bunifuSeparator11.Transparency = 255;
             this.bunifuSeparator11.Vertical = false;
@@ -1716,7 +1654,7 @@
             this.bunifuSeparator10.LineThickness = 1;
             this.bunifuSeparator10.Location = new System.Drawing.Point(78, 90);
             this.bunifuSeparator10.Name = "bunifuSeparator10";
-            this.bunifuSeparator10.Size = new System.Drawing.Size(438, 15);
+            this.bunifuSeparator10.Size = new System.Drawing.Size(538, 15);
             this.bunifuSeparator10.TabIndex = 20;
             this.bunifuSeparator10.Transparency = 255;
             this.bunifuSeparator10.Vertical = false;
@@ -1811,7 +1749,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 4);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1065, 732);
+            this.tabPage2.Size = new System.Drawing.Size(1165, 732);
             this.tabPage2.TabIndex = 6;
             this.tabPage2.Text = "Ustawienia";
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
@@ -1869,7 +1807,7 @@
             this.gridZKonta.HeaderBackColor = System.Drawing.Color.MediumSeaGreen;
             this.gridZKonta.HeaderBgColor = System.Drawing.Color.Empty;
             this.gridZKonta.HeaderForeColor = System.Drawing.Color.White;
-            this.gridZKonta.Location = new System.Drawing.Point(645, 238);
+            this.gridZKonta.Location = new System.Drawing.Point(689, 262);
             this.gridZKonta.Name = "gridZKonta";
             this.gridZKonta.RowHeadersVisible = false;
             this.gridZKonta.RowTemplate.Height = 40;
@@ -1890,9 +1828,9 @@
             this.bunifuSeparator9.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator9.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(211)))), ((int)(((byte)(211)))));
             this.bunifuSeparator9.LineThickness = 1;
-            this.bunifuSeparator9.Location = new System.Drawing.Point(645, 214);
+            this.bunifuSeparator9.Location = new System.Drawing.Point(678, 210);
             this.bunifuSeparator9.Name = "bunifuSeparator9";
-            this.bunifuSeparator9.Size = new System.Drawing.Size(376, 18);
+            this.bunifuSeparator9.Size = new System.Drawing.Size(476, 18);
             this.bunifuSeparator9.TabIndex = 30;
             this.bunifuSeparator9.Transparency = 255;
             this.bunifuSeparator9.Vertical = false;
@@ -1905,7 +1843,7 @@
             this.label18.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label18.Font = new System.Drawing.Font("Segoe UI", 15F);
             this.label18.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label18.Location = new System.Drawing.Point(642, 184);
+            this.label18.Location = new System.Drawing.Point(684, 231);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(172, 28);
             this.label18.TabIndex = 29;
@@ -1919,7 +1857,7 @@
             this.label17.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label17.Font = new System.Drawing.Font("Segoe UI", 15F);
             this.label17.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label17.Location = new System.Drawing.Point(640, 80);
+            this.label17.Location = new System.Drawing.Point(696, 79);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(73, 28);
             this.label17.TabIndex = 28;
@@ -1935,7 +1873,7 @@
             this.bunifuMetroTextbox1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.bunifuMetroTextbox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMetroTextbox1.isPassword = false;
-            this.bunifuMetroTextbox1.Location = new System.Drawing.Point(645, 112);
+            this.bunifuMetroTextbox1.Location = new System.Drawing.Point(701, 111);
             this.bunifuMetroTextbox1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuMetroTextbox1.Name = "bunifuMetroTextbox1";
             this.bunifuMetroTextbox1.Size = new System.Drawing.Size(167, 44);
@@ -1950,9 +1888,9 @@
             this.bunifuSeparator8.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator8.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(211)))), ((int)(((byte)(211)))));
             this.bunifuSeparator8.LineThickness = 1;
-            this.bunifuSeparator8.Location = new System.Drawing.Point(598, 95);
+            this.bunifuSeparator8.Location = new System.Drawing.Point(607, 94);
             this.bunifuSeparator8.Name = "bunifuSeparator8";
-            this.bunifuSeparator8.Size = new System.Drawing.Size(47, 519);
+            this.bunifuSeparator8.Size = new System.Drawing.Size(147, 519);
             this.bunifuSeparator8.TabIndex = 26;
             this.bunifuSeparator8.Transparency = 255;
             this.bunifuSeparator8.Vertical = true;
@@ -2033,7 +1971,7 @@
             this.bunifuSeparator7.LineThickness = 1;
             this.bunifuSeparator7.Location = new System.Drawing.Point(76, 380);
             this.bunifuSeparator7.Name = "bunifuSeparator7";
-            this.bunifuSeparator7.Size = new System.Drawing.Size(476, 18);
+            this.bunifuSeparator7.Size = new System.Drawing.Size(576, 18);
             this.bunifuSeparator7.TabIndex = 24;
             this.bunifuSeparator7.Transparency = 255;
             this.bunifuSeparator7.Vertical = false;
@@ -2128,7 +2066,7 @@
             this.bunifuSeparator6.LineThickness = 1;
             this.bunifuSeparator6.Location = new System.Drawing.Point(80, 99);
             this.bunifuSeparator6.Name = "bunifuSeparator6";
-            this.bunifuSeparator6.Size = new System.Drawing.Size(455, 18);
+            this.bunifuSeparator6.Size = new System.Drawing.Size(555, 18);
             this.bunifuSeparator6.TabIndex = 18;
             this.bunifuSeparator6.Transparency = 255;
             this.bunifuSeparator6.Vertical = false;
@@ -2159,17 +2097,70 @@
             this.timer2.Interval = 1000;
             this.timer2.Tick += new System.EventHandler(this.Timer2_Tick);
             // 
+            // col1
+            // 
+            this.col1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.col1.BackColor = System.Drawing.Color.SeaGreen;
+            this.col1.Location = new System.Drawing.Point(782, 16);
+            this.col1.Name = "col1";
+            this.col1.Size = new System.Drawing.Size(49, 21);
+            this.col1.TabIndex = 4;
+            this.col1.TabStop = false;
+            this.col1.Visible = false;
+            // 
+            // col2
+            // 
+            this.col2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.col2.BackColor = System.Drawing.Color.OrangeRed;
+            this.col2.Location = new System.Drawing.Point(609, 32);
+            this.col2.Name = "col2";
+            this.col2.Size = new System.Drawing.Size(49, 21);
+            this.col2.TabIndex = 6;
+            this.col2.TabStop = false;
+            this.col2.Visible = false;
+            // 
+            // col3
+            // 
+            this.col3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.col3.BackColor = System.Drawing.Color.DimGray;
+            this.col3.Location = new System.Drawing.Point(423, 30);
+            this.col3.Name = "col3";
+            this.col3.Size = new System.Drawing.Size(49, 21);
+            this.col3.TabIndex = 8;
+            this.col3.TabStop = false;
+            this.col3.Visible = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.SeaGreen;
+            this.pictureBox5.Location = new System.Drawing.Point(80, 189);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(31, 23);
+            this.pictureBox5.TabIndex = 18;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.Color.OrangeRed;
+            this.pictureBox6.Location = new System.Drawing.Point(201, 189);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(31, 23);
+            this.pictureBox6.TabIndex = 19;
+            this.pictureBox6.TabStop = false;
+            // 
             // formMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
             this.AutoScrollMargin = new System.Drawing.Size(5, 5);
-            this.ClientSize = new System.Drawing.Size(1073, 864);
+            this.ClientSize = new System.Drawing.Size(1173, 864);
             this.Controls.Add(this.Strony);
             this.Controls.Add(this.panelNaglowek);
             this.Controls.Add(this.panelTytul);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "formMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -2182,11 +2173,6 @@
             this.Strony.ResumeLayout(false);
             this.Dashboard.ResumeLayout(false);
             this.Dashboard.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.col3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.col2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.col1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -2205,6 +2191,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridZKonta)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridZWydatki)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridZPrzychod)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.col1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.col2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.col3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2229,7 +2220,6 @@
         private System.Windows.Forms.TabPage tabPage2;
         private Bunifu.Framework.UI.BunifuDatepicker podajDate;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.PictureBox col1;
         private Bunifu.DataViz.WinForms.BunifuDataViz bunifuDataViz1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label6;
@@ -2243,10 +2233,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private Bunifu.Framework.UI.BunifuDropdown bunifuDropdown1;
-        private System.Windows.Forms.PictureBox col3;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.PictureBox col2;
         private Bunifu.DataViz.WinForms.BunifuDataViz bunifuDataViz2;
         private System.Windows.Forms.Label label11;
         private Bunifu.DataViz.WinForms.BunifuDataViz bunifuDataViz3;
@@ -2318,8 +2305,11 @@
         public System.Windows.Forms.Button button12x;
         private Bunifu.Framework.UI.BunifuFlatButton buttonUsun;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
-        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox col2;
+        private System.Windows.Forms.PictureBox col1;
+        private System.Windows.Forms.PictureBox col3;
         private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pictureBox5;
     }
 }
 
