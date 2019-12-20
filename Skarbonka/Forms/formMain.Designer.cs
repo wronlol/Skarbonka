@@ -31,22 +31,22 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formMain));
             Utilities.BunifuPages.BunifuAnimatorNS.Animation animation1 = new Utilities.BunifuPages.BunifuAnimatorNS.Animation();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle41 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle43 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle44 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle45 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle46 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle47 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle48 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelTytul = new System.Windows.Forms.FlowLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -60,13 +60,18 @@
             this.przDashboard = new Bunifu.Framework.UI.BunifuFlatButton();
             this.Strony = new Bunifu.UI.WinForms.BunifuPages();
             this.Dashboard = new System.Windows.Forms.TabPage();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.bunifuSeparator3 = new Bunifu.Framework.UI.BunifuSeparator();
             this.bunifuDataViz3 = new Bunifu.DataViz.WinForms.BunifuDataViz();
             this.label12 = new System.Windows.Forms.Label();
             this.bunifuDataViz2 = new Bunifu.DataViz.WinForms.BunifuDataViz();
             this.label11 = new System.Windows.Forms.Label();
+            this.col3 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.col2 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.col1 = new System.Windows.Forms.PictureBox();
             this.bunifuDataViz1 = new Bunifu.DataViz.WinForms.BunifuDataViz();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
@@ -84,7 +89,6 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.buttonUsun = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label13 = new System.Windows.Forms.Label();
-            this.inputKategorie = new Bunifu.Framework.UI.BunifuDropdown();
             this.bunifuDropdown3 = new Bunifu.Framework.UI.BunifuDropdown();
             this.bunifuSeparator5 = new Bunifu.Framework.UI.BunifuSeparator();
             this.btnDodajPrzychod = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -150,17 +154,18 @@
             this.label15 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.col1 = new System.Windows.Forms.PictureBox();
-            this.col2 = new System.Windows.Forms.PictureBox();
-            this.col3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.panelTytul.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelNaglowek.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.wskaznik)).BeginInit();
             this.Strony.SuspendLayout();
             this.Dashboard.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.col3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.col2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.col1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -174,11 +179,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridZKonta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridZWydatki)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridZPrzychod)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.col1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.col2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.col3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // panelTytul
@@ -449,10 +449,10 @@
             this.Strony.Location = new System.Drawing.Point(0, 106);
             this.Strony.Multiline = true;
             this.Strony.Name = "Strony";
-            this.Strony.Page = this.tabPage2;
-            this.Strony.PageIndex = 4;
-            this.Strony.PageName = "tabPage2";
-            this.Strony.PageTitle = "Ustawienia";
+            this.Strony.Page = this.tabPage4;
+            this.Strony.PageIndex = 2;
+            this.Strony.PageName = "tabPage4";
+            this.Strony.PageTitle = "Wydatki";
             this.Strony.SelectedIndex = 0;
             this.Strony.Size = new System.Drawing.Size(1173, 758);
             this.Strony.TabIndex = 2;
@@ -501,13 +501,31 @@
             this.Dashboard.Text = "Dashboard";
             this.Dashboard.Click += new System.EventHandler(this.Dashboard_Click);
             // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.Color.OrangeRed;
+            this.pictureBox6.Location = new System.Drawing.Point(201, 189);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(31, 23);
+            this.pictureBox6.TabIndex = 19;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.SeaGreen;
+            this.pictureBox5.Location = new System.Drawing.Point(80, 189);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(31, 23);
+            this.pictureBox5.TabIndex = 18;
+            this.pictureBox5.TabStop = false;
+            // 
             // bunifuSeparator3
             // 
             this.bunifuSeparator3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuSeparator3.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator3.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(211)))), ((int)(((byte)(211)))));
             this.bunifuSeparator3.LineThickness = 1;
-            this.bunifuSeparator3.Location = new System.Drawing.Point(72, 545);
+            this.bunifuSeparator3.Location = new System.Drawing.Point(64, 545);
             this.bunifuSeparator3.Name = "bunifuSeparator3";
             this.bunifuSeparator3.Size = new System.Drawing.Size(917, 18);
             this.bunifuSeparator3.TabIndex = 16;
@@ -536,7 +554,7 @@
             0});
             this.bunifuDataViz3.BackColor = System.Drawing.Color.White;
             this.bunifuDataViz3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuDataViz3.Location = new System.Drawing.Point(450, 622);
+            this.bunifuDataViz3.Location = new System.Drawing.Point(442, 622);
             this.bunifuDataViz3.Name = "bunifuDataViz3";
             this.bunifuDataViz3.Size = new System.Drawing.Size(293, 297);
             this.bunifuDataViz3.TabIndex = 13;
@@ -551,7 +569,7 @@
             this.label12.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 15F);
             this.label12.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label12.Location = new System.Drawing.Point(67, 581);
+            this.label12.Location = new System.Drawing.Point(59, 581);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(182, 28);
             this.label12.TabIndex = 12;
@@ -578,7 +596,7 @@
             0});
             this.bunifuDataViz2.BackColor = System.Drawing.Color.White;
             this.bunifuDataViz2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuDataViz2.Location = new System.Drawing.Point(80, 622);
+            this.bunifuDataViz2.Location = new System.Drawing.Point(72, 622);
             this.bunifuDataViz2.Name = "bunifuDataViz2";
             this.bunifuDataViz2.Size = new System.Drawing.Size(287, 297);
             this.bunifuDataViz2.TabIndex = 11;
@@ -592,11 +610,23 @@
             this.label11.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 15F);
             this.label11.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label11.Location = new System.Drawing.Point(438, 581);
+            this.label11.Location = new System.Drawing.Point(430, 581);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(201, 28);
             this.label11.TabIndex = 10;
             this.label11.Text = "Przegląd przychodów";
+            // 
+            // col3
+            // 
+            this.col3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.col3.BackColor = System.Drawing.Color.DimGray;
+            this.col3.Location = new System.Drawing.Point(423, 30);
+            this.col3.Name = "col3";
+            this.col3.Size = new System.Drawing.Size(32, 21);
+            this.col3.TabIndex = 8;
+            this.col3.TabStop = false;
+            this.col3.Visible = false;
             // 
             // label9
             // 
@@ -613,6 +643,18 @@
             this.label9.Text = "Wydatek";
             this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
+            // col2
+            // 
+            this.col2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.col2.BackColor = System.Drawing.Color.OrangeRed;
+            this.col2.Location = new System.Drawing.Point(609, 32);
+            this.col2.Name = "col2";
+            this.col2.Size = new System.Drawing.Size(32, 21);
+            this.col2.TabIndex = 6;
+            this.col2.TabStop = false;
+            this.col2.Visible = false;
+            // 
             // label8
             // 
             this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -627,6 +669,18 @@
             this.label8.TabIndex = 5;
             this.label8.Text = "Przychód";
             this.label8.Click += new System.EventHandler(this.label8_Click);
+            // 
+            // col1
+            // 
+            this.col1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.col1.BackColor = System.Drawing.Color.SeaGreen;
+            this.col1.Location = new System.Drawing.Point(782, 16);
+            this.col1.Name = "col1";
+            this.col1.Size = new System.Drawing.Size(32, 21);
+            this.col1.TabIndex = 4;
+            this.col1.TabStop = false;
+            this.col1.Visible = false;
             // 
             // bunifuDataViz1
             // 
@@ -652,7 +706,7 @@
             this.bunifuDataViz1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuDataViz1.Location = new System.Drawing.Point(76, 222);
             this.bunifuDataViz1.Name = "bunifuDataViz1";
-            this.bunifuDataViz1.Size = new System.Drawing.Size(897, 297);
+            this.bunifuDataViz1.Size = new System.Drawing.Size(880, 297);
             this.bunifuDataViz1.TabIndex = 3;
             this.bunifuDataViz1.Theme = Bunifu.DataViz.WinForms.BunifuDataViz._theme.theme1;
             this.bunifuDataViz1.Title = "";
@@ -675,7 +729,7 @@
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Location = new System.Drawing.Point(80, 81);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(893, 89);
+            this.panel2.Size = new System.Drawing.Size(876, 89);
             this.panel2.TabIndex = 1;
             // 
             // label6
@@ -686,7 +740,7 @@
             this.label6.BackColor = System.Drawing.Color.White;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label6.Location = new System.Drawing.Point(822, 41);
+            this.label6.Location = new System.Drawing.Point(805, 41);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(39, 20);
             this.label6.TabIndex = 12;
@@ -700,7 +754,7 @@
             this.label7.BackColor = System.Drawing.Color.White;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.label7.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label7.Location = new System.Drawing.Point(822, 19);
+            this.label7.Location = new System.Drawing.Point(805, 19);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(55, 21);
             this.label7.TabIndex = 11;
@@ -712,7 +766,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.BackgroundImage")));
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.Location = new System.Drawing.Point(734, 19);
+            this.pictureBox4.Location = new System.Drawing.Point(717, 19);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(58, 56);
             this.pictureBox4.TabIndex = 10;
@@ -724,7 +778,7 @@
             this.bunifuSeparator2.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
             this.bunifuSeparator2.LineThickness = 1;
-            this.bunifuSeparator2.Location = new System.Drawing.Point(593, 20);
+            this.bunifuSeparator2.Location = new System.Drawing.Point(585, 20);
             this.bunifuSeparator2.Name = "bunifuSeparator2";
             this.bunifuSeparator2.Size = new System.Drawing.Size(36, 55);
             this.bunifuSeparator2.TabIndex = 9;
@@ -738,7 +792,7 @@
             this.label4.BackColor = System.Drawing.Color.White;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label4.Location = new System.Drawing.Point(431, 41);
+            this.label4.Location = new System.Drawing.Point(423, 41);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(39, 20);
             this.label4.TabIndex = 8;
@@ -751,7 +805,7 @@
             this.label5.BackColor = System.Drawing.Color.White;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.label5.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label5.Location = new System.Drawing.Point(431, 20);
+            this.label5.Location = new System.Drawing.Point(423, 20);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(136, 21);
             this.label5.TabIndex = 7;
@@ -762,7 +816,7 @@
             this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(343, 20);
+            this.pictureBox3.Location = new System.Drawing.Point(335, 20);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(58, 56);
             this.pictureBox3.TabIndex = 6;
@@ -774,7 +828,7 @@
             this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
             this.bunifuSeparator1.LineThickness = 1;
-            this.bunifuSeparator1.Location = new System.Drawing.Point(280, 20);
+            this.bunifuSeparator1.Location = new System.Drawing.Point(272, 20);
             this.bunifuSeparator1.Name = "bunifuSeparator1";
             this.bunifuSeparator1.Size = new System.Drawing.Size(36, 55);
             this.bunifuSeparator1.TabIndex = 5;
@@ -837,7 +891,6 @@
             this.tabPage3.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tabPage3.Controls.Add(this.buttonUsun);
             this.tabPage3.Controls.Add(this.label13);
-            this.tabPage3.Controls.Add(this.inputKategorie);
             this.tabPage3.Controls.Add(this.bunifuDropdown3);
             this.tabPage3.Controls.Add(this.bunifuSeparator5);
             this.tabPage3.Controls.Add(this.btnDodajPrzychod);
@@ -878,7 +931,7 @@
             this.buttonUsun.IconVisible = false;
             this.buttonUsun.IconZoom = 90D;
             this.buttonUsun.IsTab = false;
-            this.buttonUsun.Location = new System.Drawing.Point(180, 572);
+            this.buttonUsun.Location = new System.Drawing.Point(84, 582);
             this.buttonUsun.Name = "buttonUsun";
             this.buttonUsun.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.buttonUsun.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(150)))), ((int)(((byte)(128)))));
@@ -903,23 +956,6 @@
             this.label13.Size = new System.Drawing.Size(55, 20);
             this.label13.TabIndex = 12;
             this.label13.Text = "Suma";
-            // 
-            // inputKategorie
-            // 
-            this.inputKategorie.BackColor = System.Drawing.Color.Transparent;
-            this.inputKategorie.BorderRadius = 3;
-            this.inputKategorie.ForeColor = System.Drawing.Color.DimGray;
-            this.inputKategorie.Items = new string[] {
-        "Wszystkie",
-        "1",
-        "3"};
-            this.inputKategorie.Location = new System.Drawing.Point(669, 26);
-            this.inputKategorie.Name = "inputKategorie";
-            this.inputKategorie.NomalColor = System.Drawing.Color.White;
-            this.inputKategorie.onHoverColor = System.Drawing.Color.Silver;
-            this.inputKategorie.selectedIndex = 0;
-            this.inputKategorie.Size = new System.Drawing.Size(125, 42);
-            this.inputKategorie.TabIndex = 10;
             // 
             // bunifuDropdown3
             // 
@@ -952,7 +988,6 @@
             // btnDodajPrzychod
             // 
             this.btnDodajPrzychod.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnDodajPrzychod.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDodajPrzychod.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnDodajPrzychod.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnDodajPrzychod.BorderRadius = 0;
@@ -972,7 +1007,7 @@
             this.btnDodajPrzychod.IconVisible = false;
             this.btnDodajPrzychod.IconZoom = 90D;
             this.btnDodajPrzychod.IsTab = false;
-            this.btnDodajPrzychod.Location = new System.Drawing.Point(909, 20);
+            this.btnDodajPrzychod.Location = new System.Drawing.Point(809, 20);
             this.btnDodajPrzychod.Name = "btnDodajPrzychod";
             this.btnDodajPrzychod.Normalcolor = System.Drawing.Color.MediumSeaGreen;
             this.btnDodajPrzychod.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
@@ -1038,22 +1073,22 @@
             this.gridPrzychody.AllowUserToDeleteRows = false;
             this.gridPrzychody.AllowUserToResizeColumns = false;
             this.gridPrzychody.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(236)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.gridPrzychody.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(236)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle33.ForeColor = System.Drawing.Color.Black;
+            this.gridPrzychody.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle33;
             this.gridPrzychody.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridPrzychody.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.gridPrzychody.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gridPrzychody.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.gridPrzychody.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.MediumSeaGreen;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(143)))), ((int)(((byte)(90)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridPrzychody.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle34.BackColor = System.Drawing.Color.MediumSeaGreen;
+            dataGridViewCellStyle34.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle34.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle34.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(143)))), ((int)(((byte)(90)))));
+            dataGridViewCellStyle34.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridPrzychody.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle34;
             this.gridPrzychody.ColumnHeadersHeight = 40;
             this.gridPrzychody.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -1080,14 +1115,14 @@
             this.gridPrzychody.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.gridPrzychody.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(209)))), ((int)(((byte)(169)))));
             this.gridPrzychody.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(239)))), ((int)(((byte)(226)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(209)))), ((int)(((byte)(169)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridPrzychody.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle36.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(239)))), ((int)(((byte)(226)))));
+            dataGridViewCellStyle36.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle36.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle36.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(209)))), ((int)(((byte)(169)))));
+            dataGridViewCellStyle36.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle36.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridPrzychody.DefaultCellStyle = dataGridViewCellStyle36;
             this.gridPrzychody.EnableHeadersVisualStyles = false;
             this.gridPrzychody.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(232)))), ((int)(((byte)(212)))));
             this.gridPrzychody.HeaderBackColor = System.Drawing.Color.MediumSeaGreen;
@@ -1137,18 +1172,20 @@
             // Ilosc
             // 
             this.Ilosc.DataPropertyName = "Ilosc";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.Ilosc.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.Ilosc.DefaultCellStyle = dataGridViewCellStyle35;
             this.Ilosc.HeaderText = "Ilosc";
             this.Ilosc.Name = "Ilosc";
             this.Ilosc.ReadOnly = true;
             // 
             // buttonImport
             // 
-            this.buttonImport.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.buttonImport.Location = new System.Drawing.Point(906, 83);
+            this.buttonImport.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonImport.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonImport.BackgroundImage")));
+            this.buttonImport.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonImport.Location = new System.Drawing.Point(660, 26);
             this.buttonImport.Name = "buttonImport";
-            this.buttonImport.Size = new System.Drawing.Size(75, 24);
+            this.buttonImport.Size = new System.Drawing.Size(45, 45);
             this.buttonImport.TabIndex = 11;
             this.buttonImport.UseVisualStyleBackColor = false;
             this.buttonImport.Click += new System.EventHandler(this.buttonImport_Click_1);
@@ -1196,7 +1233,7 @@
             this.bunifuFlatButton2.IconVisible = false;
             this.bunifuFlatButton2.IconZoom = 90D;
             this.bunifuFlatButton2.IsTab = false;
-            this.bunifuFlatButton2.Location = new System.Drawing.Point(80, 572);
+            this.bunifuFlatButton2.Location = new System.Drawing.Point(84, 573);
             this.bunifuFlatButton2.Name = "bunifuFlatButton2";
             this.bunifuFlatButton2.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.bunifuFlatButton2.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(150)))), ((int)(((byte)(128)))));
@@ -1215,7 +1252,7 @@
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label22.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label22.Location = new System.Drawing.Point(934, 614);
+            this.label22.Location = new System.Drawing.Point(1009, 605);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(39, 20);
             this.label22.TabIndex = 18;
@@ -1244,7 +1281,7 @@
             this.bunifuSeparator4.LineThickness = 1;
             this.bunifuSeparator4.Location = new System.Drawing.Point(84, 517);
             this.bunifuSeparator4.Name = "bunifuSeparator4";
-            this.bunifuSeparator4.Size = new System.Drawing.Size(908, 35);
+            this.bunifuSeparator4.Size = new System.Drawing.Size(964, 35);
             this.bunifuSeparator4.TabIndex = 15;
             this.bunifuSeparator4.Transparency = 255;
             this.bunifuSeparator4.Vertical = false;
@@ -1252,7 +1289,6 @@
             // bunifuFlatButton1
             // 
             this.bunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bunifuFlatButton1.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButton1.BorderRadius = 0;
@@ -1272,7 +1308,7 @@
             this.bunifuFlatButton1.IconVisible = false;
             this.bunifuFlatButton1.IconZoom = 90D;
             this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(909, 20);
+            this.bunifuFlatButton1.Location = new System.Drawing.Point(805, 20);
             this.bunifuFlatButton1.Name = "bunifuFlatButton1";
             this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.MediumSeaGreen;
             this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
@@ -1294,7 +1330,7 @@
             this.label14.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label14.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label14.Location = new System.Drawing.Point(1018, 555);
+            this.label14.Location = new System.Drawing.Point(993, 555);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(55, 20);
             this.label14.TabIndex = 13;
@@ -1324,9 +1360,9 @@
             this.bunifuTextbox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuTextbox2.ForeColor = System.Drawing.Color.SeaGreen;
             this.bunifuTextbox2.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuTextbox2.Icon")));
-            this.bunifuTextbox2.Location = new System.Drawing.Point(84, 26);
+            this.bunifuTextbox2.Location = new System.Drawing.Point(80, 26);
             this.bunifuTextbox2.Name = "bunifuTextbox2";
-            this.bunifuTextbox2.Size = new System.Drawing.Size(250, 42);
+            this.bunifuTextbox2.Size = new System.Drawing.Size(254, 42);
             this.bunifuTextbox2.TabIndex = 12;
             this.bunifuTextbox2.text = "Szukaj...";
             // 
@@ -1337,22 +1373,22 @@
             this.gridWydatki.AllowUserToDeleteRows = false;
             this.gridWydatki.AllowUserToResizeColumns = false;
             this.gridWydatki.AllowUserToResizeRows = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(236)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            this.gridWydatki.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle37.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(236)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle37.ForeColor = System.Drawing.Color.Black;
+            this.gridWydatki.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle37;
             this.gridWydatki.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridWydatki.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.gridWydatki.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gridWydatki.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.gridWydatki.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.MediumSeaGreen;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(143)))), ((int)(((byte)(90)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridWydatki.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle38.BackColor = System.Drawing.Color.MediumSeaGreen;
+            dataGridViewCellStyle38.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle38.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle38.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(143)))), ((int)(((byte)(90)))));
+            dataGridViewCellStyle38.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle38.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridWydatki.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle38;
             this.gridWydatki.ColumnHeadersHeight = 40;
             this.gridWydatki.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -1379,20 +1415,20 @@
             this.gridWydatki.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.gridWydatki.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(209)))), ((int)(((byte)(169)))));
             this.gridWydatki.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(239)))), ((int)(((byte)(226)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(209)))), ((int)(((byte)(169)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridWydatki.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle39.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(239)))), ((int)(((byte)(226)))));
+            dataGridViewCellStyle39.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle39.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle39.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(209)))), ((int)(((byte)(169)))));
+            dataGridViewCellStyle39.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle39.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridWydatki.DefaultCellStyle = dataGridViewCellStyle39;
             this.gridWydatki.EnableHeadersVisualStyles = false;
             this.gridWydatki.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(232)))), ((int)(((byte)(212)))));
             this.gridWydatki.HeaderBackColor = System.Drawing.Color.MediumSeaGreen;
             this.gridWydatki.HeaderBgColor = System.Drawing.Color.Empty;
             this.gridWydatki.HeaderForeColor = System.Drawing.Color.White;
-            this.gridWydatki.Location = new System.Drawing.Point(84, 74);
+            this.gridWydatki.Location = new System.Drawing.Point(80, 74);
             this.gridWydatki.Name = "gridWydatki";
             this.gridWydatki.ReadOnly = true;
             this.gridWydatki.RowHeadersVisible = false;
@@ -1441,12 +1477,15 @@
             // 
             // buttonImport2
             // 
-            this.buttonImport2.Location = new System.Drawing.Point(898, 83);
+            this.buttonImport2.BackColor = System.Drawing.Color.Transparent;
+            this.buttonImport2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonImport2.BackgroundImage")));
+            this.buttonImport2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonImport2.ForeColor = System.Drawing.Color.Transparent;
+            this.buttonImport2.Location = new System.Drawing.Point(676, 26);
             this.buttonImport2.Name = "buttonImport2";
-            this.buttonImport2.Size = new System.Drawing.Size(75, 23);
+            this.buttonImport2.Size = new System.Drawing.Size(45, 45);
             this.buttonImport2.TabIndex = 17;
-            this.buttonImport2.Text = "button1";
-            this.buttonImport2.UseVisualStyleBackColor = true;
+            this.buttonImport2.UseVisualStyleBackColor = false;
             this.buttonImport2.Click += new System.EventHandler(this.buttonImport2_Click);
             // 
             // tabPage1
@@ -1757,22 +1796,22 @@
             // gridZKonta
             // 
             this.gridZKonta.AllowCustomTheming = false;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(236)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
-            this.gridZKonta.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle40.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(236)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle40.ForeColor = System.Drawing.Color.Black;
+            this.gridZKonta.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle40;
             this.gridZKonta.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridZKonta.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.gridZKonta.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gridZKonta.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.gridZKonta.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.MediumSeaGreen;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(143)))), ((int)(((byte)(90)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridZKonta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle41.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle41.BackColor = System.Drawing.Color.MediumSeaGreen;
+            dataGridViewCellStyle41.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle41.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle41.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(143)))), ((int)(((byte)(90)))));
+            dataGridViewCellStyle41.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle41.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridZKonta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle41;
             this.gridZKonta.ColumnHeadersHeight = 40;
             this.gridZKonta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn7});
@@ -1794,14 +1833,14 @@
             this.gridZKonta.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.gridZKonta.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(209)))), ((int)(((byte)(169)))));
             this.gridZKonta.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(239)))), ((int)(((byte)(226)))));
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(209)))), ((int)(((byte)(169)))));
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridZKonta.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle42.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle42.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(239)))), ((int)(((byte)(226)))));
+            dataGridViewCellStyle42.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle42.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle42.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(209)))), ((int)(((byte)(169)))));
+            dataGridViewCellStyle42.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle42.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridZKonta.DefaultCellStyle = dataGridViewCellStyle42;
             this.gridZKonta.EnableHeadersVisualStyles = false;
             this.gridZKonta.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(232)))), ((int)(((byte)(212)))));
             this.gridZKonta.HeaderBackColor = System.Drawing.Color.MediumSeaGreen;
@@ -1898,22 +1937,22 @@
             // gridZWydatki
             // 
             this.gridZWydatki.AllowCustomTheming = false;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(236)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
-            this.gridZWydatki.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle43.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(236)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle43.ForeColor = System.Drawing.Color.Black;
+            this.gridZWydatki.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle43;
             this.gridZWydatki.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridZWydatki.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.gridZWydatki.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gridZWydatki.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.gridZWydatki.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.MediumSeaGreen;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(143)))), ((int)(((byte)(90)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridZWydatki.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle44.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle44.BackColor = System.Drawing.Color.MediumSeaGreen;
+            dataGridViewCellStyle44.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle44.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle44.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(143)))), ((int)(((byte)(90)))));
+            dataGridViewCellStyle44.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle44.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridZWydatki.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle44;
             this.gridZWydatki.ColumnHeadersHeight = 40;
             this.gridZWydatki.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn6});
@@ -1935,14 +1974,14 @@
             this.gridZWydatki.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.gridZWydatki.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(209)))), ((int)(((byte)(169)))));
             this.gridZWydatki.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(239)))), ((int)(((byte)(226)))));
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(209)))), ((int)(((byte)(169)))));
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridZWydatki.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle45.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle45.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(239)))), ((int)(((byte)(226)))));
+            dataGridViewCellStyle45.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle45.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle45.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(209)))), ((int)(((byte)(169)))));
+            dataGridViewCellStyle45.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle45.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridZWydatki.DefaultCellStyle = dataGridViewCellStyle45;
             this.gridZWydatki.EnableHeadersVisualStyles = false;
             this.gridZWydatki.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(232)))), ((int)(((byte)(212)))));
             this.gridZWydatki.HeaderBackColor = System.Drawing.Color.MediumSeaGreen;
@@ -1993,22 +2032,22 @@
             // gridZPrzychod
             // 
             this.gridZPrzychod.AllowCustomTheming = false;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(236)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black;
-            this.gridZPrzychod.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle46.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(236)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle46.ForeColor = System.Drawing.Color.Black;
+            this.gridZPrzychod.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle46;
             this.gridZPrzychod.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridZPrzychod.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.gridZPrzychod.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gridZPrzychod.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.gridZPrzychod.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.MediumSeaGreen;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(143)))), ((int)(((byte)(90)))));
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridZPrzychod.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle47.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle47.BackColor = System.Drawing.Color.MediumSeaGreen;
+            dataGridViewCellStyle47.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle47.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle47.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(143)))), ((int)(((byte)(90)))));
+            dataGridViewCellStyle47.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle47.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridZPrzychod.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle47;
             this.gridZPrzychod.ColumnHeadersHeight = 40;
             this.gridZPrzychod.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column8});
@@ -2030,14 +2069,14 @@
             this.gridZPrzychod.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.gridZPrzychod.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(209)))), ((int)(((byte)(169)))));
             this.gridZPrzychod.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(239)))), ((int)(((byte)(226)))));
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(209)))), ((int)(((byte)(169)))));
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridZPrzychod.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle48.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle48.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(239)))), ((int)(((byte)(226)))));
+            dataGridViewCellStyle48.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle48.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle48.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(209)))), ((int)(((byte)(169)))));
+            dataGridViewCellStyle48.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle48.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridZPrzychod.DefaultCellStyle = dataGridViewCellStyle48;
             this.gridZPrzychod.EnableHeadersVisualStyles = false;
             this.gridZPrzychod.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(232)))), ((int)(((byte)(212)))));
             this.gridZPrzychod.HeaderBackColor = System.Drawing.Color.MediumSeaGreen;
@@ -2097,59 +2136,10 @@
             this.timer2.Interval = 1000;
             this.timer2.Tick += new System.EventHandler(this.Timer2_Tick);
             // 
-            // col1
+            // timer3
             // 
-            this.col1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.col1.BackColor = System.Drawing.Color.SeaGreen;
-            this.col1.Location = new System.Drawing.Point(782, 16);
-            this.col1.Name = "col1";
-            this.col1.Size = new System.Drawing.Size(49, 21);
-            this.col1.TabIndex = 4;
-            this.col1.TabStop = false;
-            this.col1.Visible = false;
-            // 
-            // col2
-            // 
-            this.col2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.col2.BackColor = System.Drawing.Color.OrangeRed;
-            this.col2.Location = new System.Drawing.Point(609, 32);
-            this.col2.Name = "col2";
-            this.col2.Size = new System.Drawing.Size(49, 21);
-            this.col2.TabIndex = 6;
-            this.col2.TabStop = false;
-            this.col2.Visible = false;
-            // 
-            // col3
-            // 
-            this.col3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.col3.BackColor = System.Drawing.Color.DimGray;
-            this.col3.Location = new System.Drawing.Point(423, 30);
-            this.col3.Name = "col3";
-            this.col3.Size = new System.Drawing.Size(49, 21);
-            this.col3.TabIndex = 8;
-            this.col3.TabStop = false;
-            this.col3.Visible = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.Color.SeaGreen;
-            this.pictureBox5.Location = new System.Drawing.Point(80, 189);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(31, 23);
-            this.pictureBox5.TabIndex = 18;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackColor = System.Drawing.Color.OrangeRed;
-            this.pictureBox6.Location = new System.Drawing.Point(201, 189);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(31, 23);
-            this.pictureBox6.TabIndex = 19;
-            this.pictureBox6.TabStop = false;
+            this.timer3.Enabled = true;
+            this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
             // 
             // formMain
             // 
@@ -2173,6 +2163,11 @@
             this.Strony.ResumeLayout(false);
             this.Dashboard.ResumeLayout(false);
             this.Dashboard.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.col3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.col2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.col1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -2191,11 +2186,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridZKonta)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridZWydatki)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridZPrzychod)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.col1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.col2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.col3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2289,7 +2279,6 @@
         private Bunifu.Framework.UI.BunifuTileButton bunifuTileButton8;
         private Bunifu.Framework.UI.BunifuTileButton bunifuTileButton9;
         private System.Windows.Forms.Timer timer1;
-        private Bunifu.Framework.UI.BunifuDropdown inputKategorie;
         public Bunifu.UI.WinForms.BunifuDataGridView gridPrzychody;
         public System.Windows.Forms.Button buttonImport;
         private System.Windows.Forms.Timer timer2;
@@ -2310,6 +2299,7 @@
         private System.Windows.Forms.PictureBox col3;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Timer timer3;
     }
 }
 

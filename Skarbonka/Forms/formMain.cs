@@ -24,10 +24,10 @@ namespace Skarbonka
 
             File.AppendAllText("przychod.txt", "");
             File.AppendAllText("wydatek.txt", "");
-          //  File.AppendAllText("login.txt", "");
+            File.AppendAllText("login.txt", "");
 
             InitializeComponent();
-        //    new Helper.Popup.transparentBg(this, new Forms.login());
+            new Helper.Popup.transparentBg(this, new Forms.login());
 
             ApplyGridTheme(gridPrzychody);
             ApplyGridTheme(gridWydatki);
@@ -59,6 +59,24 @@ namespace Skarbonka
         {
             
             
+
+
+            string[] lines = File.ReadAllLines(@"przychod.txt");
+            string[] values;
+
+
+            for (int i = 0; i < lines.Length; i++)
+            {
+                values = lines[i].ToString().Split(';');
+                string[] row = new string[values.Length];
+
+                for (int j = 0; j < values.Length; j++)
+                {
+                    row[j] = values[j].Trim();
+                }
+                gridPrzychody.Rows.Add(row);
+            }
+
             string[] lines1 = File.ReadAllLines("wydatek.txt");
             string[] values1;
 
@@ -74,6 +92,8 @@ namespace Skarbonka
                 }
                 gridWydatki.Rows.Add(row);
             }
+
+
 
         }
 
@@ -96,6 +116,7 @@ namespace Skarbonka
                 }
                 gridPrzychody.Rows.Add(row);
             }
+            ReverseDGVRows(gridPrzychody);
 
 
 
@@ -424,9 +445,9 @@ namespace Skarbonka
         {
 
             timer2.Interval = 1000;
-            buttonImport.PerformClick();
-            buttonImport2.PerformClick();
-            button12x.PerformClick();
+            //buttonImport.PerformClick();
+            //buttonImport2.PerformClick();
+            //button12x.PerformClick();
             
             double sum = 0;
             for (int i = 0; i < gridPrzychody.Rows.Count; ++i)
@@ -451,8 +472,6 @@ namespace Skarbonka
             label4.Text = sum1.ToString();
             label6.Text = (sum - sum1).ToString();
 
-            ReverseDGVRows(gridPrzychody);
-            ReverseDGVRows(gridWydatki);
 
 
 
@@ -478,6 +497,7 @@ namespace Skarbonka
                 }
                 gridWydatki.Rows.Add(row);
             }
+            ReverseDGVRows(gridWydatki);
 
         }
 
@@ -531,6 +551,14 @@ namespace Skarbonka
         private void bunifuDataViz3_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void timer3_Tick(object sender, EventArgs e)
+        {
+            buttonImport.PerformClick();
+            buttonImport2.PerformClick();
+            button12x.PerformClick();
+            timer3.Enabled = false;
         }
     }
 }

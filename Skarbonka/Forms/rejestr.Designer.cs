@@ -32,11 +32,13 @@
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtOpis1 = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.txtDla1 = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.txtLog10 = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.txtHas11 = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.bunifuSeparator11 = new Bunifu.Framework.UI.BunifuSeparator();
             this.label20 = new System.Windows.Forms.Label();
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtHas10 = new Bunifu.Framework.UI.BunifuMetroTextbox();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,7 +65,7 @@
             this.bunifuFlatButton1.IconVisible = false;
             this.bunifuFlatButton1.IconZoom = 90D;
             this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(198, 253);
+            this.bunifuFlatButton1.Location = new System.Drawing.Point(199, 271);
             this.bunifuFlatButton1.Name = "bunifuFlatButton1";
             this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.MediumSeaGreen;
             this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
@@ -102,41 +104,42 @@
             this.label1.TabIndex = 69;
             this.label1.Text = "Podaj nazwę użytkownika";
             // 
-            // txtOpis1
+            // txtLog10
             // 
-            this.txtOpis1.BackColor = System.Drawing.Color.White;
-            this.txtOpis1.BorderColorFocused = System.Drawing.Color.Blue;
-            this.txtOpis1.BorderColorIdle = System.Drawing.Color.DarkGray;
-            this.txtOpis1.BorderColorMouseHover = System.Drawing.Color.Blue;
-            this.txtOpis1.BorderThickness = 3;
-            this.txtOpis1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtOpis1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtOpis1.ForeColor = System.Drawing.Color.DarkGray;
-            this.txtOpis1.isPassword = false;
-            this.txtOpis1.Location = new System.Drawing.Point(52, 105);
-            this.txtOpis1.Margin = new System.Windows.Forms.Padding(4);
-            this.txtOpis1.Name = "txtOpis1";
-            this.txtOpis1.Size = new System.Drawing.Size(496, 44);
-            this.txtOpis1.TabIndex = 67;
-            this.txtOpis1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtLog10.BackColor = System.Drawing.Color.White;
+            this.txtLog10.BorderColorFocused = System.Drawing.Color.Blue;
+            this.txtLog10.BorderColorIdle = System.Drawing.Color.DarkGray;
+            this.txtLog10.BorderColorMouseHover = System.Drawing.Color.Blue;
+            this.txtLog10.BorderThickness = 3;
+            this.txtLog10.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtLog10.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtLog10.ForeColor = System.Drawing.Color.DarkGray;
+            this.txtLog10.isPassword = false;
+            this.txtLog10.Location = new System.Drawing.Point(52, 105);
+            this.txtLog10.Margin = new System.Windows.Forms.Padding(4);
+            this.txtLog10.Name = "txtLog10";
+            this.txtLog10.Size = new System.Drawing.Size(496, 44);
+            this.txtLog10.TabIndex = 67;
+            this.txtLog10.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtLog10.OnValueChanged += new System.EventHandler(this.txtLog10_OnValueChanged);
             // 
-            // txtDla1
+            // txtHas11
             // 
-            this.txtDla1.BackColor = System.Drawing.Color.White;
-            this.txtDla1.BorderColorFocused = System.Drawing.Color.Blue;
-            this.txtDla1.BorderColorIdle = System.Drawing.Color.DarkGray;
-            this.txtDla1.BorderColorMouseHover = System.Drawing.Color.Blue;
-            this.txtDla1.BorderThickness = 3;
-            this.txtDla1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtDla1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtDla1.ForeColor = System.Drawing.Color.DarkGray;
-            this.txtDla1.isPassword = false;
-            this.txtDla1.Location = new System.Drawing.Point(53, 157);
-            this.txtDla1.Margin = new System.Windows.Forms.Padding(4);
-            this.txtDla1.Name = "txtDla1";
-            this.txtDla1.Size = new System.Drawing.Size(496, 44);
-            this.txtDla1.TabIndex = 66;
-            this.txtDla1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtHas11.BackColor = System.Drawing.Color.White;
+            this.txtHas11.BorderColorFocused = System.Drawing.Color.Blue;
+            this.txtHas11.BorderColorIdle = System.Drawing.Color.DarkGray;
+            this.txtHas11.BorderColorMouseHover = System.Drawing.Color.Blue;
+            this.txtHas11.BorderThickness = 3;
+            this.txtHas11.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtHas11.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtHas11.ForeColor = System.Drawing.Color.DarkGray;
+            this.txtHas11.isPassword = true;
+            this.txtHas11.Location = new System.Drawing.Point(53, 157);
+            this.txtHas11.Margin = new System.Windows.Forms.Padding(4);
+            this.txtHas11.Name = "txtHas11";
+            this.txtHas11.Size = new System.Drawing.Size(496, 44);
+            this.txtHas11.TabIndex = 66;
+            this.txtHas11.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuSeparator11
             // 
@@ -180,22 +183,57 @@
             this.bunifuImageButton1.Zoom = 10;
             this.bunifuImageButton1.Click += new System.EventHandler(this.bunifuImageButton1_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.White;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.label3.ForeColor = System.Drawing.Color.DarkGray;
+            this.label3.Location = new System.Drawing.Point(64, 205);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(100, 17);
+            this.label3.TabIndex = 73;
+            this.label3.Text = "Powtórz hasło";
+            // 
+            // txtHas10
+            // 
+            this.txtHas10.BackColor = System.Drawing.Color.White;
+            this.txtHas10.BorderColorFocused = System.Drawing.Color.Blue;
+            this.txtHas10.BorderColorIdle = System.Drawing.Color.DarkGray;
+            this.txtHas10.BorderColorMouseHover = System.Drawing.Color.Blue;
+            this.txtHas10.BorderThickness = 3;
+            this.txtHas10.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtHas10.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtHas10.ForeColor = System.Drawing.Color.DarkGray;
+            this.txtHas10.isPassword = true;
+            this.txtHas10.Location = new System.Drawing.Point(53, 209);
+            this.txtHas10.Margin = new System.Windows.Forms.Padding(4);
+            this.txtHas10.Name = "txtHas10";
+            this.txtHas10.Size = new System.Drawing.Size(496, 44);
+            this.txtHas10.TabIndex = 72;
+            this.txtHas10.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
             // rejestr
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(596, 379);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtHas10);
             this.Controls.Add(this.bunifuFlatButton1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtOpis1);
-            this.Controls.Add(this.txtDla1);
+            this.Controls.Add(this.txtLog10);
+            this.Controls.Add(this.txtHas11);
             this.Controls.Add(this.bunifuSeparator11);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.bunifuImageButton1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "rejestr";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "rejestr";
+            this.TopMost = true;
+            this.Load += new System.EventHandler(this.rejestr_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -207,10 +245,12 @@
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private Bunifu.Framework.UI.BunifuMetroTextbox txtOpis1;
-        private Bunifu.Framework.UI.BunifuMetroTextbox txtDla1;
+        private Bunifu.Framework.UI.BunifuMetroTextbox txtLog10;
+        private Bunifu.Framework.UI.BunifuMetroTextbox txtHas11;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator11;
         private System.Windows.Forms.Label label20;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
+        private System.Windows.Forms.Label label3;
+        private Bunifu.Framework.UI.BunifuMetroTextbox txtHas10;
     }
 }

@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.IO;
 namespace Skarbonka.Forms
 {
     public partial class login : Form
@@ -19,7 +19,24 @@ namespace Skarbonka.Forms
 
         private void btnZaloguj_Click(object sender, EventArgs e)
         {
-            this.Close();
+            string log = txtLog.Text;
+            string has = txtHas.Text;
+            foreach (string line in File.ReadLines(@"login.txt"))
+            {
+                if (log != "" & has != "")
+                {
+                    if (line.Contains(log) & line.Contains(has))
+                    {
+                        this.Close();
+                    }
+                    else
+                        MessageBox.Show("Zły login lub hasło!", "Logowanie", MessageBoxButtons.OK);
+                    //zmienic na text w labelu
+                }
+                else
+                    MessageBox.Show("Zły login lub hasło!", "Logowanie", MessageBoxButtons.OK);
+            }
+
         }
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)
@@ -32,8 +49,6 @@ namespace Skarbonka.Forms
         {
             
             new Helper.Popup.transparentBg(this, new Forms.rejestr());
-            this.Close();
-
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -50,6 +65,8 @@ namespace Skarbonka.Forms
         {
 
         }
+       
+
 
         private void bunifuSeparator11_Load(object sender, EventArgs e)
         {

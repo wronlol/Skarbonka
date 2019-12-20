@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Skarbonka.Forms
 {
@@ -19,13 +20,33 @@ namespace Skarbonka.Forms
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
-            new Helper.Popup.transparentBg(this, new Forms.login());
-            this.Close();
+
+            if (txtHas11.Text == txtHas10.Text)
+            {
+                File.AppendAllText("login.txt", txtLog10.Text + ";");
+                File.AppendAllText("login.txt", txtHas11.Text + Environment.NewLine);
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Hasła nie są takie same", "Rejestracja",
+                MessageBoxButtons.OK);
+            }
         }
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void rejestr_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtLog10_OnValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
