@@ -21,20 +21,22 @@ namespace Skarbonka.Forms
         {
             string log = txtLog.Text;
             string has = txtHas.Text;
+
             foreach (string line in File.ReadLines(@"login.txt"))
             {
                 if (log != "" & has != "")
                 {
                     if (line.Contains(log) & line.Contains(has))
                     {
+                        File.WriteAllText("current.txt", log);
+
                         this.Close();
                     }
                     else
-                        MessageBox.Show("Zły login lub hasło!", "Logowanie", MessageBoxButtons.OK);
-                    //zmienic na text w labelu
+                        lblWrong.Text=("Zły login lub hasło!");
                 }
                 else
-                    MessageBox.Show("Zły login lub hasło!", "Logowanie", MessageBoxButtons.OK);
+                    lblWrong.Text=("Zły login lub hasło!");
             }
 
         }

@@ -38,6 +38,7 @@
             this.label20 = new System.Windows.Forms.Label();
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.lblWrong = new Bunifu.Framework.UI.BunifuCustomLabel();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -225,12 +226,23 @@
             this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
             this.bunifuFlatButton1.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
             // 
+            // lblWrong
+            // 
+            this.lblWrong.AutoSize = true;
+            this.lblWrong.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.lblWrong.ForeColor = System.Drawing.Color.Salmon;
+            this.lblWrong.Location = new System.Drawing.Point(228, 210);
+            this.lblWrong.Name = "lblWrong";
+            this.lblWrong.Size = new System.Drawing.Size(0, 19);
+            this.lblWrong.TabIndex = 63;
+            // 
             // login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(557, 368);
             this.ControlBox = false;
+            this.Controls.Add(this.lblWrong);
             this.Controls.Add(this.bunifuFlatButton1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -262,5 +274,6 @@
         private System.Windows.Forms.Label label20;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
+        private Bunifu.Framework.UI.BunifuCustomLabel lblWrong;
     }
 }

@@ -17,17 +17,20 @@ namespace Skarbonka
 
     public partial class formMain : Form
     {
+        string txtprzych = "przychod.txt";
+        string txtwyd = "wydatek.txt";
+        string txtlog = "login.txt";
         public formMain()
         {
 
 
 
-            File.AppendAllText("przychod.txt", "");
-            File.AppendAllText("wydatek.txt", "");
-            File.AppendAllText("login.txt", "");
+            File.AppendAllText(txtprzych, "");
+            File.AppendAllText(txtwyd, "");
+            File.AppendAllText(txtlog, "");
+            new Helper.Popup.transparentBg(this, new Forms.login());
 
             InitializeComponent();
-            new Helper.Popup.transparentBg(this, new Forms.login());
 
             ApplyGridTheme(gridPrzychody);
             ApplyGridTheme(gridWydatki);
@@ -40,44 +43,21 @@ namespace Skarbonka
             bunifuDataViz1.colorSet.Add(col2.BackColor);
             bunifuDataViz1.colorSet.Add(col3.BackColor);
 
-            klik();
-
-            ReloadIncome();
-            DataTable table = new DataTable();
-            
-
-
-
-
-
 
         }
 
 
 
-        private void klik()
+
+
+
+
+        
+                    private void klik()
         {
-            
-            
 
 
-            string[] lines = File.ReadAllLines(@"przychod.txt");
-            string[] values;
-
-
-            for (int i = 0; i < lines.Length; i++)
-            {
-                values = lines[i].ToString().Split(';');
-                string[] row = new string[values.Length];
-
-                for (int j = 0; j < values.Length; j++)
-                {
-                    row[j] = values[j].Trim();
-                }
-                gridPrzychody.Rows.Add(row);
-            }
-
-            string[] lines1 = File.ReadAllLines("wydatek.txt");
+            string[] lines1 = File.ReadAllLines(txtwyd);
             string[] values1;
 
 
@@ -101,7 +81,7 @@ namespace Skarbonka
         {
 
             gridPrzychody.Rows.Clear();
-            string[] lines = File.ReadAllLines(@"przychod.txt");
+            string[] lines = File.ReadAllLines(@txtprzych);
             string[] values;
 
 
@@ -118,36 +98,32 @@ namespace Skarbonka
             }
             ReverseDGVRows(gridPrzychody);
 
+        }
+
+        private void buttonImport2_Click(object sender, EventArgs e)
+        {
+
+            gridPrzychody.Rows.Clear();
+            string[] lines = File.ReadAllLines(@txtprzych);
+            string[] values;
 
 
+            for (int i = 0; i < lines.Length; i++)
+            {
+                values = lines[i].ToString().Split(';');
+                string[] row = new string[values.Length];
 
-
+                for (int j = 0; j < values.Length; j++)
+                {
+                    row[j] = values[j].Trim();
+                }
+                gridPrzychody.Rows.Add(row);
+            }
+            ReverseDGVRows(gridPrzychody);
 
         }
 
 
-        void ReloadIncome()
-        {
-            gridPrzychody.Rows.Clear();
-
-            var przychodTransakcje = DbContext.GetInstance().GetCollection<PrzychodTransakcje>("przychod_transakcja")
-                    .FindAll();
-
-            lblTotoIncome.Text = przychodTransakcje.Sum(r => r.Ilosc).ToString("N0");
-
-            foreach (var item in przychodTransakcje)
-            {
-                gridPrzychody.Rows.Add(new object[]{
-                    "   "+ item.Kod,
-                    item.Od,
-                    item.Opis,
-                    item.Kategoria.Name,
-                    item.Konto.Name,
-                    item.Ilosc.ToString("N0")
-                });
-            }
-                
-         }
 
         void ApplyGridTheme(Bunifu.UI.WinForms.BunifuDataGridView grid)
         {
@@ -239,14 +215,14 @@ namespace Skarbonka
 
             
 
-            foreach (string line in File.ReadLines(@"przychod.txt"))
+            foreach (string line in File.ReadLines(@txtprzych))
             {
                 string lastWord = line.Split(';').Last();
                 int ix = System.Convert.ToInt32(lastWord);
                 przychod.addLabely("", ix);
             }
 
-            foreach (string line in File.ReadLines(@"wydatek.txt"))
+            foreach (string line in File.ReadLines(@txtwyd))
             {
                 string lastWord = line.Split(';').Last();
                 int ix = System.Convert.ToInt32(lastWord);
@@ -273,7 +249,7 @@ namespace Skarbonka
             Double wyplatax = 0;
 
 
-            foreach (string line in File.ReadLines(@"przychod.txt"))
+            foreach (string line in File.ReadLines(@txtprzych))
             {
 
                 if (line.Contains("Wypłata"))
@@ -316,7 +292,7 @@ namespace Skarbonka
 
 
 
-            foreach (string line in File.ReadLines(@"wydatek.txt"))
+            foreach (string line in File.ReadLines(@txtwyd))
             {
 
                 if (line.Contains("Zakupy"))
@@ -444,11 +420,12 @@ namespace Skarbonka
         private void Timer2_Tick(object sender, EventArgs e)
         {
 
-            timer2.Interval = 1000;
+            timer2.Interval = 10000;
             //buttonImport.PerformClick();
             //buttonImport2.PerformClick();
             //button12x.PerformClick();
             
+
             double sum = 0;
             for (int i = 0; i < gridPrzychody.Rows.Count; ++i)
             {
@@ -478,26 +455,26 @@ namespace Skarbonka
 
         }
 
-        private void buttonImport2_Click(object sender, EventArgs e)
+        private void button69_Click(object sender, EventArgs e)
         {
-            gridWydatki.Rows.Clear();
 
-            string[] lines1 = File.ReadAllLines("wydatek.txt");
-            string[] values1;
+            gridPrzychody.Rows.Clear();
+            string[] lines = File.ReadAllLines(@txtprzych);
+            string[] values;
 
 
-            for (int i = 0; i < lines1.Length; i++)
+            for (int i = 0; i < lines.Length; i++)
             {
-                values1 = lines1[i].ToString().Split(';');
-                string[] row = new string[values1.Length];
+                values = lines[i].ToString().Split(';');
+                string[] row = new string[values.Length];
 
-                for (int j = 0; j < values1.Length; j++)
+                for (int j = 0; j < values.Length; j++)
                 {
-                    row[j] = values1[j].Trim();
+                    row[j] = values[j].Trim();
                 }
-                gridWydatki.Rows.Add(row);
+                gridPrzychody.Rows.Add(row);
             }
-            ReverseDGVRows(gridWydatki);
+            ReverseDGVRows(gridPrzychody);
 
         }
 
@@ -509,7 +486,7 @@ namespace Skarbonka
         private void button12x_Click(object sender, EventArgs e)
         {
             gridPrzychody.Rows.Clear();
-            string[] lines = File.ReadAllLines(@"przychod.txt");
+            string[] lines = File.ReadAllLines(@txtprzych);
             string[] values;
 
 
@@ -540,12 +517,12 @@ namespace Skarbonka
 
         private void bunifuFlatButton2_Click(object sender, EventArgs e)
         {
-            DeleteLastLine("wydatek.txt");
+            DeleteLastLine(txtwyd);
         }
 
         private void buttonUsun_Click(object sender, EventArgs e)
         {
-            DeleteLastLine("przychod.txt");
+            DeleteLastLine(txtprzych);
         }
 
         private void bunifuDataViz3_Load(object sender, EventArgs e)
@@ -555,10 +532,19 @@ namespace Skarbonka
 
         private void timer3_Tick(object sender, EventArgs e)
         {
-            buttonImport.PerformClick();
-            buttonImport2.PerformClick();
-            button12x.PerformClick();
+            foreach (string line in File.ReadLines(@"current.txt"))
+            {
+                lblWitaj.Text = line.ToString();
+            }
+
+            button69.PerformClick();
+            klik();
             timer3.Enabled = false;
+        }
+
+        private void bunifuCustomLabel1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

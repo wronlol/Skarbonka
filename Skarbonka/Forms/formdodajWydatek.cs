@@ -13,6 +13,7 @@ namespace Skarbonka.Forms
 {
     public partial class formdodajWydatek : Form
     {
+        string txtwyd = "wydatek.txt";
         public formdodajWydatek()
         {
             InitializeComponent();
@@ -30,12 +31,12 @@ namespace Skarbonka.Forms
 
         private void btnDodajPrzychod_Click(object sender, EventArgs e)
         {
-            File.AppendAllText("wydatek.txt", txtId1.Text + ";");
-            File.AppendAllText("wydatek.txt", txtDla1.Text + ";");
-            File.AppendAllText("wydatek.txt", txtOpis1.Text + ";");
-            File.AppendAllText("wydatek.txt", txtKategoria1.selectedValue.Trim() + ";");
-            File.AppendAllText("wydatek.txt", txtKonto1.selectedValue.Trim() + ";");
-            File.AppendAllText("wydatek.txt", txtIlosc1.Text + Environment.NewLine);
+            File.AppendAllText(txtwyd, txtId1.Text + ";");
+            File.AppendAllText(txtwyd, txtDla1.Text + ";");
+            File.AppendAllText(txtwyd, txtOpis1.Text + ";");
+            File.AppendAllText(txtwyd, txtKategoria1.selectedValue.Trim() + ";");
+            File.AppendAllText(txtwyd, txtKonto1.selectedValue.Trim() + ";");
+            File.AppendAllText(txtwyd, txtIlosc1.Text + Environment.NewLine);
             this.Close();
         }
     }

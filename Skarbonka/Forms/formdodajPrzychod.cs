@@ -15,6 +15,7 @@ namespace Skarbonka.Forms
 
     public partial class formdodajPrzychod : Form
     {
+        string txtprzych = "przychod.txt";
 
 
         public formdodajPrzychod(DateTime date)
@@ -69,12 +70,12 @@ namespace Skarbonka.Forms
 
         private void btnDodajPrzychod_Click(object sender, EventArgs e)
         {
-            File.AppendAllText("przychod.txt", txtKod.Text + ";");
-            File.AppendAllText("przychod.txt", txtOd.Text + ";");
-            File.AppendAllText("przychod.txt", txtOpis.Text + ";");
-            File.AppendAllText("przychod.txt", txtKategoria.selectedValue.Trim() + ";");
-            File.AppendAllText("przychod.txt", txtKonto.selectedValue.Trim() + ";");
-            File.AppendAllText("przychod.txt", txtIlosc.Text + Environment.NewLine);            
+            File.AppendAllText(txtprzych, txtKod.Text + ";");
+            File.AppendAllText(txtprzych, txtOd.Text + ";");
+            File.AppendAllText(txtprzych, txtOpis.Text + ";");
+            File.AppendAllText(txtprzych, txtKategoria.selectedValue.Trim() + ";");
+            File.AppendAllText(txtprzych, txtKonto.selectedValue.Trim() + ";");
+            File.AppendAllText(txtprzych, txtIlosc.Text + Environment.NewLine);            
             this.Close();
 
 
