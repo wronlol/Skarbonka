@@ -24,8 +24,12 @@ namespace Skarbonka
         string txtlog = "login.txt";
 
 
+
         public formMain()
         {
+            File.AppendAllText("current.txt", "");
+            File.AppendAllText("login.txt", "admin;admin");
+
 
             string curs = "";
 
