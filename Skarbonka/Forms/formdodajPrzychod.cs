@@ -23,35 +23,18 @@ namespace Skarbonka.Forms
 
 
 
+            string curs = "";
 
+            foreach (string line in File.ReadLines(@"current.txt"))
+            {
+                curs = line.ToString();
+            }
+
+            txtprzych = curs + "przychod.txt";
 
             InitializeComponent();
 
-            foreach (var item in DbContext.GetInstance().GetCollection<PrzychodKat>("przychod_kategorie").FindAll())
-            {
-                txtKategoria.AddItem(item.Name);
-            }
 
-            foreach (var item in DbContext.GetInstance().GetCollection<Konta>("konta").FindAll())
-            {
-                txtKategoria.AddItem(item.Name);
-            }
-
-            double ilosc = 0;
-            ilosc = double.Parse(txtIlosc.Text.Trim());
-            txtData.Value = date;
-
-            PrzychodTransakcje przychodTransakcja = new PrzychodTransakcje()
-            {
-                Ilosc = ilosc,
-                Data = txtData.Value,
-                Opis = txtOpis.Text.Trim(),
-                Od = txtOd.Text.Trim(),
-                Kod = txtKod.Text.Trim()
-
-            };
-
-            DbContext.GetInstance().GetCollection<PrzychodTransakcje>("przychod_transakcje").Insert(przychodTransakcja);
 
 
         }

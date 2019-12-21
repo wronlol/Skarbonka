@@ -15,8 +15,18 @@ namespace Skarbonka.Forms
     {
 
         string txtwyd = "wydatek.txt";
+
         public formdodajWydatek()
         {
+            string curs = "";
+
+            foreach (string line in File.ReadLines(@"current.txt"))
+            {
+                curs = line.ToString();
+            }
+
+            txtwyd = curs + "wydatek.txt";
+
             InitializeComponent();
         }
 

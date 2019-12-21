@@ -60,7 +60,9 @@
             this.przDashboard = new Bunifu.Framework.UI.BunifuFlatButton();
             this.Strony = new Bunifu.UI.WinForms.BunifuPages();
             this.Dashboard = new System.Windows.Forms.TabPage();
+            this.button69 = new System.Windows.Forms.Button();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.lblWitaj = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.bunifuSeparator3 = new Bunifu.Framework.UI.BunifuSeparator();
             this.bunifuDataViz3 = new Bunifu.DataViz.WinForms.BunifuDataViz();
@@ -154,9 +156,7 @@
             this.label15 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.button69 = new System.Windows.Forms.Button();
             this.timer3 = new System.Windows.Forms.Timer(this.components);
-            this.lblWitaj = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panelTytul.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelNaglowek.SuspendLayout();
@@ -506,6 +506,16 @@
             this.Dashboard.Text = "Dashboard";
             this.Dashboard.Click += new System.EventHandler(this.Dashboard_Click);
             // 
+            // button69
+            // 
+            this.button69.ForeColor = System.Drawing.Color.Transparent;
+            this.button69.Location = new System.Drawing.Point(1011, 216);
+            this.button69.Name = "button69";
+            this.button69.Size = new System.Drawing.Size(0, 0);
+            this.button69.TabIndex = 20;
+            this.button69.UseVisualStyleBackColor = true;
+            this.button69.Click += new System.EventHandler(this.button69_Click);
+            // 
             // pictureBox6
             // 
             this.pictureBox6.BackColor = System.Drawing.Color.OrangeRed;
@@ -514,6 +524,17 @@
             this.pictureBox6.Size = new System.Drawing.Size(31, 23);
             this.pictureBox6.TabIndex = 19;
             this.pictureBox6.TabStop = false;
+            // 
+            // lblWitaj
+            // 
+            this.lblWitaj.AutoSize = true;
+            this.lblWitaj.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.lblWitaj.Location = new System.Drawing.Point(76, 30);
+            this.lblWitaj.Name = "lblWitaj";
+            this.lblWitaj.Size = new System.Drawing.Size(46, 21);
+            this.lblWitaj.TabIndex = 3;
+            this.lblWitaj.Text = "Witaj";
+            this.lblWitaj.Click += new System.EventHandler(this.bunifuCustomLabel1_Click);
             // 
             // pictureBox5
             // 
@@ -530,7 +551,7 @@
             this.bunifuSeparator3.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator3.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(211)))), ((int)(((byte)(211)))));
             this.bunifuSeparator3.LineThickness = 1;
-            this.bunifuSeparator3.Location = new System.Drawing.Point(80, 543);
+            this.bunifuSeparator3.Location = new System.Drawing.Point(72, 543);
             this.bunifuSeparator3.Name = "bunifuSeparator3";
             this.bunifuSeparator3.Size = new System.Drawing.Size(893, 18);
             this.bunifuSeparator3.TabIndex = 16;
@@ -559,7 +580,7 @@
             0});
             this.bunifuDataViz3.BackColor = System.Drawing.Color.White;
             this.bunifuDataViz3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuDataViz3.Location = new System.Drawing.Point(428, 616);
+            this.bunifuDataViz3.Location = new System.Drawing.Point(420, 616);
             this.bunifuDataViz3.Name = "bunifuDataViz3";
             this.bunifuDataViz3.Size = new System.Drawing.Size(293, 297);
             this.bunifuDataViz3.TabIndex = 13;
@@ -574,7 +595,7 @@
             this.label12.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 15F);
             this.label12.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label12.Location = new System.Drawing.Point(75, 564);
+            this.label12.Location = new System.Drawing.Point(67, 564);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(182, 28);
             this.label12.TabIndex = 12;
@@ -601,12 +622,13 @@
             0});
             this.bunifuDataViz2.BackColor = System.Drawing.Color.White;
             this.bunifuDataViz2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuDataViz2.Location = new System.Drawing.Point(80, 616);
+            this.bunifuDataViz2.Location = new System.Drawing.Point(72, 616);
             this.bunifuDataViz2.Name = "bunifuDataViz2";
             this.bunifuDataViz2.Size = new System.Drawing.Size(287, 297);
             this.bunifuDataViz2.TabIndex = 11;
             this.bunifuDataViz2.Theme = Bunifu.DataViz.WinForms.BunifuDataViz._theme.theme1;
             this.bunifuDataViz2.Title = "";
+            this.bunifuDataViz2.Load += new System.EventHandler(this.bunifuDataViz2_Load);
             // 
             // label11
             // 
@@ -615,7 +637,7 @@
             this.label11.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 15F);
             this.label11.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label11.Location = new System.Drawing.Point(423, 564);
+            this.label11.Location = new System.Drawing.Point(415, 564);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(201, 28);
             this.label11.TabIndex = 10;
@@ -628,7 +650,7 @@
             this.col3.BackColor = System.Drawing.Color.DimGray;
             this.col3.Location = new System.Drawing.Point(433, 30);
             this.col3.Name = "col3";
-            this.col3.Size = new System.Drawing.Size(15, 21);
+            this.col3.Size = new System.Drawing.Size(0, 21);
             this.col3.TabIndex = 8;
             this.col3.TabStop = false;
             this.col3.Visible = false;
@@ -655,7 +677,7 @@
             this.col2.BackColor = System.Drawing.Color.OrangeRed;
             this.col2.Location = new System.Drawing.Point(454, 30);
             this.col2.Name = "col2";
-            this.col2.Size = new System.Drawing.Size(15, 21);
+            this.col2.Size = new System.Drawing.Size(0, 21);
             this.col2.TabIndex = 6;
             this.col2.TabStop = false;
             this.col2.Visible = false;
@@ -682,7 +704,7 @@
             this.col1.BackColor = System.Drawing.Color.SeaGreen;
             this.col1.Location = new System.Drawing.Point(475, 30);
             this.col1.Name = "col1";
-            this.col1.Size = new System.Drawing.Size(15, 21);
+            this.col1.Size = new System.Drawing.Size(0, 21);
             this.col1.TabIndex = 4;
             this.col1.TabStop = false;
             this.col1.Visible = false;
@@ -711,7 +733,7 @@
             this.bunifuDataViz1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuDataViz1.Location = new System.Drawing.Point(80, 222);
             this.bunifuDataViz1.Name = "bunifuDataViz1";
-            this.bunifuDataViz1.Size = new System.Drawing.Size(893, 297);
+            this.bunifuDataViz1.Size = new System.Drawing.Size(876, 297);
             this.bunifuDataViz1.TabIndex = 3;
             this.bunifuDataViz1.Theme = Bunifu.DataViz.WinForms.BunifuDataViz._theme.theme1;
             this.bunifuDataViz1.Title = "";
@@ -734,7 +756,7 @@
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Location = new System.Drawing.Point(80, 81);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(893, 89);
+            this.panel2.Size = new System.Drawing.Size(876, 89);
             this.panel2.TabIndex = 1;
             // 
             // label6
@@ -745,7 +767,7 @@
             this.label6.BackColor = System.Drawing.Color.White;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label6.Location = new System.Drawing.Point(792, 41);
+            this.label6.Location = new System.Drawing.Point(775, 41);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(39, 20);
             this.label6.TabIndex = 12;
@@ -759,7 +781,7 @@
             this.label7.BackColor = System.Drawing.Color.White;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.label7.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label7.Location = new System.Drawing.Point(792, 19);
+            this.label7.Location = new System.Drawing.Point(775, 19);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(55, 21);
             this.label7.TabIndex = 11;
@@ -771,7 +793,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.BackgroundImage")));
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.Location = new System.Drawing.Point(704, 19);
+            this.pictureBox4.Location = new System.Drawing.Point(687, 19);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(58, 56);
             this.pictureBox4.TabIndex = 10;
@@ -783,7 +805,7 @@
             this.bunifuSeparator2.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
             this.bunifuSeparator2.LineThickness = 1;
-            this.bunifuSeparator2.Location = new System.Drawing.Point(593, 20);
+            this.bunifuSeparator2.Location = new System.Drawing.Point(585, 20);
             this.bunifuSeparator2.Name = "bunifuSeparator2";
             this.bunifuSeparator2.Size = new System.Drawing.Size(36, 55);
             this.bunifuSeparator2.TabIndex = 9;
@@ -797,7 +819,7 @@
             this.label4.BackColor = System.Drawing.Color.White;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label4.Location = new System.Drawing.Point(431, 41);
+            this.label4.Location = new System.Drawing.Point(423, 41);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(39, 20);
             this.label4.TabIndex = 8;
@@ -810,7 +832,7 @@
             this.label5.BackColor = System.Drawing.Color.White;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.label5.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label5.Location = new System.Drawing.Point(431, 20);
+            this.label5.Location = new System.Drawing.Point(423, 20);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(136, 21);
             this.label5.TabIndex = 7;
@@ -821,7 +843,7 @@
             this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(343, 20);
+            this.pictureBox3.Location = new System.Drawing.Point(335, 20);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(58, 56);
             this.pictureBox3.TabIndex = 6;
@@ -833,7 +855,7 @@
             this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
             this.bunifuSeparator1.LineThickness = 1;
-            this.bunifuSeparator1.Location = new System.Drawing.Point(280, 20);
+            this.bunifuSeparator1.Location = new System.Drawing.Point(272, 20);
             this.bunifuSeparator1.Name = "bunifuSeparator1";
             this.bunifuSeparator1.Size = new System.Drawing.Size(36, 55);
             this.bunifuSeparator1.TabIndex = 5;
@@ -2141,31 +2163,10 @@
             this.timer2.Interval = 1000;
             this.timer2.Tick += new System.EventHandler(this.Timer2_Tick);
             // 
-            // button69
-            // 
-            this.button69.ForeColor = System.Drawing.Color.Transparent;
-            this.button69.Location = new System.Drawing.Point(1011, 216);
-            this.button69.Name = "button69";
-            this.button69.Size = new System.Drawing.Size(0, 0);
-            this.button69.TabIndex = 20;
-            this.button69.UseVisualStyleBackColor = true;
-            this.button69.Click += new System.EventHandler(this.button69_Click);
-            // 
             // timer3
             // 
             this.timer3.Enabled = true;
             this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
-            // 
-            // lblWitaj
-            // 
-            this.lblWitaj.AutoSize = true;
-            this.lblWitaj.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.lblWitaj.Location = new System.Drawing.Point(76, 30);
-            this.lblWitaj.Name = "lblWitaj";
-            this.lblWitaj.Size = new System.Drawing.Size(46, 21);
-            this.lblWitaj.TabIndex = 3;
-            this.lblWitaj.Text = "Witaj";
-            this.lblWitaj.Click += new System.EventHandler(this.bunifuCustomLabel1_Click);
             // 
             // formMain
             // 

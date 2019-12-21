@@ -18,15 +18,24 @@ namespace Skarbonka
     public partial class formMain : Form
     {
 
-        string txtprzych = "przychod.txt";
-        string txtwyd =  "wydatek.txt";
-        string txtlog = "login.txt";
 
+        string txtprzych = "przychod.txt";
+        string txtwyd = "wydatek.txt";
+        string txtlog = "login.txt";
 
 
         public formMain()
         {
 
+            string curs = "";
+
+            foreach (string line in File.ReadLines(@"current.txt"))
+            {
+                curs = line.ToString();
+            }
+
+            txtprzych = curs + "przychod.txt";
+            txtwyd = curs + "wydatek.txt";
 
             File.AppendAllText(txtprzych, "");
             File.AppendAllText(txtwyd, "");
@@ -106,8 +115,8 @@ namespace Skarbonka
         private void buttonImport2_Click(object sender, EventArgs e)
         {
 
-            gridPrzychody.Rows.Clear();
-            string[] lines = File.ReadAllLines(@txtprzych);
+            gridWydatki.Rows.Clear();
+            string[] lines = File.ReadAllLines(@txtwyd);
             string[] values;
 
 
@@ -120,9 +129,9 @@ namespace Skarbonka
                 {
                     row[j] = values[j].Trim();
                 }
-                gridPrzychody.Rows.Add(row);
+                gridWydatki.Rows.Add(row);
             }
-            ReverseDGVRows(gridPrzychody);
+            ReverseDGVRows(gridWydatki);
 
         }
 
@@ -553,6 +562,11 @@ namespace Skarbonka
         }
 
         private void podajDate_onValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuDataViz2_Load(object sender, EventArgs e)
         {
 
         }
