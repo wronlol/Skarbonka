@@ -14,6 +14,8 @@ namespace Skarbonka.Forms
     {
         public login()
         {
+
+
             InitializeComponent();
         }
 
@@ -29,7 +31,6 @@ namespace Skarbonka.Forms
                     if (line.Contains(log) & line.Contains(has))
                     {
                         File.WriteAllText("current.txt", log);
-
                         this.Close();
                     }
                     else

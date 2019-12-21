@@ -64,7 +64,7 @@
             this.label1.Location = new System.Drawing.Point(55, 92);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(138, 17);
-            this.label1.TabIndex = 60;
+            this.label1.TabIndex = 7;
             this.label1.Text = "Nazwa użytkownika";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
@@ -99,7 +99,7 @@
             this.btnZaloguj.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnZaloguj.selected = false;
             this.btnZaloguj.Size = new System.Drawing.Size(183, 48);
-            this.btnZaloguj.TabIndex = 58;
+            this.btnZaloguj.TabIndex = 2;
             this.btnZaloguj.Text = "Zaloguj";
             this.btnZaloguj.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnZaloguj.Textcolor = System.Drawing.Color.White;
@@ -116,12 +116,14 @@
             this.txtLog.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtLog.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txtLog.ForeColor = System.Drawing.Color.DarkGray;
+            this.txtLog.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.txtLog.isPassword = false;
             this.txtLog.Location = new System.Drawing.Point(45, 99);
             this.txtLog.Margin = new System.Windows.Forms.Padding(4);
             this.txtLog.Name = "txtLog";
             this.txtLog.Size = new System.Drawing.Size(496, 44);
-            this.txtLog.TabIndex = 56;
+            this.txtLog.TabIndex = 0;
+            this.txtLog.TabStop = false;
             this.txtLog.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtLog.OnValueChanged += new System.EventHandler(this.txtOpis1_OnValueChanged);
             // 
@@ -140,7 +142,8 @@
             this.txtHas.Margin = new System.Windows.Forms.Padding(4);
             this.txtHas.Name = "txtHas";
             this.txtHas.Size = new System.Drawing.Size(496, 44);
-            this.txtHas.TabIndex = 55;
+            this.txtHas.TabIndex = 1;
+            this.txtHas.TabStop = false;
             this.txtHas.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtHas.OnValueChanged += new System.EventHandler(this.txtDla1_OnValueChanged);
             // 
@@ -155,6 +158,7 @@
             this.bunifuSeparator11.Name = "bunifuSeparator11";
             this.bunifuSeparator11.Size = new System.Drawing.Size(481, 26);
             this.bunifuSeparator11.TabIndex = 52;
+            this.bunifuSeparator11.TabStop = false;
             this.bunifuSeparator11.Transparency = 255;
             this.bunifuSeparator11.Vertical = false;
             this.bunifuSeparator11.Load += new System.EventHandler(this.bunifuSeparator11_Load);

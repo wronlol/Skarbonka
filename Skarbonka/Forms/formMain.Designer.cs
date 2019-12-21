@@ -157,7 +157,6 @@
             this.button69 = new System.Windows.Forms.Button();
             this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.lblWitaj = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panelTytul.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelNaglowek.SuspendLayout();
@@ -236,7 +235,8 @@
             this.podajDate.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.podajDate.Size = new System.Drawing.Size(303, 36);
             this.podajDate.TabIndex = 3;
-            this.podajDate.Value = new System.DateTime(2019, 11, 11, 18, 1, 28, 750);
+            this.podajDate.Value = new System.DateTime(2019, 12, 21, 14, 39, 14, 0);
+            this.podajDate.onValueChanged += new System.EventHandler(this.podajDate_onValueChanged);
             // 
             // panelNaglowek
             // 
@@ -481,7 +481,6 @@
             // 
             this.Dashboard.AutoScroll = true;
             this.Dashboard.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.Dashboard.Controls.Add(this.bunifuCustomLabel1);
             this.Dashboard.Controls.Add(this.button69);
             this.Dashboard.Controls.Add(this.pictureBox6);
             this.Dashboard.Controls.Add(this.lblWitaj);
@@ -2161,22 +2160,12 @@
             // 
             this.lblWitaj.AutoSize = true;
             this.lblWitaj.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.lblWitaj.Location = new System.Drawing.Point(132, 30);
+            this.lblWitaj.Location = new System.Drawing.Point(76, 30);
             this.lblWitaj.Name = "lblWitaj";
             this.lblWitaj.Size = new System.Drawing.Size(46, 21);
             this.lblWitaj.TabIndex = 3;
             this.lblWitaj.Text = "Witaj";
             this.lblWitaj.Click += new System.EventHandler(this.bunifuCustomLabel1_Click);
-            // 
-            // bunifuCustomLabel1
-            // 
-            this.bunifuCustomLabel1.AutoSize = true;
-            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(80, 30);
-            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(49, 21);
-            this.bunifuCustomLabel1.TabIndex = 21;
-            this.bunifuCustomLabel1.Text = "Witaj,";
             // 
             // formMain
             // 
@@ -2339,7 +2328,6 @@
         private System.Windows.Forms.Button button69;
         private System.Windows.Forms.Timer timer3;
         private Bunifu.Framework.UI.BunifuCustomLabel lblWitaj;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
     }
 }
 

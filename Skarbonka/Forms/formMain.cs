@@ -17,12 +17,15 @@ namespace Skarbonka
 
     public partial class formMain : Form
     {
+
         string txtprzych = "przychod.txt";
-        string txtwyd = "wydatek.txt";
+        string txtwyd =  "wydatek.txt";
         string txtlog = "login.txt";
+
+
+
         public formMain()
         {
-
 
 
             File.AppendAllText(txtprzych, "");
@@ -534,15 +537,22 @@ namespace Skarbonka
         {
             foreach (string line in File.ReadLines(@"current.txt"))
             {
-                lblWitaj.Text = line.ToString();
+                lblWitaj.Text = "Witaj, " +  line.ToString() + "!";
             }
 
             button69.PerformClick();
             klik();
+
             timer3.Enabled = false;
+
         }
 
         private void bunifuCustomLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void podajDate_onValueChanged(object sender, EventArgs e)
         {
 
         }

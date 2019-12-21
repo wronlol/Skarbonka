@@ -25,7 +25,11 @@ namespace Skarbonka.Forms
             {
                 File.AppendAllText("login.txt", txtLog10.Text + ";");
                 File.AppendAllText("login.txt", txtHas11.Text + Environment.NewLine);
+                MessageBox.Show("Rejestracja zakończona sukcesem!", "Rejestracja",
+                MessageBoxButtons.OK);
+
                 this.Close();
+
             }
             else
             {

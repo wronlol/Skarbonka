@@ -13,6 +13,7 @@ namespace Skarbonka.Forms
 {
     public partial class formdodajWydatek : Form
     {
+
         string txtwyd = "wydatek.txt";
         public formdodajWydatek()
         {
