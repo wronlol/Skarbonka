@@ -54,28 +54,19 @@ namespace Skarbonka
             ApplyGridTheme(gridZKonta);
             ApplyGridTheme(gridWydatki);
             ApplyGridTheme(gridZWydatki);
-
             bunifuDataViz1.colorSet.Add(col1.BackColor);
             bunifuDataViz1.colorSet.Add(col2.BackColor);
             bunifuDataViz1.colorSet.Add(col3.BackColor);
 
-
-        }
-
+         }
 
 
 
 
-
-
-        
-                    private void klik()
+        public void klik()
         {
-
-
             string[] lines1 = File.ReadAllLines(txtwyd);
             string[] values1;
-
 
             for (int i = 0; i < lines1.Length; i++)
             {
@@ -95,11 +86,9 @@ namespace Skarbonka
 
         private void buttonImport_Click_1(object sender, EventArgs e)
         {
-
             gridPrzychody.Rows.Clear();
             string[] lines = File.ReadAllLines(@txtprzych);
             string[] values;
-
 
             for (int i = 0; i < lines.Length; i++)
             {
@@ -113,7 +102,6 @@ namespace Skarbonka
                 gridPrzychody.Rows.Add(row);
             }
             ReverseDGVRows(gridPrzychody);
-
         }
 
         private void buttonImport2_Click(object sender, EventArgs e)
@@ -122,8 +110,7 @@ namespace Skarbonka
             gridWydatki.Rows.Clear();
             string[] lines = File.ReadAllLines(@txtwyd);
             string[] values;
-
-
+            
             for (int i = 0; i < lines.Length; i++)
             {
                 values = lines[i].ToString().Split(';');
@@ -136,7 +123,6 @@ namespace Skarbonka
                 gridWydatki.Rows.Add(row);
             }
             ReverseDGVRows(gridWydatki);
-
         }
 
 

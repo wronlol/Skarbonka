@@ -17,12 +17,11 @@ namespace Skarbonka.Forms
     {
         string txtprzych = "przychod.txt";
 
-
         public formdodajPrzychod(DateTime date)
         {
 
-
-
+            
+            formMain f = new formMain();
             string curs = "";
 
             foreach (string line in File.ReadLines(@"current.txt"))
@@ -38,6 +37,8 @@ namespace Skarbonka.Forms
 
 
         }
+
+
 
 
 
@@ -58,11 +59,16 @@ namespace Skarbonka.Forms
             File.AppendAllText(txtprzych, txtOpis.Text + ";");
             File.AppendAllText(txtprzych, txtKategoria.selectedValue.Trim() + ";");
             File.AppendAllText(txtprzych, txtKonto.selectedValue.Trim() + ";");
-            File.AppendAllText(txtprzych, txtIlosc.Text + Environment.NewLine);            
+            File.AppendAllText(txtprzych, txtIlosc.Text + Environment.NewLine);
+            
             this.Close();
+            
+            
 
 
         }
+
+
 
         private void bindingSource1_CurrentChanged(object sender, EventArgs e)
         {

@@ -15,7 +15,6 @@ namespace Skarbonka
         static void Main()
         {
 
-            Modele.DbContext.Init("database.db");
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new formMain());
