@@ -185,6 +185,7 @@
             this.bunifuSeparator11.TabIndex = 36;
             this.bunifuSeparator11.Transparency = 255;
             this.bunifuSeparator11.Vertical = false;
+            this.bunifuSeparator11.Load += new System.EventHandler(this.bunifuSeparator11_Load);
             // 
             // label20
             // 

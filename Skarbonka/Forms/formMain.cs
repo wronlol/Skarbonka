@@ -11,6 +11,9 @@ using LiteDB;
 using Skarbonka.Modele;
 using System.IO;
 using Skarbonka.Forms;
+using iTextSharp;
+using iTextSharp.text.pdf;
+using iTextSharp.text;
 
 namespace Skarbonka
 {
@@ -30,7 +33,6 @@ namespace Skarbonka
             File.AppendAllText("current.txt", "");
             File.AppendAllText("login.txt", "admin;admin");
 
-
             string curs = "";
 
             foreach (string line in File.ReadLines(@"current.txt"))
@@ -44,7 +46,7 @@ namespace Skarbonka
             File.AppendAllText(txtprzych, "");
             File.AppendAllText(txtwyd, "");
             File.AppendAllText(txtlog, "");
-            new Helper.Popup.transparentBg(this, new Forms.login());
+          //  new Helper.Popup.transparentBg(this, new Forms.login());
 
             InitializeComponent();
 
@@ -558,6 +560,161 @@ namespace Skarbonka
 
         private void bunifuDataViz2_Load(object sender, EventArgs e)
         {
+
+        }
+
+
+        private void bunifuTileButton1_Click(object sender, EventArgs e)
+        {
+
+            if (gridPrzychody.Rows.Count > 0)
+            {
+                SaveFileDialog sfd = new SaveFileDialog();
+                sfd.Filter = "PDF (*.pdf)|*.pdf";
+                sfd.FileName = "Przychody.pdf";
+                bool fileError = false;
+                if (sfd.ShowDialog() == DialogResult.OK)
+                {
+                    if (File.Exists(sfd.FileName))
+                    {
+                        try
+                        {
+                            File.Delete(sfd.FileName);
+                        }
+                        catch (IOException ex)
+                        {
+                            fileError = true;
+                            MessageBox.Show("Nie można było zapisać na dysku." + ex.Message);
+                        }
+                    }
+                    if (!fileError)
+                    {
+                        try
+                        {
+                            PdfPTable pdfTable = new PdfPTable(gridPrzychody.Columns.Count);
+                            pdfTable.DefaultCell.Padding = 3;
+                            pdfTable.WidthPercentage = 100;
+                            pdfTable.HorizontalAlignment = Element.ALIGN_LEFT;
+
+                            foreach (DataGridViewColumn column in gridPrzychody.Columns)
+                            {
+                                PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText));
+                                pdfTable.AddCell(cell);
+                            }
+
+                            foreach (DataGridViewRow row in gridPrzychody.Rows)
+                            {
+                                foreach (DataGridViewCell cell in row.Cells)
+                                {
+                                    pdfTable.AddCell(cell.Value.ToString());
+                                }
+                            }
+
+                            using (FileStream stream = new FileStream(sfd.FileName, System.IO.FileMode.Create))
+                            {
+                                Document pdfDoc = new Document(PageSize.A4, 10f, 20f, 20f, 10f);
+                                PdfWriter.GetInstance(pdfDoc, stream);
+                                pdfDoc.Open();
+                                pdfDoc.AddTitle("Raport przychodów programu Skarbonka");
+                                pdfDoc.Add(new Paragraph("Raport Przychodów"));
+                                pdfDoc.Add(new Paragraph("\n"));
+                                pdfDoc.Add(pdfTable);
+                                pdfDoc.Close();
+                                stream.Close();
+                            }
+
+                            MessageBox.Show("Raport został wygenerowany!", "Info");
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Błąd :" + ex.Message);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Brak danych do wygenerowania raportu!", "Info");
+            }
+
+        }
+
+        private void bunifuTileButton6_Click(object sender, EventArgs e)
+        {
+            if (gridWydatki.Rows.Count > 0)
+            {
+                SaveFileDialog sfd = new SaveFileDialog();
+                sfd.Filter = "PDF (*.pdf)|*.pdf";
+                sfd.FileName = "Wydatki.pdf";
+                bool fileError = false;
+                if (sfd.ShowDialog() == DialogResult.OK)
+                {
+                    if (File.Exists(sfd.FileName))
+                    {
+                        try
+                        {
+                            File.Delete(sfd.FileName);
+                        }
+                        catch (IOException ex)
+                        {
+                            fileError = true;
+                            MessageBox.Show("Nie można było zapisać na dysku." + ex.Message);
+                        }
+                    }
+                    if (!fileError)
+                    {
+                        try
+                        {
+                            PdfPTable pdfTable = new PdfPTable(gridWydatki.Columns.Count);
+                            pdfTable.DefaultCell.Padding = 3;
+                            pdfTable.WidthPercentage = 100;
+                            pdfTable.HorizontalAlignment = Element.ALIGN_LEFT;
+
+                            foreach (DataGridViewColumn column in gridWydatki.Columns)
+                            {
+                                PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText));
+                                pdfTable.AddCell(cell);
+                            }
+
+                            foreach (DataGridViewRow row in gridWydatki.Rows)
+                            {
+                                foreach (DataGridViewCell cell in row.Cells)
+                                {
+                                    pdfTable.AddCell(cell.Value.ToString());
+                                }
+                            }
+
+                            using (FileStream stream = new FileStream(sfd.FileName, System.IO.FileMode.Create))
+                            {
+                                Document pdfDoc = new Document(PageSize.A4, 10f, 20f, 20f, 10f);
+
+
+                                PdfWriter.GetInstance(pdfDoc, stream);
+                                pdfDoc.Open();
+                                var redListTextFont = FontFactory.GetFont("Arial", 20);
+                                var descriptionChunk = new Chunk("                                      Raport Wydatków", redListTextFont);
+                                pdfDoc.Add(new Paragraph("\n"));
+                                pdfDoc.Add(new Paragraph("\n"));
+
+                                pdfDoc.Add(descriptionChunk);
+                                pdfDoc.Add(pdfTable);
+                                pdfDoc.Close();
+                                stream.Close();
+                            }
+
+                            MessageBox.Show("Raport został wygenerowany!", "Info");
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Błąd :" + ex.Message);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Brak danych do wygenerowania raportu!", "Info");
+            }
 
         }
     }

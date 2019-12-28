@@ -50,5 +50,10 @@ namespace Skarbonka.Forms
             File.AppendAllText(txtwyd, txtIlosc1.Text + Environment.NewLine);
             this.Close();
         }
+
+        private void bunifuSeparator11_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
