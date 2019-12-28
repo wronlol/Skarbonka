@@ -591,22 +591,33 @@ namespace Skarbonka
                     {
                         try
                         {
+
                             PdfPTable pdfTable = new PdfPTable(gridPrzychody.Columns.Count);
-                            pdfTable.DefaultCell.Padding = 3;
+                            pdfTable.DefaultCell.Padding = 10;
+                            pdfTable.DefaultCell.PaddingBottom = 9;
                             pdfTable.WidthPercentage = 100;
                             pdfTable.HorizontalAlignment = Element.ALIGN_LEFT;
 
                             foreach (DataGridViewColumn column in gridPrzychody.Columns)
                             {
-                                PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText));
+                                BaseFont bf = BaseFont.CreateFont(BaseFont.TIMES_ROMAN, BaseFont.CP1257, BaseFont.EMBEDDED);
+                                iTextSharp.text.Font font = new iTextSharp.text.Font(bf, 16);
+                                PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText, font));
+
                                 pdfTable.AddCell(cell);
                             }
 
                             foreach (DataGridViewRow row in gridPrzychody.Rows)
                             {
+                                BaseFont bf = BaseFont.CreateFont(BaseFont.TIMES_ROMAN, BaseFont.CP1257, BaseFont.EMBEDDED);
+                                iTextSharp.text.Font font = new iTextSharp.text.Font(bf, 13);
+
                                 foreach (DataGridViewCell cell in row.Cells)
                                 {
-                                    pdfTable.AddCell(cell.Value.ToString());
+
+                                    PdfPCell acell = new PdfPCell(new Phrase(cell.Value.ToString(), font));
+
+                                    pdfTable.AddCell(acell);
                                 }
                             }
 
@@ -616,8 +627,12 @@ namespace Skarbonka
                                 PdfWriter.GetInstance(pdfDoc, stream);
                                 pdfDoc.Open();
                                 pdfDoc.AddTitle("Raport przychodów programu Skarbonka");
-                                pdfDoc.Add(new Paragraph("Raport Przychodów"));
+                                var redListTextFont = FontFactory.GetFont("Arial", 20);
+                                var descriptionChunk = new Chunk("                                      Raport Przychodów", redListTextFont);
                                 pdfDoc.Add(new Paragraph("\n"));
+                                pdfDoc.Add(new Paragraph("\n"));
+
+                                pdfDoc.Add(descriptionChunk);
                                 pdfDoc.Add(pdfTable);
                                 pdfDoc.Close();
                                 stream.Close();
@@ -666,21 +681,30 @@ namespace Skarbonka
                         try
                         {
                             PdfPTable pdfTable = new PdfPTable(gridWydatki.Columns.Count);
-                            pdfTable.DefaultCell.Padding = 3;
+                            pdfTable.DefaultCell.Padding = 10;
                             pdfTable.WidthPercentage = 100;
                             pdfTable.HorizontalAlignment = Element.ALIGN_LEFT;
 
-                            foreach (DataGridViewColumn column in gridWydatki.Columns)
+                            foreach (DataGridViewColumn column in gridPrzychody.Columns)
                             {
-                                PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText));
+                                BaseFont bf = BaseFont.CreateFont(BaseFont.TIMES_ROMAN, BaseFont.CP1257, BaseFont.EMBEDDED);
+                                iTextSharp.text.Font font = new iTextSharp.text.Font(bf, 16);
+                                PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText, font));
+
                                 pdfTable.AddCell(cell);
                             }
 
                             foreach (DataGridViewRow row in gridWydatki.Rows)
                             {
+                                BaseFont bf = BaseFont.CreateFont(BaseFont.TIMES_ROMAN, BaseFont.CP1257, BaseFont.EMBEDDED);
+                                iTextSharp.text.Font font = new iTextSharp.text.Font(bf, 13);
+
                                 foreach (DataGridViewCell cell in row.Cells)
                                 {
-                                    pdfTable.AddCell(cell.Value.ToString());
+
+                                    PdfPCell acell = new PdfPCell(new Phrase(cell.Value.ToString(), font));
+
+                                    pdfTable.AddCell(acell);
                                 }
                             }
 
