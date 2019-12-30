@@ -14,6 +14,11 @@ using Skarbonka.Forms;
 using iTextSharp;
 using iTextSharp.text.pdf;
 using iTextSharp.text;
+using System.Text.RegularExpressions;
+using Spire.Pdf;
+using Spire.Pdf.Annotations;
+using Spire.Pdf.Widget;
+
 
 namespace Skarbonka
 {
@@ -560,18 +565,22 @@ namespace Skarbonka
 
         private void bunifuDataViz2_Load(object sender, EventArgs e)
         {
-
+           
         }
 
-
+        private string pathP = string.Empty;
+        private bool markerP = false;
         private void bunifuTileButton1_Click(object sender, EventArgs e)
         {
 
             if (gridPrzychody.Rows.Count > 0)
             {
                 SaveFileDialog sfd = new SaveFileDialog();
-                sfd.Filter = "PDF (*.pdf)|*.pdf";
+                sfd.Filter = "PDF (*.pdf)|*.pdf"; 
                 sfd.FileName = "Przychody.pdf";
+
+
+
                 bool fileError = false;
                 if (sfd.ShowDialog() == DialogResult.OK)
                 {
@@ -595,14 +604,16 @@ namespace Skarbonka
                             PdfPTable pdfTable = new PdfPTable(gridPrzychody.Columns.Count);
                             pdfTable.DefaultCell.Padding = 10;
                             pdfTable.DefaultCell.PaddingBottom = 9;
-                            pdfTable.WidthPercentage = 100;
-                            pdfTable.HorizontalAlignment = Element.ALIGN_LEFT;
+                            pdfTable.WidthPercentage = 85;
+                            pdfTable.HorizontalAlignment = Element.ALIGN_CENTER;
+
 
                             foreach (DataGridViewColumn column in gridPrzychody.Columns)
                             {
                                 BaseFont bf = BaseFont.CreateFont(BaseFont.TIMES_ROMAN, BaseFont.CP1257, BaseFont.EMBEDDED);
                                 iTextSharp.text.Font font = new iTextSharp.text.Font(bf, 16);
                                 PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText, font));
+                                cell.BackgroundColor = new iTextSharp.text.BaseColor(210, 180, 140);
 
                                 pdfTable.AddCell(cell);
                             }
@@ -616,6 +627,8 @@ namespace Skarbonka
                                 {
 
                                     PdfPCell acell = new PdfPCell(new Phrase(cell.Value.ToString(), font));
+                                    acell.BackgroundColor = new iTextSharp.text.BaseColor(245, 245, 220);
+;
 
                                     pdfTable.AddCell(acell);
                                 }
@@ -626,16 +639,22 @@ namespace Skarbonka
                                 Document pdfDoc = new Document(PageSize.A4, 10f, 20f, 20f, 10f);
                                 PdfWriter.GetInstance(pdfDoc, stream);
                                 pdfDoc.Open();
+                                pdfTable.DefaultCell.BackgroundColor = BaseColor.RED;
+
                                 pdfDoc.AddTitle("Raport przychodów programu Skarbonka");
-                                var redListTextFont = FontFactory.GetFont("Arial", 20);
-                                var descriptionChunk = new Chunk("                                      Raport Przychodów", redListTextFont);
+                                var textfont = FontFactory.GetFont("Arial", 20);
+                                var descriptionChunk = new Chunk("                                      Raport Przychodów", textfont);
                                 pdfDoc.Add(new Paragraph("\n"));
                                 pdfDoc.Add(new Paragraph("\n"));
 
+                                pathP = sfd.ToString();
+                                pathP = pathP.Split(' ').Last();
                                 pdfDoc.Add(descriptionChunk);
+
                                 pdfDoc.Add(pdfTable);
                                 pdfDoc.Close();
                                 stream.Close();
+                                markerP = true;
                             }
 
                             MessageBox.Show("Raport został wygenerowany!", "Info");
@@ -653,7 +672,8 @@ namespace Skarbonka
             }
 
         }
-
+        private string pathW = string.Empty;
+        private bool markerW = false;
         private void bunifuTileButton6_Click(object sender, EventArgs e)
         {
             if (gridWydatki.Rows.Count > 0)
@@ -661,6 +681,9 @@ namespace Skarbonka
                 SaveFileDialog sfd = new SaveFileDialog();
                 sfd.Filter = "PDF (*.pdf)|*.pdf";
                 sfd.FileName = "Wydatki.pdf";
+                
+
+
                 bool fileError = false;
                 if (sfd.ShowDialog() == DialogResult.OK)
                 {
@@ -682,14 +705,15 @@ namespace Skarbonka
                         {
                             PdfPTable pdfTable = new PdfPTable(gridWydatki.Columns.Count);
                             pdfTable.DefaultCell.Padding = 10;
-                            pdfTable.WidthPercentage = 100;
-                            pdfTable.HorizontalAlignment = Element.ALIGN_LEFT;
+                            pdfTable.WidthPercentage = 85;
+                            pdfTable.HorizontalAlignment = Element.ALIGN_CENTER;
 
                             foreach (DataGridViewColumn column in gridPrzychody.Columns)
                             {
                                 BaseFont bf = BaseFont.CreateFont(BaseFont.TIMES_ROMAN, BaseFont.CP1257, BaseFont.EMBEDDED);
                                 iTextSharp.text.Font font = new iTextSharp.text.Font(bf, 16);
                                 PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText, font));
+                                cell.BackgroundColor = new iTextSharp.text.BaseColor(210, 180, 140);
 
                                 pdfTable.AddCell(cell);
                             }
@@ -703,6 +727,7 @@ namespace Skarbonka
                                 {
 
                                     PdfPCell acell = new PdfPCell(new Phrase(cell.Value.ToString(), font));
+                                    acell.BackgroundColor = new iTextSharp.text.BaseColor(245, 245, 220);
 
                                     pdfTable.AddCell(acell);
                                 }
@@ -712,18 +737,22 @@ namespace Skarbonka
                             {
                                 Document pdfDoc = new Document(PageSize.A4, 10f, 20f, 20f, 10f);
 
-
+                                
                                 PdfWriter.GetInstance(pdfDoc, stream);
                                 pdfDoc.Open();
-                                var redListTextFont = FontFactory.GetFont("Arial", 20);
-                                var descriptionChunk = new Chunk("                                      Raport Wydatków", redListTextFont);
+                                var textfont = FontFactory.GetFont("Arial", 20);
+                                var descriptionChunk = new Chunk("                                      Raport Wydatków", textfont);
                                 pdfDoc.Add(new Paragraph("\n"));
                                 pdfDoc.Add(new Paragraph("\n"));
+
+                                pathW = sfd.ToString();
+                                pathW = pathW.Split(' ').Last();
 
                                 pdfDoc.Add(descriptionChunk);
                                 pdfDoc.Add(pdfTable);
                                 pdfDoc.Close();
                                 stream.Close();
+                                markerW = true;
                             }
 
                             MessageBox.Show("Raport został wygenerowany!", "Info");
@@ -732,6 +761,7 @@ namespace Skarbonka
                         {
                             MessageBox.Show("Błąd :" + ex.Message);
                         }
+
                     }
                 }
             }
@@ -740,6 +770,198 @@ namespace Skarbonka
                 MessageBox.Show("Brak danych do wygenerowania raportu!", "Info");
             }
 
+        }
+        private string pathO = string.Empty;
+        private void MergePDF(string File1, string File2)
+        {
+            
+            string[] fileArray = new string[3];
+            fileArray[0] = File1;
+            fileArray[1] = File2;
+
+            PdfReader reader = null;
+            Document sourceDocument = null;
+            PdfCopy pdfCopyProvider = null;
+            PdfImportedPage importedPage;
+
+
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Filter = "PDF (*.pdf)|*.pdf";
+            sfd.FileName = "Ogólny.pdf";
+
+            string outputPdfPath = sfd.FileName;
+            bool fileError = false;
+            pathO = sfd.ToString();
+            pathO = pathO.Split(' ').Last();
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                if (File.Exists(sfd.FileName))
+                {
+                    try
+                    {
+                        File.Delete(sfd.FileName);
+                    }
+                    catch (IOException ex)
+                    {
+                        fileError = true;
+                        MessageBox.Show("Nie można było zapisać na dysku." + ex.Message);
+                    }
+                }
+
+                if (!fileError)
+                {
+                    try
+                    {
+
+
+                        sourceDocument = new Document();
+                        pdfCopyProvider = new PdfCopy(sourceDocument, new System.IO.FileStream(sfd.FileName, System.IO.FileMode.Create));
+
+                        //output file Open  
+                        sourceDocument.Open();
+
+
+                        //files list wise Loop  
+                        for (int f = 0; f < fileArray.Length - 1; f++)
+                        {
+                            int pages = TotalPageCount(fileArray[f]);
+
+                            reader = new PdfReader(fileArray[f]);
+                            //Add pages in new file  
+                            for (int i = 1; i <= pages; i++)
+                            {
+                                importedPage = pdfCopyProvider.GetImportedPage(reader, i);
+                                pdfCopyProvider.AddPage(importedPage);
+                            }
+
+                            reader.Close();
+                        }
+                        //save the output file  
+                        sourceDocument.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        fileError = true;
+                        MessageBox.Show("Nie można było zapisać na dysku." + ex.Message);
+                    }
+                }
+            }
+        }
+
+        private static int TotalPageCount(string file)
+        {
+            using (StreamReader sr = new StreamReader(System.IO.File.OpenRead(file)))
+            {
+                Regex regex = new Regex(@"/Type\s*/Page[^s]");
+                MatchCollection matches = regex.Matches(sr.ReadToEnd());
+
+                return matches.Count;
+            }
+        }
+
+
+
+        private void bunifuTileButton9_Click(object sender, EventArgs e)
+        {
+            
+            string x = pathP;
+            string z = pathW;
+            if (markerP = true && markerW == true)
+            {
+                MergePDF(x, z);
+                MessageBox.Show("Raport ogólny został stworzony!", "Info");
+
+            }
+            else
+            {
+                MessageBox.Show("Najpierw stwórz aktualne raporty wydatków i przychodów!", "Info");
+            }
+
+        }
+
+        private void bunifuTileButton2_Click(object sender, EventArgs e)
+        {
+            bool pot = false;
+            var confirmResult = MessageBox.Show("Czy chcesz wydrukować raport przychodów?",
+                                     "Potwierdź drukowanie",
+                                     MessageBoxButtons.YesNo);
+            if (confirmResult == DialogResult.Yes)
+            {
+                pot = true;
+            }
+            else
+            {
+                pot = false;
+                MessageBox.Show("Drukowanie przerwane", "Info");
+            }
+
+
+            if (pot == true) if (pathP != null)
+            {
+                Spire.Pdf.PdfDocument doc = new Spire.Pdf.PdfDocument();
+                doc.LoadFromFile(pathP);
+                doc.PrintDocument.Print();
+            }
+            else
+                MessageBox.Show("Najpierw stwórz raport!", "Info");
+
+        }
+
+        private void bunifuTileButton5_Click(object sender, EventArgs e)
+        {
+            bool pot = false;
+            var confirmResult = MessageBox.Show("Czy chcesz wydrukować raport wydatków?",
+                                     "Potwierdź drukowanie",
+                                     MessageBoxButtons.YesNo);
+            if (confirmResult == DialogResult.Yes)
+            {
+                pot = true;
+            }
+            else
+            {
+                pot = false;
+                MessageBox.Show("Drukowanie przerwane", "Info");
+            }
+
+
+            if (pot == true) if (pathW != null)
+            {
+                Spire.Pdf.PdfDocument doc = new Spire.Pdf.PdfDocument();
+                doc.LoadFromFile(pathW);
+                doc.PrintDocument.Print();
+            }
+            else
+                MessageBox.Show("Najpierw stwórz raport!", "Info");
+        }
+
+        private void bunifuTileButton8_Click(object sender, EventArgs e)
+        {
+            bool pot = false;
+            var confirmResult = MessageBox.Show("Czy chcesz wydrukować raport ogólny?",
+                                     "Potwierdź drukowanie",
+                                     MessageBoxButtons.YesNo);
+            if (confirmResult == DialogResult.Yes)
+            {
+                pot = true;
+            }
+            else
+            {
+                pot = false;
+                MessageBox.Show("Drukowanie przerwane", "Info");
+            }
+
+
+            if (pot == true)
+            {
+                if (pathO != null)
+                {
+                    Spire.Pdf.PdfDocument doc = new Spire.Pdf.PdfDocument();
+                    doc.LoadFromFile(pathO);
+                    doc.PrintDocument.Print();
+                }
+                else
+                    MessageBox.Show("Najpierw stwórz raport!", "Info");
+            }
         }
     }
 }
