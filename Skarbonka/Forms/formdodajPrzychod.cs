@@ -21,7 +21,6 @@ namespace Skarbonka.Forms
         {
 
             
-            formMain f = new formMain();
             string curs = "";
 
             foreach (string line in File.ReadLines(@"current.txt"))

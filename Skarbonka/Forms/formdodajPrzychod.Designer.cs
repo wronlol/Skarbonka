@@ -40,7 +40,6 @@
             this.txtOpis = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.txtIlosc = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.btnDodajPrzychod = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.txtData = new Bunifu.Framework.UI.BunifuDatepicker();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.closeForm = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
@@ -125,7 +124,7 @@
             this.txtKonto.NomalColor = System.Drawing.Color.White;
             this.txtKonto.onHoverColor = System.Drawing.Color.Silver;
             this.txtKonto.selectedIndex = 0;
-            this.txtKonto.Size = new System.Drawing.Size(168, 42);
+            this.txtKonto.Size = new System.Drawing.Size(232, 42);
             this.txtKonto.TabIndex = 27;
             // 
             // txtKategoria
@@ -136,12 +135,12 @@
             this.txtKategoria.Items = new string[] {
         "Wypłata",
         "Przelew"};
-            this.txtKategoria.Location = new System.Drawing.Point(208, 199);
+            this.txtKategoria.Location = new System.Drawing.Point(261, 199);
             this.txtKategoria.Name = "txtKategoria";
             this.txtKategoria.NomalColor = System.Drawing.Color.White;
             this.txtKategoria.onHoverColor = System.Drawing.Color.Silver;
             this.txtKategoria.selectedIndex = 0;
-            this.txtKategoria.Size = new System.Drawing.Size(306, 42);
+            this.txtKategoria.Size = new System.Drawing.Size(253, 42);
             this.txtKategoria.TabIndex = 28;
             // 
             // txtOd
@@ -192,7 +191,7 @@
             this.txtIlosc.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txtIlosc.ForeColor = System.Drawing.Color.DarkGray;
             this.txtIlosc.isPassword = false;
-            this.txtIlosc.Location = new System.Drawing.Point(259, 299);
+            this.txtIlosc.Location = new System.Drawing.Point(261, 248);
             this.txtIlosc.Margin = new System.Windows.Forms.Padding(4);
             this.txtIlosc.Name = "txtIlosc";
             this.txtIlosc.Size = new System.Drawing.Size(254, 44);
@@ -224,7 +223,7 @@
             this.btnDodajPrzychod.IconVisible = false;
             this.btnDodajPrzychod.IconZoom = 90D;
             this.btnDodajPrzychod.IsTab = false;
-            this.btnDodajPrzychod.Location = new System.Drawing.Point(260, 369);
+            this.btnDodajPrzychod.Location = new System.Drawing.Point(261, 323);
             this.btnDodajPrzychod.Name = "btnDodajPrzychod";
             this.btnDodajPrzychod.Normalcolor = System.Drawing.Color.MediumSeaGreen;
             this.btnDodajPrzychod.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
@@ -238,19 +237,6 @@
             this.btnDodajPrzychod.Textcolor = System.Drawing.Color.White;
             this.btnDodajPrzychod.TextFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
             this.btnDodajPrzychod.Click += new System.EventHandler(this.btnDodajPrzychod_Click);
-            // 
-            // txtData
-            // 
-            this.txtData.BackColor = System.Drawing.Color.Gray;
-            this.txtData.BorderRadius = 0;
-            this.txtData.ForeColor = System.Drawing.Color.White;
-            this.txtData.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.txtData.FormatCustom = null;
-            this.txtData.Location = new System.Drawing.Point(261, 248);
-            this.txtData.Name = "txtData";
-            this.txtData.Size = new System.Drawing.Size(253, 44);
-            this.txtData.TabIndex = 33;
-            this.txtData.Value = new System.DateTime(2019, 11, 15, 16, 14, 8, 652);
             // 
             // bindingSource1
             // 
@@ -303,7 +289,7 @@
             this.label4.BackColor = System.Drawing.Color.White;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.label4.ForeColor = System.Drawing.Color.DarkGray;
-            this.label4.Location = new System.Drawing.Point(269, 295);
+            this.label4.Location = new System.Drawing.Point(271, 244);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(36, 17);
             this.label4.TabIndex = 37;
@@ -314,12 +300,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(526, 439);
+            this.ClientSize = new System.Drawing.Size(526, 413);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtData);
             this.Controls.Add(this.btnDodajPrzychod);
             this.Controls.Add(this.txtIlosc);
             this.Controls.Add(this.txtOpis);
@@ -354,7 +339,6 @@
         private Bunifu.Framework.UI.BunifuMetroTextbox txtOpis;
         private Bunifu.Framework.UI.BunifuMetroTextbox txtIlosc;
         private Bunifu.Framework.UI.BunifuFlatButton btnDodajPrzychod;
-        private Bunifu.Framework.UI.BunifuDatepicker txtData;
         private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.Timer closeForm;
         private System.Windows.Forms.Label label1;

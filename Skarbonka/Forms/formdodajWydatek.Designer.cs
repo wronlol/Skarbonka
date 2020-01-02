@@ -39,7 +39,6 @@
             this.label20 = new System.Windows.Forms.Label();
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.txtId1 = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.bunifuDatepicker1 = new Bunifu.Framework.UI.BunifuDatepicker();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -70,14 +69,14 @@
             this.btnDodajPrzychod.IconVisible = false;
             this.btnDodajPrzychod.IconZoom = 90D;
             this.btnDodajPrzychod.IsTab = false;
-            this.btnDodajPrzychod.Location = new System.Drawing.Point(330, 380);
+            this.btnDodajPrzychod.Location = new System.Drawing.Point(261, 323);
             this.btnDodajPrzychod.Name = "btnDodajPrzychod";
             this.btnDodajPrzychod.Normalcolor = System.Drawing.Color.MediumSeaGreen;
             this.btnDodajPrzychod.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
             this.btnDodajPrzychod.OnHoverTextColor = System.Drawing.Color.White;
             this.btnDodajPrzychod.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnDodajPrzychod.selected = false;
-            this.btnDodajPrzychod.Size = new System.Drawing.Size(183, 48);
+            this.btnDodajPrzychod.Size = new System.Drawing.Size(254, 48);
             this.btnDodajPrzychod.TabIndex = 42;
             this.btnDodajPrzychod.Text = "Dodaj transakcję";
             this.btnDodajPrzychod.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -96,7 +95,7 @@
             this.txtIlosc1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txtIlosc1.ForeColor = System.Drawing.Color.DarkGray;
             this.txtIlosc1.isPassword = false;
-            this.txtIlosc1.Location = new System.Drawing.Point(259, 308);
+            this.txtIlosc1.Location = new System.Drawing.Point(259, 256);
             this.txtIlosc1.Margin = new System.Windows.Forms.Padding(4);
             this.txtIlosc1.Name = "txtIlosc1";
             this.txtIlosc1.Size = new System.Drawing.Size(254, 44);
@@ -148,12 +147,12 @@
         "Zakupy",
         "Czynsz",
         "Opłaty"};
-            this.txtKategoria1.Location = new System.Drawing.Point(208, 207);
+            this.txtKategoria1.Location = new System.Drawing.Point(259, 207);
             this.txtKategoria1.Name = "txtKategoria1";
             this.txtKategoria1.NomalColor = System.Drawing.Color.White;
             this.txtKategoria1.onHoverColor = System.Drawing.Color.Silver;
             this.txtKategoria1.selectedIndex = 0;
-            this.txtKategoria1.Size = new System.Drawing.Size(306, 42);
+            this.txtKategoria1.Size = new System.Drawing.Size(255, 42);
             this.txtKategoria1.TabIndex = 38;
             // 
             // txtKonto1
@@ -169,7 +168,7 @@
             this.txtKonto1.NomalColor = System.Drawing.Color.White;
             this.txtKonto1.onHoverColor = System.Drawing.Color.Silver;
             this.txtKonto1.selectedIndex = 0;
-            this.txtKonto1.Size = new System.Drawing.Size(168, 42);
+            this.txtKonto1.Size = new System.Drawing.Size(232, 42);
             this.txtKonto1.TabIndex = 37;
             // 
             // bunifuSeparator11
@@ -233,19 +232,6 @@
             this.txtId1.TabIndex = 33;
             this.txtId1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // bunifuDatepicker1
-            // 
-            this.bunifuDatepicker1.BackColor = System.Drawing.Color.Gray;
-            this.bunifuDatepicker1.BorderRadius = 0;
-            this.bunifuDatepicker1.ForeColor = System.Drawing.Color.White;
-            this.bunifuDatepicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.bunifuDatepicker1.FormatCustom = null;
-            this.bunifuDatepicker1.Location = new System.Drawing.Point(259, 256);
-            this.bunifuDatepicker1.Name = "bunifuDatepicker1";
-            this.bunifuDatepicker1.Size = new System.Drawing.Size(254, 44);
-            this.bunifuDatepicker1.TabIndex = 44;
-            this.bunifuDatepicker1.Value = new System.DateTime(2019, 11, 15, 16, 14, 8, 652);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -288,7 +274,7 @@
             this.label4.BackColor = System.Drawing.Color.White;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.label4.ForeColor = System.Drawing.Color.DarkGray;
-            this.label4.Location = new System.Drawing.Point(266, 303);
+            this.label4.Location = new System.Drawing.Point(266, 251);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(36, 17);
             this.label4.TabIndex = 48;
@@ -299,12 +285,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(526, 440);
+            this.ClientSize = new System.Drawing.Size(526, 413);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.bunifuDatepicker1);
             this.Controls.Add(this.btnDodajPrzychod);
             this.Controls.Add(this.txtIlosc1);
             this.Controls.Add(this.txtOpis1);
@@ -338,7 +323,6 @@
         private System.Windows.Forms.Label label20;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
         private Bunifu.Framework.UI.BunifuMetroTextbox txtId1;
-        private Bunifu.Framework.UI.BunifuDatepicker bunifuDatepicker1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

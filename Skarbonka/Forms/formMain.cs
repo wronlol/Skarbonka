@@ -18,7 +18,7 @@ using System.Text.RegularExpressions;
 using Spire.Pdf;
 using Spire.Pdf.Annotations;
 using Spire.Pdf.Widget;
-
+using System.Diagnostics;
 
 namespace Skarbonka
 {
@@ -51,21 +51,20 @@ namespace Skarbonka
             File.AppendAllText(txtprzych, "");
             File.AppendAllText(txtwyd, "");
             File.AppendAllText(txtlog, "");
-          //  new Helper.Popup.transparentBg(this, new Forms.login());
+            new Helper.Popup.transparentBg(this, new Forms.login());
 
             InitializeComponent();
 
             ApplyGridTheme(gridPrzychody);
             ApplyGridTheme(gridWydatki);
-            ApplyGridTheme(gridZPrzychod);
-            ApplyGridTheme(gridZKonta);
             ApplyGridTheme(gridWydatki);
-            ApplyGridTheme(gridZWydatki);
             bunifuDataViz1.colorSet.Add(col1.BackColor);
             bunifuDataViz1.colorSet.Add(col2.BackColor);
             bunifuDataViz1.colorSet.Add(col3.BackColor);
-
-         }
+            lblWaluta.Text = "[" + bunifuMetroTextbox1.Text + "]";
+            lblWaluta2.Text = "[" + bunifuMetroTextbox1.Text + "]";
+            podajDate.Value = DateTime.Now;
+        }
 
 
 
@@ -656,8 +655,9 @@ namespace Skarbonka
                                 stream.Close();
                                 markerP = true;
                             }
-
+                            System.Diagnostics.Process.Start(sfd.FileName);
                             MessageBox.Show("Raport został wygenerowany!", "Info");
+
                         }
                         catch (Exception ex)
                         {
@@ -754,8 +754,9 @@ namespace Skarbonka
                                 stream.Close();
                                 markerW = true;
                             }
-
                             MessageBox.Show("Raport został wygenerowany!", "Info");
+                            System.Diagnostics.Process.Start(sfd.FileName);
+
                         }
                         catch (Exception ex)
                         {
@@ -835,9 +836,13 @@ namespace Skarbonka
                             }
 
                             reader.Close();
+
                         }
                         //save the output file  
                         sourceDocument.Close();
+                        System.Diagnostics.Process.Start(sfd.FileName);
+                        MessageBox.Show("Raport ogólny został stworzony!", "Info");
+
                     }
                     catch (Exception ex)
                     {
@@ -869,8 +874,6 @@ namespace Skarbonka
             if (markerP = true && markerW == true)
             {
                 MergePDF(x, z);
-                MessageBox.Show("Raport ogólny został stworzony!", "Info");
-
             }
             else
             {
@@ -962,6 +965,22 @@ namespace Skarbonka
                 else
                     MessageBox.Show("Najpierw stwórz raport!", "Info");
             }
+        }
+
+        private void bunifuMetroTextbox1_OnValueChanged(object sender, EventArgs e)
+        {
+            lblWaluta.Text = "[" + bunifuMetroTextbox1.Text + "]";
+            lblWaluta2.Text = "[" + bunifuMetroTextbox1.Text + "]";
+        }
+
+        private void bunifuFlatButton3_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
+            var p = new Process();
+            p.StartInfo.FileName = "Skarbonka.exe";  // just for example, you can use yours.
+            p.Start();
+
+
         }
     }
 }
