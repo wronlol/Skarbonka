@@ -36,7 +36,7 @@ namespace Skarbonka
         public formMain()
         {
             File.AppendAllText("current.txt", "");
-            File.AppendAllText("login.txt", "admin;admin");
+            File.AppendAllText("login.txt", "");
 
             string curs = "";
 
@@ -71,6 +71,8 @@ namespace Skarbonka
 
         public void klik()
         {
+            //wczytanie danych
+
             string[] lines1 = File.ReadAllLines(txtwyd);
             string[] values1;
 
@@ -92,6 +94,8 @@ namespace Skarbonka
 
         private void buttonImport_Click_1(object sender, EventArgs e)
         {
+            //wczytanie danych
+
             gridPrzychody.Rows.Clear();
             string[] lines = File.ReadAllLines(@txtprzych);
             string[] values;
@@ -112,7 +116,7 @@ namespace Skarbonka
 
         private void buttonImport2_Click(object sender, EventArgs e)
         {
-
+            //wczytanie danych
             gridWydatki.Rows.Clear();
             string[] lines = File.ReadAllLines(@txtwyd);
             string[] values;
@@ -144,6 +148,7 @@ namespace Skarbonka
 
         void MoveIndicator(Control btn)
         {
+            //wskaznik ktora strona
             wskaznik.Left = btn.Left;
             wskaznik.Width = btn.Width;
 
@@ -207,19 +212,15 @@ namespace Skarbonka
 
         void RenderMonthChart()
         {
+
+            //glowny wykres
             Bunifu.DataViz.WinForms.Canvas canvas = new Bunifu.DataViz.WinForms.Canvas();
 
             Bunifu.DataViz.WinForms.DataPoint przychod = new Bunifu.DataViz.WinForms.DataPoint(Bunifu.DataViz.WinForms.BunifuDataViz._type.Bunifu_spline);
             Bunifu.DataViz.WinForms.DataPoint wydatki = new Bunifu.DataViz.WinForms.DataPoint(Bunifu.DataViz.WinForms.BunifuDataViz._type.Bunifu_spline);
             //Bunifu.DataViz.WinForms.DataPoint balans = new Bunifu.DataViz.WinForms.DataPoint(Bunifu.DataViz.WinForms.BunifuDataViz._type.Bunifu_spline);
 
-            //random data
-         /* Random ran = new Random();
-            for (int i = 0; i <= 30; i++)
-            {
-                wydatki.addLabely(i.ToString(), ran.Next(0, 100));
-                balans.addLabely(i.ToString(), ran.Next(100, 1000));
-            }*/
+
 
             
 
@@ -251,8 +252,7 @@ namespace Skarbonka
 
             Bunifu.DataViz.WinForms.DataPoint outlook = new Bunifu.DataViz.WinForms.DataPoint(Bunifu.DataViz.WinForms.BunifuDataViz._type.Bunifu_pie);
 
-            //random data
-
+            //wykres kolowy przychody
             Double przelewx = 0;
             Double wyplatax = 0;
 
@@ -289,6 +289,7 @@ namespace Skarbonka
 
         void RenderWydatkiChart()
         {
+            //wykres kolowy wydatki
             Bunifu.DataViz.WinForms.Canvas canvas = new Bunifu.DataViz.WinForms.Canvas();
 
             Bunifu.DataViz.WinForms.DataPoint outlook = new Bunifu.DataViz.WinForms.DataPoint(Bunifu.DataViz.WinForms.BunifuDataViz._type.Bunifu_pie);
@@ -395,6 +396,7 @@ namespace Skarbonka
 
         private void btnDodajPrzychod_Click(object sender, EventArgs e)
         {
+            //wlacz formularz dodawania przychodow
 
             new Helper.Popup.transparentBg(this, new Forms.formdodajPrzychod(podajDate.Value));
 
@@ -402,6 +404,7 @@ namespace Skarbonka
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
+            //wlacz formularz dodawania wydatkow
             new Helper.Popup.transparentBg(this, new Forms.formdodajWydatek());
         }
 
@@ -417,6 +420,7 @@ namespace Skarbonka
 
         void ReverseDGVRows(DataGridView gridPrzychody)
         {
+            //odwracanie tabeli
             List<DataGridViewRow> rows = new List<DataGridViewRow>();
             rows.AddRange(gridPrzychody.Rows.Cast<DataGridViewRow>());
             rows.Reverse();
@@ -427,7 +431,7 @@ namespace Skarbonka
 
         private void Timer2_Tick(object sender, EventArgs e)
         {
-
+            //timer sumy
             timer2.Interval = 10000;
             //buttonImport.PerformClick();
             //buttonImport2.PerformClick();
@@ -465,7 +469,7 @@ namespace Skarbonka
 
         private void button69_Click(object sender, EventArgs e)
         {
-
+            //wprowadzanie danych do dgv
             gridPrzychody.Rows.Clear();
             string[] lines = File.ReadAllLines(@txtprzych);
             string[] values;
@@ -493,6 +497,7 @@ namespace Skarbonka
 
         private void button12x_Click(object sender, EventArgs e)
         {
+            //wprowadzanie danych do dgv
             gridPrzychody.Rows.Clear();
             string[] lines = File.ReadAllLines(@txtprzych);
             string[] values;
@@ -516,6 +521,8 @@ namespace Skarbonka
 
         public static void DeleteLastLine(string filepath)
         {
+            //usun ostatni wpis - metoda
+
             List<string> lines = File.ReadAllLines(filepath).ToList();
 
             File.WriteAllLines(filepath, lines.GetRange(0, lines.Count - 1).ToArray());
@@ -525,11 +532,14 @@ namespace Skarbonka
 
         private void bunifuFlatButton2_Click(object sender, EventArgs e)
         {
+            //usun ostatni wpis
             DeleteLastLine(txtwyd);
         }
 
         private void buttonUsun_Click(object sender, EventArgs e)
         {
+            //usun ostatni wpis
+
             DeleteLastLine(txtprzych);
         }
 
@@ -540,6 +550,7 @@ namespace Skarbonka
 
         private void timer3_Tick(object sender, EventArgs e)
         {
+            //powitanie zalogowanego uzytkownika
             foreach (string line in File.ReadLines(@"current.txt"))
             {
                 lblWitaj.Text = "Witaj, " +  line.ToString() + "!";
@@ -572,6 +583,7 @@ namespace Skarbonka
         private void bunifuTileButton1_Click(object sender, EventArgs e)
         {
 
+            //tworzenie raportu przychodow
             if (gridPrzychody.Rows.Count > 0)
             {
                 SaveFileDialog sfd = new SaveFileDialog();
@@ -678,6 +690,8 @@ namespace Skarbonka
         {
             if (gridWydatki.Rows.Count > 0)
             {
+
+                //tworzenie raportu wydatkow
                 SaveFileDialog sfd = new SaveFileDialog();
                 sfd.Filter = "PDF (*.pdf)|*.pdf";
                 sfd.FileName = "Wydatki.pdf";
@@ -775,7 +789,7 @@ namespace Skarbonka
         private string pathO = string.Empty;
         private void MergePDF(string File1, string File2)
         {
-            
+            //raport ogolny - laczenie dwoch raportow
             string[] fileArray = new string[3];
             fileArray[0] = File1;
             fileArray[1] = File2;
@@ -869,6 +883,7 @@ namespace Skarbonka
         private void bunifuTileButton9_Click(object sender, EventArgs e)
         {
             
+            //raport ogolny przez zlaczenie raportow wydatkow i przychodow
             string x = pathP;
             string z = pathW;
             if (markerP = true && markerW == true)
@@ -884,6 +899,8 @@ namespace Skarbonka
 
         private void bunifuTileButton2_Click(object sender, EventArgs e)
         {
+            //potwierdzenie 
+
             bool pot = false;
             var confirmResult = MessageBox.Show("Czy chcesz wydrukować raport przychodów?",
                                      "Potwierdź drukowanie",
@@ -898,6 +915,7 @@ namespace Skarbonka
                 MessageBox.Show("Drukowanie przerwane", "Info");
             }
 
+            //drukowanie po zatwierdzeniu 
 
             if (pot == true) if (pathP != null)
             {
@@ -912,6 +930,7 @@ namespace Skarbonka
 
         private void bunifuTileButton5_Click(object sender, EventArgs e)
         {
+            //potwierdzenie 
             bool pot = false;
             var confirmResult = MessageBox.Show("Czy chcesz wydrukować raport wydatków?",
                                      "Potwierdź drukowanie",
@@ -926,6 +945,7 @@ namespace Skarbonka
                 MessageBox.Show("Drukowanie przerwane", "Info");
             }
 
+            //drukowanie po zatwierdzeniu 
 
             if (pot == true) if (pathW != null)
             {
@@ -939,6 +959,8 @@ namespace Skarbonka
 
         private void bunifuTileButton8_Click(object sender, EventArgs e)
         {
+
+            //raport ogolny - potwierdzenie
             bool pot = false;
             var confirmResult = MessageBox.Show("Czy chcesz wydrukować raport ogólny?",
                                      "Potwierdź drukowanie",
@@ -953,7 +975,7 @@ namespace Skarbonka
                 MessageBox.Show("Drukowanie przerwane", "Info");
             }
 
-
+            //drukowanie po zatwierdzeniu 
             if (pot == true)
             {
                 if (pathO != null)
@@ -969,15 +991,17 @@ namespace Skarbonka
 
         private void bunifuMetroTextbox1_OnValueChanged(object sender, EventArgs e)
         {
+            //waluta brana z txtboxa w ustawieniach do labela w datagridview
             lblWaluta.Text = "[" + bunifuMetroTextbox1.Text + "]";
             lblWaluta2.Text = "[" + bunifuMetroTextbox1.Text + "]";
         }
 
         private void bunifuFlatButton3_Click(object sender, EventArgs e)
         {
+            //wylogowanie - zamknij i otworz znowu aplikacje
             System.Windows.Forms.Application.Exit();
             var p = new Process();
-            p.StartInfo.FileName = "Skarbonka.exe";  // just for example, you can use yours.
+            p.StartInfo.FileName = "Skarbonka.exe";  
             p.Start();
 
 
