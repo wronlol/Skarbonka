@@ -61,7 +61,7 @@ namespace Skarbonka.Forms
 
         private void txtOpis1_OnValueChanged(object sender, EventArgs e)
         {
-
+            File.WriteAllText("current.txt", txtLog.Text);
         }
 
         private void txtDla1_OnValueChanged(object sender, EventArgs e)

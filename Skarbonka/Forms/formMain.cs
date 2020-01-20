@@ -19,6 +19,7 @@ using Spire.Pdf;
 using Spire.Pdf.Annotations;
 using Spire.Pdf.Widget;
 using System.Diagnostics;
+using System.Net.Mail;
 
 namespace Skarbonka
 {
@@ -35,6 +36,7 @@ namespace Skarbonka
 
         public formMain()
         {
+            //files needed to start the program
             File.AppendAllText("current.txt", "");
             File.AppendAllText("login.txt", "");
 
@@ -64,6 +66,19 @@ namespace Skarbonka
             lblWaluta.Text = "[" + bunifuMetroTextbox1.Text + "]";
             lblWaluta2.Text = "[" + bunifuMetroTextbox1.Text + "]";
             podajDate.Value = DateTime.Now;
+
+            //recreating files for a specific user
+            foreach (string line in File.ReadLines(@"current.txt"))
+            {
+                curs = line.ToString();
+            }
+
+            txtprzych = curs + "przychod.txt";
+            txtwyd = curs + "wydatek.txt";
+
+            File.AppendAllText(txtprzych, "");
+            File.AppendAllText(txtwyd, "");
+            File.AppendAllText(txtlog, "");
         }
 
 
@@ -660,6 +675,7 @@ namespace Skarbonka
 
                                 pathP = sfd.ToString();
                                 pathP = pathP.Split(' ').Last();
+                                label24.Text = pathP;
                                 pdfDoc.Add(descriptionChunk);
 
                                 pdfDoc.Add(pdfTable);
@@ -761,6 +777,7 @@ namespace Skarbonka
 
                                 pathW = sfd.ToString();
                                 pathW = pathW.Split(' ').Last();
+                                label25.Text = pathW;
 
                                 pdfDoc.Add(descriptionChunk);
                                 pdfDoc.Add(pdfTable);
@@ -808,6 +825,8 @@ namespace Skarbonka
             bool fileError = false;
             pathO = sfd.ToString();
             pathO = pathO.Split(' ').Last();
+            label26.Text = pathO;
+
             if (sfd.ShowDialog() == DialogResult.OK)
             {
                 if (File.Exists(sfd.FileName))
@@ -1005,6 +1024,114 @@ namespace Skarbonka
             p.Start();
 
 
+        }
+
+        private void label16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuFlatButton4_Click(object sender, EventArgs e)
+        {
+            string curs = "";
+
+            foreach (string line in File.ReadLines(@"current.txt"))
+            {
+                curs = line.ToString();
+            }
+
+            txtprzych = curs + "przychod.txt";
+            txtwyd = curs + "wydatek.txt";
+
+
+            //reset konta potwierdzenie
+            bool pot = false;
+            var confirmResult = MessageBox.Show("Czy na pewno chcesz zresetować swoje konto?",
+                                     "Reset",
+                                     MessageBoxButtons.YesNo);
+            if (confirmResult == DialogResult.Yes)
+            {
+                pot = true;
+            }
+            else
+            {
+                pot = false;
+                MessageBox.Show("Resetowanie zakończone niepowodzeniem", "Info");
+            }
+
+            //reset konta 
+            if (pot == true)
+            {
+                File.WriteAllText(txtprzych, "");
+                File.WriteAllText(txtwyd, "");
+            }
+
+        }
+
+        private void bunifuTileButton4_Click(object sender, EventArgs e)
+        {
+            string input = Microsoft.VisualBasic.Interaction.InputBox("Podaj adres e-mail",
+                       "Adres",
+                       "");
+            if (input != null)
+            {
+                MailMessage theMailMessage = new MailMessage("sprawdziantei@wp.pl", input);
+                theMailMessage.Body = "Raport przychodów z programu Skarbonka";
+                theMailMessage.Attachments.Add(new Attachment(label24.Text));
+                theMailMessage.Subject = "Raport przychodów";
+
+                SmtpClient theClient = new SmtpClient("smtp.wp.pl");
+                theClient.UseDefaultCredentials = false;
+                System.Net.NetworkCredential theCredential = new System.Net.NetworkCredential("sprawdziantei@wp.pl", "pszemo123");
+                theClient.Credentials = theCredential;
+                theClient.Send(theMailMessage);
+            }
+        }
+
+        private void label24_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuTileButton3_Click(object sender, EventArgs e)
+        {
+            string input = Microsoft.VisualBasic.Interaction.InputBox("Podaj adres e-mail",
+           "Adres",
+           "");
+            if (input != null)
+            { 
+
+            MailMessage theMailMessage = new MailMessage("sprawdziantei@wp.pl", input);
+            theMailMessage.Body = "Raport wydatków z programu Skarbonka";
+            theMailMessage.Attachments.Add(new Attachment(label25.Text));
+            theMailMessage.Subject = "Raport wydatków";
+
+            SmtpClient theClient = new SmtpClient("smtp.wp.pl");
+            theClient.UseDefaultCredentials = false;
+            System.Net.NetworkCredential theCredential = new System.Net.NetworkCredential("sprawdziantei@wp.pl", "pszemo123");
+            theClient.Credentials = theCredential;
+            theClient.Send(theMailMessage);
+            }
+        }
+
+        private void bunifuTileButton7_Click(object sender, EventArgs e)
+        {
+            string input = Microsoft.VisualBasic.Interaction.InputBox("Podaj adres e-mail",
+           "Adres",
+           "");
+            if (input != null)
+            {
+                MailMessage theMailMessage = new MailMessage("sprawdziantei@wp.pl", input);
+                theMailMessage.Body = "Raport ogólny z programu Skarbonka";
+                theMailMessage.Attachments.Add(new Attachment(label26.Text));
+                theMailMessage.Subject = "Raport ogólny";
+
+                SmtpClient theClient = new SmtpClient("smtp.wp.pl");
+                theClient.UseDefaultCredentials = false;
+                System.Net.NetworkCredential theCredential = new System.Net.NetworkCredential("sprawdziantei@wp.pl", "pszemo123");
+                theClient.Credentials = theCredential;
+                theClient.Send(theMailMessage);
+            }
         }
     }
 }
