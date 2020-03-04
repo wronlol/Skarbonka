@@ -166,7 +166,6 @@ namespace Skarbonka
             //wskaznik ktora strona
             wskaznik.Left = btn.Left;
             wskaznik.Width = btn.Width;
-
         }
 
         private void formMain_Load(object sender, EventArgs e)
@@ -1040,8 +1039,8 @@ namespace Skarbonka
                 curs = line.ToString();
             }
 
-            txtprzych = curs + "przychod.txt";
-            txtwyd = curs + "wydatek.txt";
+            string txtprzych = curs + "przychod.txt";
+            string txtwyd = curs + "wydatek.txt";
 
 
             //reset konta potwierdzenie
@@ -1070,6 +1069,7 @@ namespace Skarbonka
 
         private void bunifuTileButton4_Click(object sender, EventArgs e)
         {
+            //todo check if the report has been created before prompting
             string input = Microsoft.VisualBasic.Interaction.InputBox("Podaj adres e-mail",
                        "Adres",
                        "");
@@ -1085,6 +1085,8 @@ namespace Skarbonka
                 System.Net.NetworkCredential theCredential = new System.Net.NetworkCredential("sprawdziantei@wp.pl", "pszemo123");
                 theClient.Credentials = theCredential;
                 theClient.Send(theMailMessage);
+                MessageBox.Show("Raport został wysłany!", "Info");
+
             }
         }
 
@@ -1111,6 +1113,8 @@ namespace Skarbonka
             System.Net.NetworkCredential theCredential = new System.Net.NetworkCredential("sprawdziantei@wp.pl", "pszemo123");
             theClient.Credentials = theCredential;
             theClient.Send(theMailMessage);
+                MessageBox.Show("Raport został wysłany!", "Info");
+
             }
         }
 
@@ -1131,7 +1135,45 @@ namespace Skarbonka
                 System.Net.NetworkCredential theCredential = new System.Net.NetworkCredential("sprawdziantei@wp.pl", "pszemo123");
                 theClient.Credentials = theCredential;
                 theClient.Send(theMailMessage);
+                MessageBox.Show("Raport został wysłany!", "Info");
+
             }
+        }
+
+        private void label27_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuFlatButton5_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog fdprzychody = new OpenFileDialog();
+            string filePath = "";
+            if (fdprzychody.ShowDialog() == DialogResult.OK)
+            {   
+                
+                //Get the path of specified file
+                filePath = fdprzychody.FileName;
+
+            }
+
+            File.AppendAllText(txtprzych, File.ReadAllText(filePath));
+
+        }
+
+        private void bunifuFlatButton6_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog fdwydatki = new OpenFileDialog();
+            string filePath = "";
+            if (fdwydatki.ShowDialog() == DialogResult.OK)
+            {
+
+                //Get the path of specified file
+                filePath = fdwydatki.FileName;
+
+            }
+
+            File.AppendAllText(txtwyd, File.ReadAllText(filePath));
         }
     }
 }

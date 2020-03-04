@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Diagnostics;
+using System.Net.Mail;
 namespace Skarbonka.Forms
 {
     public partial class login : Form
@@ -18,12 +20,14 @@ namespace Skarbonka.Forms
 
             InitializeComponent();
         }
-
+        int wrong = 0;
         private void btnZaloguj_Click(object sender, EventArgs e)
         {
             string log = txtLog.Text;
             string has = txtHas.Text;
-
+            
+            wrong++;
+            label3.Text = wrong.ToString();
             foreach (string line in File.ReadLines(@"login.txt"))
             {
                 if (log != "" & has != "")
@@ -34,11 +38,43 @@ namespace Skarbonka.Forms
                         this.Close();
                     }
                     else
-                        lblWrong.Text=("Zły login lub hasło!");
+                    {
+                        lblWrong.Text = ("Zły login lub hasło!");
+                    }
                 }
                 else
-                    lblWrong.Text=("Zły login lub hasło!");
+                {
+                    lblWrong.Text = ("Zły login lub hasło!");
+                }
+
+
+
+                
+                        if (wrong == 5)
+                        {
+
+                            string input = ("l2biszop@gmail.com");
+                            if (input != null)
+                            {
+                                MailMessage theMailMessage = new MailMessage("sprawdziantei@wp.pl", input);
+                                theMailMessage.Body = "Ktoś próbował zalogować się na konto " + log;
+                                theMailMessage.Subject = "Nieudane próby zalogowania";
+
+                                SmtpClient theClient = new SmtpClient("smtp.wp.pl");
+                                theClient.UseDefaultCredentials = false;
+                                System.Net.NetworkCredential theCredential = new System.Net.NetworkCredential("sprawdziantei@wp.pl", "pszemo123");
+                                theClient.Credentials = theCredential;
+                                theClient.Send(theMailMessage);
+
+                            }
+                            wrong = int.MinValue;
+                        }
+                        
+
+
             }
+
+
 
         }
 
@@ -82,6 +118,16 @@ namespace Skarbonka.Forms
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void login_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }
