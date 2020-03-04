@@ -20,6 +20,10 @@ namespace Skarbonka.Forms
 
             InitializeComponent();
         }
+
+
+
+
         int wrong = 0;
         private void btnZaloguj_Click(object sender, EventArgs e)
         {
@@ -27,7 +31,6 @@ namespace Skarbonka.Forms
             string has = txtHas.Text;
             
             wrong++;
-            label3.Text = wrong.ToString();
             foreach (string line in File.ReadLines(@"login.txt"))
             {
                 if (log != "" & has != "")
@@ -104,7 +107,9 @@ namespace Skarbonka.Forms
         {
 
         }
-       
+
+
+
 
 
         private void bunifuSeparator11_Load(object sender, EventArgs e)
@@ -131,5 +136,10 @@ namespace Skarbonka.Forms
         {
 
         }
+
+
     }
+
+
+
 }

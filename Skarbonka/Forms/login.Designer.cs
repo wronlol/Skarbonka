@@ -39,6 +39,7 @@
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.lblWrong = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,7 +52,7 @@
             this.label2.Location = new System.Drawing.Point(55, 147);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 17);
-            this.label2.TabIndex = 61;
+            this.label2.TabIndex = 3;
             this.label2.Text = "Hasło";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
@@ -64,7 +65,7 @@
             this.label1.Location = new System.Drawing.Point(55, 92);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(138, 17);
-            this.label1.TabIndex = 7;
+            this.label1.TabIndex = 2;
             this.label1.Text = "Nazwa użytkownika";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
@@ -99,7 +100,7 @@
             this.btnZaloguj.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnZaloguj.selected = false;
             this.btnZaloguj.Size = new System.Drawing.Size(183, 48);
-            this.btnZaloguj.TabIndex = 2;
+            this.btnZaloguj.TabIndex = 6;
             this.btnZaloguj.Text = "Zaloguj";
             this.btnZaloguj.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnZaloguj.Textcolor = System.Drawing.Color.White;
@@ -122,8 +123,7 @@
             this.txtLog.Margin = new System.Windows.Forms.Padding(4);
             this.txtLog.Name = "txtLog";
             this.txtLog.Size = new System.Drawing.Size(496, 44);
-            this.txtLog.TabIndex = 0;
-            this.txtLog.TabStop = false;
+            this.txtLog.TabIndex = 2;
             this.txtLog.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtLog.OnValueChanged += new System.EventHandler(this.txtOpis1_OnValueChanged);
             // 
@@ -142,8 +142,7 @@
             this.txtHas.Margin = new System.Windows.Forms.Padding(4);
             this.txtHas.Name = "txtHas";
             this.txtHas.Size = new System.Drawing.Size(496, 44);
-            this.txtHas.TabIndex = 1;
-            this.txtHas.TabStop = false;
+            this.txtHas.TabIndex = 4;
             this.txtHas.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtHas.OnValueChanged += new System.EventHandler(this.txtDla1_OnValueChanged);
             // 
@@ -157,7 +156,7 @@
             this.bunifuSeparator11.Location = new System.Drawing.Point(38, 63);
             this.bunifuSeparator11.Name = "bunifuSeparator11";
             this.bunifuSeparator11.Size = new System.Drawing.Size(481, 26);
-            this.bunifuSeparator11.TabIndex = 52;
+            this.bunifuSeparator11.TabIndex = 0;
             this.bunifuSeparator11.TabStop = false;
             this.bunifuSeparator11.Transparency = 255;
             this.bunifuSeparator11.Vertical = false;
@@ -174,7 +173,7 @@
             this.label20.Location = new System.Drawing.Point(38, 32);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(218, 28);
-            this.label20.TabIndex = 51;
+            this.label20.TabIndex = 1;
             this.label20.Text = "Skarbonka - Logowanie";
             this.label20.Click += new System.EventHandler(this.label20_Click);
             // 
@@ -223,7 +222,7 @@
             this.bunifuFlatButton1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuFlatButton1.selected = false;
             this.bunifuFlatButton1.Size = new System.Drawing.Size(183, 48);
-            this.bunifuFlatButton1.TabIndex = 62;
+            this.bunifuFlatButton1.TabIndex = 8;
             this.bunifuFlatButton1.Text = "Rejestracja";
             this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
@@ -238,7 +237,16 @@
             this.lblWrong.Location = new System.Drawing.Point(228, 210);
             this.lblWrong.Name = "lblWrong";
             this.lblWrong.Size = new System.Drawing.Size(0, 19);
-            this.lblWrong.TabIndex = 63;
+            this.lblWrong.TabIndex = 7;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(290, 203);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.TabIndex = 51;
+            this.label3.Text = "label3";
             // 
             // login
             // 
@@ -246,6 +254,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(557, 368);
             this.ControlBox = false;
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.lblWrong);
             this.Controls.Add(this.bunifuFlatButton1);
             this.Controls.Add(this.label2);
@@ -280,5 +289,6 @@
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
         private Bunifu.Framework.UI.BunifuCustomLabel lblWrong;
+        private System.Windows.Forms.Label label3;
     }
 }

@@ -63,10 +63,10 @@ namespace Skarbonka
             bunifuDataViz1.colorSet.Add(col1.BackColor);
             bunifuDataViz1.colorSet.Add(col2.BackColor);
             bunifuDataViz1.colorSet.Add(col3.BackColor);
-            lblWaluta.Text = "[" + bunifuMetroTextbox1.Text + "]";
-            lblWaluta2.Text = "[" + bunifuMetroTextbox1.Text + "]";
+            lblWaluta.Text = "[" + comboBox1.Text + "]";
+            lblWaluta2.Text = "[" + comboBox1.Text + "]";
             podajDate.Value = DateTime.Now;
-
+            comboBox1.SelectedIndex = 0;
             //recreating files for a specific user
             foreach (string line in File.ReadLines(@"current.txt"))
             {
@@ -1007,12 +1007,7 @@ namespace Skarbonka
             }
         }
 
-        private void bunifuMetroTextbox1_OnValueChanged(object sender, EventArgs e)
-        {
-            //waluta brana z txtboxa w ustawieniach do labela w datagridview
-            lblWaluta.Text = "[" + bunifuMetroTextbox1.Text + "]";
-            lblWaluta2.Text = "[" + bunifuMetroTextbox1.Text + "]";
-        }
+
 
         private void bunifuFlatButton3_Click(object sender, EventArgs e)
         {
@@ -1175,5 +1170,18 @@ namespace Skarbonka
 
             File.AppendAllText(txtwyd, File.ReadAllText(filePath));
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //waluta brana z txtboxa w ustawieniach do labela w datagridview
+
+
+           lblWaluta.Text = "[" + comboBox1.Text + "]";
+           lblWaluta2.Text = "[" + comboBox1.Text + "]";
+
+        }
+        
+
+
     }
 }
