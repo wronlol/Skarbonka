@@ -19,26 +19,29 @@ using Spire.Pdf;
 using Spire.Pdf.Annotations;
 using Spire.Pdf.Widget;
 using System.Diagnostics;
+using System.Configuration;
 using System.Net.Mail;
+using System.Xml;
+using System.Xml.Linq;
+using System.Net;
+using System.Globalization;
 
 namespace Skarbonka
 {
 
     public partial class formMain : Form
     {
-
-
         string txtprzych = "przychod.txt";
         string txtwyd = "wydatek.txt";
         string txtlog = "login.txt";
-
-
 
         public formMain()
         {
             //files needed to start the program
             File.AppendAllText("current.txt", "");
             File.AppendAllText("login.txt", "");
+            File.AppendAllText("waluta.txt", "");
+
 
             string curs = "";
 
@@ -53,18 +56,18 @@ namespace Skarbonka
             File.AppendAllText(txtprzych, "");
             File.AppendAllText(txtwyd, "");
             File.AppendAllText(txtlog, "");
-            new Helper.Popup.transparentBg(this, new Forms.login());
+            //     new Helper.Popup.transparentBg(this, new Forms.login());
 
             InitializeComponent();
 
             ApplyGridTheme(gridPrzychody);
             ApplyGridTheme(gridWydatki);
             ApplyGridTheme(gridWydatki);
+
             bunifuDataViz1.colorSet.Add(col1.BackColor);
             bunifuDataViz1.colorSet.Add(col2.BackColor);
             bunifuDataViz1.colorSet.Add(col3.BackColor);
-            lblWaluta.Text = "[" + comboBox1.Text + "]";
-            lblWaluta2.Text = "[" + comboBox1.Text + "]";
+
             podajDate.Value = DateTime.Now;
             comboBox1.SelectedIndex = 0;
             //recreating files for a specific user
@@ -79,8 +82,22 @@ namespace Skarbonka
             File.AppendAllText(txtprzych, "");
             File.AppendAllText(txtwyd, "");
             File.AppendAllText(txtlog, "");
-        }
+            string wal1 = "";
+            foreach (string line in File.ReadLines(@"waluta.txt"))
+            {
+                wal1 = line.ToString();
+            }
 
+            lblWaluta.Text = "[" + wal1 + "]";
+            lblWaluta2.Text = "[" + wal1 + "]";
+
+
+
+      comboBox1.Text = wal1;
+
+
+
+        }
 
 
 
@@ -367,6 +384,7 @@ namespace Skarbonka
             RenderMonthChart();
             RenderPrzychodChart();
             RenderWydatkiChart();
+            File.WriteAllText("waluta.txt", comboBox1.Text);
         }
     
 
