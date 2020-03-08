@@ -39,7 +39,6 @@
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.lblWrong = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -239,22 +238,12 @@
             this.lblWrong.Size = new System.Drawing.Size(0, 19);
             this.lblWrong.TabIndex = 7;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(290, 203);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
-            this.label3.TabIndex = 51;
-            this.label3.Text = "label3";
-            // 
             // login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(557, 368);
             this.ControlBox = false;
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.lblWrong);
             this.Controls.Add(this.bunifuFlatButton1);
             this.Controls.Add(this.label2);
@@ -289,6 +278,5 @@
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
         private Bunifu.Framework.UI.BunifuCustomLabel lblWrong;
-        private System.Windows.Forms.Label label3;
     }
 }
