@@ -30,14 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formMain));
-            Utilities.BunifuPages.BunifuAnimatorNS.Animation animation1 = new Utilities.BunifuPages.BunifuAnimatorNS.Animation();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            Utilities.BunifuPages.BunifuAnimatorNS.Animation animation2 = new Utilities.BunifuPages.BunifuAnimatorNS.Animation();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelTytul = new System.Windows.Forms.FlowLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -156,6 +156,18 @@
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.label28 = new System.Windows.Forms.Label();
+            this.bunifuFlatButton7 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.label29 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.panelTytul.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelNaglowek.SuspendLayout();
@@ -178,6 +190,8 @@
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            this.tabPage5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.SuspendLayout();
             // 
             // panelTytul
@@ -238,6 +252,7 @@
             // panelNaglowek
             // 
             this.panelNaglowek.BackColor = System.Drawing.Color.White;
+            this.panelNaglowek.Controls.Add(this.bunifuFlatButton7);
             this.panelNaglowek.Controls.Add(this.przUstawienia);
             this.panelNaglowek.Controls.Add(this.przRaporty);
             this.panelNaglowek.Controls.Add(this.przWydatki);
@@ -271,7 +286,7 @@
             this.przUstawienia.IconVisible = true;
             this.przUstawienia.IconZoom = 90D;
             this.przUstawienia.IsTab = false;
-            this.przUstawienia.Location = new System.Drawing.Point(682, 5);
+            this.przUstawienia.Location = new System.Drawing.Point(813, 6);
             this.przUstawienia.Name = "przUstawienia";
             this.przUstawienia.Normalcolor = System.Drawing.Color.White;
             this.przUstawienia.OnHovercolor = System.Drawing.Color.White;
@@ -445,33 +460,34 @@
             this.Strony.Controls.Add(this.tabPage4);
             this.Strony.Controls.Add(this.tabPage1);
             this.Strony.Controls.Add(this.tabPage2);
+            this.Strony.Controls.Add(this.tabPage5);
             this.Strony.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Strony.Location = new System.Drawing.Point(0, 115);
             this.Strony.Multiline = true;
             this.Strony.Name = "Strony";
-            this.Strony.Page = this.tabPage2;
-            this.Strony.PageIndex = 4;
-            this.Strony.PageName = "tabPage2";
-            this.Strony.PageTitle = "Ustawienia";
+            this.Strony.Page = this.tabPage5;
+            this.Strony.PageIndex = 5;
+            this.Strony.PageName = "tabPage5";
+            this.Strony.PageTitle = "Waluty";
             this.Strony.SelectedIndex = 0;
             this.Strony.Size = new System.Drawing.Size(1173, 749);
             this.Strony.TabIndex = 2;
-            animation1.AnimateOnlyDifferences = false;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
-            this.Strony.Transition = animation1;
+            animation2.AnimateOnlyDifferences = false;
+            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
+            animation2.LeafCoeff = 0F;
+            animation2.MaxTime = 1F;
+            animation2.MinTime = 0F;
+            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
+            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
+            animation2.MosaicSize = 0;
+            animation2.Padding = new System.Windows.Forms.Padding(0);
+            animation2.RotateCoeff = 0F;
+            animation2.RotateLimit = 0F;
+            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
+            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
+            animation2.TimeCoeff = 0F;
+            animation2.TransparencyCoeff = 0F;
+            this.Strony.Transition = animation2;
             this.Strony.TransitionType = Utilities.BunifuPages.BunifuAnimatorNS.AnimationType.Custom;
             // 
             // Dashboard
@@ -1111,22 +1127,22 @@
             this.gridPrzychody.AllowUserToDeleteRows = false;
             this.gridPrzychody.AllowUserToResizeColumns = false;
             this.gridPrzychody.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(236)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.gridPrzychody.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(236)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            this.gridPrzychody.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle8;
             this.gridPrzychody.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridPrzychody.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.gridPrzychody.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gridPrzychody.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.gridPrzychody.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.MediumSeaGreen;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(143)))), ((int)(((byte)(90)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridPrzychody.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.MediumSeaGreen;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(143)))), ((int)(((byte)(90)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridPrzychody.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.gridPrzychody.ColumnHeadersHeight = 40;
             this.gridPrzychody.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -1153,14 +1169,14 @@
             this.gridPrzychody.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.gridPrzychody.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(209)))), ((int)(((byte)(169)))));
             this.gridPrzychody.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(239)))), ((int)(((byte)(226)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(209)))), ((int)(((byte)(169)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridPrzychody.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(239)))), ((int)(((byte)(226)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(209)))), ((int)(((byte)(169)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridPrzychody.DefaultCellStyle = dataGridViewCellStyle11;
             this.gridPrzychody.EnableHeadersVisualStyles = false;
             this.gridPrzychody.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(232)))), ((int)(((byte)(212)))));
             this.gridPrzychody.HeaderBackColor = System.Drawing.Color.MediumSeaGreen;
@@ -1210,8 +1226,8 @@
             // Ilosc
             // 
             this.Ilosc.DataPropertyName = "Ilosc";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.Ilosc.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.Ilosc.DefaultCellStyle = dataGridViewCellStyle10;
             this.Ilosc.HeaderText = "Ilość";
             this.Ilosc.Name = "Ilosc";
             this.Ilosc.ReadOnly = true;
@@ -1424,22 +1440,22 @@
             this.gridWydatki.AllowUserToDeleteRows = false;
             this.gridWydatki.AllowUserToResizeColumns = false;
             this.gridWydatki.AllowUserToResizeRows = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(236)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            this.gridWydatki.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(236)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
+            this.gridWydatki.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle12;
             this.gridWydatki.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridWydatki.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.gridWydatki.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gridWydatki.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.gridWydatki.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.MediumSeaGreen;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(143)))), ((int)(((byte)(90)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridWydatki.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.MediumSeaGreen;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(143)))), ((int)(((byte)(90)))));
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridWydatki.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.gridWydatki.ColumnHeadersHeight = 40;
             this.gridWydatki.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -1466,14 +1482,14 @@
             this.gridWydatki.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.gridWydatki.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(209)))), ((int)(((byte)(169)))));
             this.gridWydatki.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(239)))), ((int)(((byte)(226)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(209)))), ((int)(((byte)(169)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridWydatki.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(239)))), ((int)(((byte)(226)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(209)))), ((int)(((byte)(169)))));
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridWydatki.DefaultCellStyle = dataGridViewCellStyle14;
             this.gridWydatki.EnableHeadersVisualStyles = false;
             this.gridWydatki.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(232)))), ((int)(((byte)(212)))));
             this.gridWydatki.HeaderBackColor = System.Drawing.Color.MediumSeaGreen;
@@ -2238,6 +2254,189 @@
             this.label28.Size = new System.Drawing.Size(0, 21);
             this.label28.TabIndex = 21;
             // 
+            // bunifuFlatButton7
+            // 
+            this.bunifuFlatButton7.Activecolor = System.Drawing.Color.White;
+            this.bunifuFlatButton7.BackColor = System.Drawing.Color.White;
+            this.bunifuFlatButton7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton7.BorderRadius = 0;
+            this.bunifuFlatButton7.ButtonText = "Waluty";
+            this.bunifuFlatButton7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton7.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton7.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton7.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton7.Iconimage")));
+            this.bunifuFlatButton7.Iconimage_right = null;
+            this.bunifuFlatButton7.Iconimage_right_Selected = null;
+            this.bunifuFlatButton7.Iconimage_Selected = null;
+            this.bunifuFlatButton7.IconMarginLeft = 0;
+            this.bunifuFlatButton7.IconMarginRight = 0;
+            this.bunifuFlatButton7.IconRightVisible = true;
+            this.bunifuFlatButton7.IconRightZoom = 0D;
+            this.bunifuFlatButton7.IconVisible = true;
+            this.bunifuFlatButton7.IconZoom = 90D;
+            this.bunifuFlatButton7.IsTab = false;
+            this.bunifuFlatButton7.Location = new System.Drawing.Point(664, 6);
+            this.bunifuFlatButton7.Name = "bunifuFlatButton7";
+            this.bunifuFlatButton7.Normalcolor = System.Drawing.Color.White;
+            this.bunifuFlatButton7.OnHovercolor = System.Drawing.Color.White;
+            this.bunifuFlatButton7.OnHoverTextColor = System.Drawing.Color.SeaGreen;
+            this.bunifuFlatButton7.selected = false;
+            this.bunifuFlatButton7.Size = new System.Drawing.Size(143, 53);
+            this.bunifuFlatButton7.TabIndex = 10;
+            this.bunifuFlatButton7.Text = "Waluty";
+            this.bunifuFlatButton7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bunifuFlatButton7.Textcolor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton7.TextFont = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.bunifuFlatButton7.Click += new System.EventHandler(this.bunifuFlatButton7_Click);
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPage5.Controls.Add(this.pictureBox8);
+            this.tabPage5.Controls.Add(this.webBrowser1);
+            this.tabPage5.Controls.Add(this.button1);
+            this.tabPage5.Controls.Add(this.label32);
+            this.tabPage5.Controls.Add(this.label31);
+            this.tabPage5.Controls.Add(this.label30);
+            this.tabPage5.Controls.Add(this.listBox2);
+            this.tabPage5.Controls.Add(this.listBox1);
+            this.tabPage5.Controls.Add(this.textBox1);
+            this.tabPage5.Controls.Add(this.label29);
+            this.tabPage5.Location = new System.Drawing.Point(4, 4);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(1165, 723);
+            this.tabPage5.TabIndex = 7;
+            this.tabPage5.Text = "Waluty";
+            // 
+            // label29
+            // 
+            this.label29.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label29.AutoSize = true;
+            this.label29.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label29.Font = new System.Drawing.Font("Segoe UI", 15F);
+            this.label29.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label29.Location = new System.Drawing.Point(71, 45);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(192, 28);
+            this.label29.TabIndex = 36;
+            this.label29.Text = "Aktualne kursy walut";
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.textBox1.Location = new System.Drawing.Point(181, 123);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(119, 23);
+            this.textBox1.TabIndex = 37;
+            // 
+            // listBox1
+            // 
+            this.listBox1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.listBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 17;
+            this.listBox1.Items.AddRange(new object[] {
+            "PLN",
+            "EUR",
+            "GBP"});
+            this.listBox1.Location = new System.Drawing.Point(403, 106);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(120, 55);
+            this.listBox1.TabIndex = 38;
+            // 
+            // listBox2
+            // 
+            this.listBox2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.listBox2.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.ItemHeight = 17;
+            this.listBox2.Items.AddRange(new object[] {
+            "PLN",
+            "EUR",
+            "GBP"});
+            this.listBox2.Location = new System.Drawing.Point(622, 106);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(120, 55);
+            this.listBox2.TabIndex = 39;
+            // 
+            // label30
+            // 
+            this.label30.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label30.AutoSize = true;
+            this.label30.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label30.Font = new System.Drawing.Font("Segoe UI", 15F);
+            this.label30.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label30.Location = new System.Drawing.Point(120, 118);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(55, 28);
+            this.label30.TabIndex = 40;
+            this.label30.Text = "Ilość:";
+            // 
+            // label31
+            // 
+            this.label31.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label31.AutoSize = true;
+            this.label31.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label31.Font = new System.Drawing.Font("Segoe UI", 15F);
+            this.label31.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label31.Location = new System.Drawing.Point(375, 116);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(27, 28);
+            this.label31.TabIndex = 41;
+            this.label31.Text = "Z:";
+            // 
+            // label32
+            // 
+            this.label32.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label32.AutoSize = true;
+            this.label32.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label32.Font = new System.Drawing.Font("Segoe UI", 15F);
+            this.label32.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label32.Location = new System.Drawing.Point(575, 118);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(41, 28);
+            this.label32.TabIndex = 42;
+            this.label32.Text = "Na:";
+            // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(778, 109);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(120, 50);
+            this.button1.TabIndex = 43;
+            this.button1.TabStop = false;
+            this.button1.Text = "Przelicz";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // webBrowser1
+            // 
+            this.webBrowser1.Location = new System.Drawing.Point(125, 176);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser1.Name = "webBrowser1";
+            this.webBrowser1.ScrollBarsEnabled = false;
+            this.webBrowser1.Size = new System.Drawing.Size(804, 292);
+            this.webBrowser1.TabIndex = 44;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Location = new System.Drawing.Point(125, 166);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(875, 40);
+            this.pictureBox8.TabIndex = 45;
+            this.pictureBox8.TabStop = false;
+            // 
             // formMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -2281,6 +2480,9 @@
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            this.tabPage5.ResumeLayout(false);
+            this.tabPage5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2405,6 +2607,18 @@
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton6;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label28;
+        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton7;
+        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.WebBrowser webBrowser1;
     }
 }
 

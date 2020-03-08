@@ -385,6 +385,13 @@ namespace Skarbonka
             RenderPrzychodChart();
             RenderWydatkiChart();
             File.WriteAllText("waluta.txt", comboBox1.Text);
+
+            Point scrollPoint = new Point(150, 155);
+
+            if (webBrowser1.Document != null)
+            {
+                webBrowser1.Document.Window.ScrollTo(scrollPoint);
+            }
         }
     
 
@@ -1198,8 +1205,20 @@ namespace Skarbonka
            lblWaluta2.Text = "[" + comboBox1.Text + "]";
 
         }
-        
 
+        private void bunifuFlatButton7_Click(object sender, EventArgs e)
+        {
+            MoveIndicator((Control)sender);
+            Strony.SetPage("Waluty");
+        }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+           string from, to;
+           from = listBox1.SelectedItem.ToString();
+           to = listBox2.SelectedItem.ToString();
+           webBrowser1.Navigate("https://www.google.com/search?q=" + textBox1.Text + " " + from + " in " + to + "&oq=" + textBox1.Text + from + "in" + to);
+
+        }
     }
 }
