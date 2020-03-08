@@ -19,26 +19,29 @@ using Spire.Pdf;
 using Spire.Pdf.Annotations;
 using Spire.Pdf.Widget;
 using System.Diagnostics;
+using System.Configuration;
 using System.Net.Mail;
+using System.Xml;
+using System.Xml.Linq;
+using System.Net;
+using System.Globalization;
 
 namespace Skarbonka
 {
 
     public partial class formMain : Form
     {
-
-
         string txtprzych = "przychod.txt";
         string txtwyd = "wydatek.txt";
         string txtlog = "login.txt";
-
-
 
         public formMain()
         {
             //files needed to start the program
             File.AppendAllText("current.txt", "");
             File.AppendAllText("login.txt", "");
+            File.AppendAllText("waluta.txt", "");
+
 
             string curs = "";
 
@@ -53,18 +56,18 @@ namespace Skarbonka
             File.AppendAllText(txtprzych, "");
             File.AppendAllText(txtwyd, "");
             File.AppendAllText(txtlog, "");
-            new Helper.Popup.transparentBg(this, new Forms.login());
+            //     new Helper.Popup.transparentBg(this, new Forms.login());
 
             InitializeComponent();
 
             ApplyGridTheme(gridPrzychody);
             ApplyGridTheme(gridWydatki);
             ApplyGridTheme(gridWydatki);
+
             bunifuDataViz1.colorSet.Add(col1.BackColor);
             bunifuDataViz1.colorSet.Add(col2.BackColor);
             bunifuDataViz1.colorSet.Add(col3.BackColor);
-            lblWaluta.Text = "[" + comboBox1.Text + "]";
-            lblWaluta2.Text = "[" + comboBox1.Text + "]";
+
             podajDate.Value = DateTime.Now;
             comboBox1.SelectedIndex = 0;
             //recreating files for a specific user
@@ -79,7 +82,24 @@ namespace Skarbonka
             File.AppendAllText(txtprzych, "");
             File.AppendAllText(txtwyd, "");
             File.AppendAllText(txtlog, "");
+            string wal1 = "";
+            foreach (string line in File.ReadLines(@"waluta.txt"))
+            {
+                wal1 = line.ToString();
+            }
+
+            lblWaluta.Text = "[" + wal1 + "]";
+            lblWaluta2.Text = "[" + wal1 + "]";
+
+
+
+            comboBox1.Text = wal1;
+
+
+
         }
+
+
 
 
 
@@ -135,7 +155,7 @@ namespace Skarbonka
             gridWydatki.Rows.Clear();
             string[] lines = File.ReadAllLines(@txtwyd);
             string[] values;
-            
+
             for (int i = 0; i < lines.Length; i++)
             {
                 values = lines[i].ToString().Split(';');
@@ -170,6 +190,47 @@ namespace Skarbonka
 
         private void formMain_Load(object sender, EventArgs e)
         {
+            /*
+            string url = "http://finance.yahoo.com/webservice/" +
+    "v1/symbols/allcurrencies/quote?format=xml";
+            try
+            {
+                // Load the data.
+                XmlDocument doc = new XmlDocument();
+                doc.Load(url);
+
+                // Process the resource nodes.
+                XmlNode root = doc.DocumentElement;
+                string xquery = "descendant::resource[@classname='Quote']";
+                foreach (XmlNode node in root.SelectNodes(xquery))
+                {
+                    const string name_query =
+                        "descendant::field[@name='name']";
+                    const string price_query =
+                        "descendant::field[@name='price']";
+                    string name =
+                        node.SelectSingleNode(name_query).InnerText;
+                    string price =
+                        node.SelectSingleNode(price_query).InnerText;
+                    decimal inverse = 1m / decimal.Parse(price);
+
+                    ListViewItem item = lvwPrices.Items.Add(name);
+                    item.SubItems.Add(price);
+                    item.SubItems.Add(inverse.ToString("f6"));
+                }
+
+                // Sort.
+                lvwPrices.Sorting = SortOrder.Ascending;
+                lvwPrices.FullRowSelect = true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Read Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+           
+        }
+         */
 
         }
 
@@ -236,7 +297,7 @@ namespace Skarbonka
 
 
 
-            
+
 
             foreach (string line in File.ReadLines(@txtprzych))
             {
@@ -254,10 +315,10 @@ namespace Skarbonka
 
             canvas.addData(przychod);
             canvas.addData(wydatki);
-          //  canvas.addData(balans);
+            //  canvas.addData(balans);
 
-                bunifuDataViz1.Render(canvas);
-           
+            bunifuDataViz1.Render(canvas);
+
         }
 
         void RenderPrzychodChart()
@@ -367,8 +428,10 @@ namespace Skarbonka
             RenderMonthChart();
             RenderPrzychodChart();
             RenderWydatkiChart();
+            File.WriteAllText("waluta.txt", comboBox1.Text);
+
         }
-    
+
 
         private void bunifuDatepicker1_onValueChanged(object sender, EventArgs e)
         {
@@ -396,9 +459,9 @@ namespace Skarbonka
 
         }
 
-    
 
-    private void tabPage3_Click(object sender, EventArgs e)
+
+        private void tabPage3_Click(object sender, EventArgs e)
         {
 
         }
@@ -450,7 +513,7 @@ namespace Skarbonka
             //buttonImport.PerformClick();
             //buttonImport2.PerformClick();
             //button12x.PerformClick();
-            
+
 
             double sum = 0;
             for (int i = 0; i < gridPrzychody.Rows.Count; ++i)
@@ -506,7 +569,7 @@ namespace Skarbonka
 
         private void lblTotoIncome_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void button12x_Click(object sender, EventArgs e)
@@ -567,7 +630,7 @@ namespace Skarbonka
             //powitanie zalogowanego uzytkownika
             foreach (string line in File.ReadLines(@"current.txt"))
             {
-                lblWitaj.Text = "Witaj, " +  line.ToString() + "!";
+                lblWitaj.Text = "Witaj, " + line.ToString() + "!";
             }
 
             button69.PerformClick();
@@ -589,7 +652,7 @@ namespace Skarbonka
 
         private void bunifuDataViz2_Load(object sender, EventArgs e)
         {
-           
+
         }
 
         private string pathP = string.Empty;
@@ -601,7 +664,7 @@ namespace Skarbonka
             if (gridPrzychody.Rows.Count > 0)
             {
                 SaveFileDialog sfd = new SaveFileDialog();
-                sfd.Filter = "PDF (*.pdf)|*.pdf"; 
+                sfd.Filter = "PDF (*.pdf)|*.pdf";
                 sfd.FileName = "Przychody.pdf";
 
 
@@ -653,7 +716,7 @@ namespace Skarbonka
 
                                     PdfPCell acell = new PdfPCell(new Phrase(cell.Value.ToString(), font));
                                     acell.BackgroundColor = new iTextSharp.text.BaseColor(245, 245, 220);
-;
+                                    ;
 
                                     pdfTable.AddCell(acell);
                                 }
@@ -710,7 +773,7 @@ namespace Skarbonka
                 SaveFileDialog sfd = new SaveFileDialog();
                 sfd.Filter = "PDF (*.pdf)|*.pdf";
                 sfd.FileName = "Wydatki.pdf";
-                
+
 
 
                 bool fileError = false;
@@ -766,7 +829,7 @@ namespace Skarbonka
                             {
                                 Document pdfDoc = new Document(PageSize.A4, 10f, 20f, 20f, 10f);
 
-                                
+
                                 PdfWriter.GetInstance(pdfDoc, stream);
                                 pdfDoc.Open();
                                 var textfont = FontFactory.GetFont("Arial", 20);
@@ -900,7 +963,7 @@ namespace Skarbonka
 
         private void bunifuTileButton9_Click(object sender, EventArgs e)
         {
-            
+
             //raport ogolny przez zlaczenie raportow wydatkow i przychodow
             string x = pathP;
             string z = pathW;
@@ -936,13 +999,13 @@ namespace Skarbonka
             //drukowanie po zatwierdzeniu 
 
             if (pot == true) if (pathP != null)
-            {
-                Spire.Pdf.PdfDocument doc = new Spire.Pdf.PdfDocument();
-                doc.LoadFromFile(pathP);
-                doc.PrintDocument.Print();
-            }
-            else
-                MessageBox.Show("Najpierw stwórz raport!", "Info");
+                {
+                    Spire.Pdf.PdfDocument doc = new Spire.Pdf.PdfDocument();
+                    doc.LoadFromFile(pathP);
+                    doc.PrintDocument.Print();
+                }
+                else
+                    MessageBox.Show("Najpierw stwórz raport!", "Info");
 
         }
 
@@ -966,13 +1029,13 @@ namespace Skarbonka
             //drukowanie po zatwierdzeniu 
 
             if (pot == true) if (pathW != null)
-            {
-                Spire.Pdf.PdfDocument doc = new Spire.Pdf.PdfDocument();
-                doc.LoadFromFile(pathW);
-                doc.PrintDocument.Print();
-            }
-            else
-                MessageBox.Show("Najpierw stwórz raport!", "Info");
+                {
+                    Spire.Pdf.PdfDocument doc = new Spire.Pdf.PdfDocument();
+                    doc.LoadFromFile(pathW);
+                    doc.PrintDocument.Print();
+                }
+                else
+                    MessageBox.Show("Najpierw stwórz raport!", "Info");
         }
 
         private void bunifuTileButton8_Click(object sender, EventArgs e)
@@ -1014,7 +1077,7 @@ namespace Skarbonka
             //wylogowanie - zamknij i otworz znowu aplikacje
             System.Windows.Forms.Application.Exit();
             var p = new Process();
-            p.StartInfo.FileName = "Skarbonka.exe";  
+            p.StartInfo.FileName = "Skarbonka.exe";
             p.Start();
 
 
@@ -1096,18 +1159,18 @@ namespace Skarbonka
            "Adres",
            "");
             if (input != null)
-            { 
+            {
 
-            MailMessage theMailMessage = new MailMessage("sprawdziantei@wp.pl", input);
-            theMailMessage.Body = "Raport wydatków z programu Skarbonka";
-            theMailMessage.Attachments.Add(new Attachment(label25.Text));
-            theMailMessage.Subject = "Raport wydatków";
+                MailMessage theMailMessage = new MailMessage("sprawdziantei@wp.pl", input);
+                theMailMessage.Body = "Raport wydatków z programu Skarbonka";
+                theMailMessage.Attachments.Add(new Attachment(label25.Text));
+                theMailMessage.Subject = "Raport wydatków";
 
-            SmtpClient theClient = new SmtpClient("smtp.wp.pl");
-            theClient.UseDefaultCredentials = false;
-            System.Net.NetworkCredential theCredential = new System.Net.NetworkCredential("sprawdziantei@wp.pl", "pszemo123");
-            theClient.Credentials = theCredential;
-            theClient.Send(theMailMessage);
+                SmtpClient theClient = new SmtpClient("smtp.wp.pl");
+                theClient.UseDefaultCredentials = false;
+                System.Net.NetworkCredential theCredential = new System.Net.NetworkCredential("sprawdziantei@wp.pl", "pszemo123");
+                theClient.Credentials = theCredential;
+                theClient.Send(theMailMessage);
                 MessageBox.Show("Raport został wysłany!", "Info");
 
             }
@@ -1145,8 +1208,8 @@ namespace Skarbonka
             OpenFileDialog fdprzychody = new OpenFileDialog();
             string filePath = "";
             if (fdprzychody.ShowDialog() == DialogResult.OK)
-            {   
-                
+            {
+
                 //Get the path of specified file
                 filePath = fdprzychody.FileName;
 
@@ -1176,12 +1239,42 @@ namespace Skarbonka
             //waluta brana z txtboxa w ustawieniach do labela w datagridview
 
 
-           lblWaluta.Text = "[" + comboBox1.Text + "]";
-           lblWaluta2.Text = "[" + comboBox1.Text + "]";
+
+
+            lblWaluta.Text = "[" + comboBox1.Text + "]";
+            lblWaluta2.Text = "[" + comboBox1.Text + "]";
+
+
 
         }
-        
 
+        private void label28_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void tabPage5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void przWaluty_Click(object sender, EventArgs e)
+        {
+            MoveIndicator((Control)sender);
+            Strony.SetPage("Waluty");
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_Click(object sender, EventArgs e)
+        {
+            string from, to;
+            from = listBox1.SelectedItem.ToString();
+            to = listBox2.SelectedItem.ToString();
+            webBrowser1.Navigate("https://www.google.com/search?q=100+pln+in+usd&oq=100+pln+in+usd");
+        }
     }
 }
