@@ -90,17 +90,54 @@ namespace Skarbonka
 
             lblWaluta.Text = "[" + wal1 + "]";
             lblWaluta2.Text = "[" + wal1 + "]";
+            comboBox1.Text = wal1;
+            exchangerates();
 
-
-
-      comboBox1.Text = wal1;
 
 
 
         }
+        string euro = "";
+        string gbp = "";
+        string usd = "";
 
 
+        public void exchangerates()
+        {
+            WebClient client = new WebClient();
+            string dnlad = client.DownloadString("http://api.nbp.pl/api/exchangerates/tables/A/");
+            File.WriteAllText(@"waluty.txt", dnlad);
+            string str1 = File.ReadAllText(@"waluty.txt");
+            str1 = str1.Replace("{", "\n");
+            File.WriteAllText("waluty.txt", str1);
 
+            foreach (string line in File.ReadLines(@"waluty.txt"))
+            {
+                if (line.Contains("EUR"))
+                {
+                    euro = line.Split(':').Last();
+                    euro = euro.Remove(euro.Length - 2);
+                    lblEuro.Text = euro;
+                }
+
+                if (line.Contains("GBP"))
+                {
+                    gbp = line.Split(':').Last();
+                    gbp = gbp.Remove(gbp.Length - 2);
+                    lblGBP.Text = gbp;
+                }
+
+                if (line.Contains("USD"))
+                {
+                    usd = line.Split(':').Last();
+                    usd = usd.Remove(usd.Length - 2);
+                    lblUSD.Text = usd;
+                }
+
+            }
+
+
+        }
         public void klik()
         {
             //wczytanie danych
@@ -1218,6 +1255,11 @@ namespace Skarbonka
            from = listBox1.SelectedItem.ToString();
            to = listBox2.SelectedItem.ToString();
            webBrowser1.Navigate("https://www.google.com/search?q=" + textBox1.Text + " " + from + " in " + to + "&oq=" + textBox1.Text + from + "in" + to);
+           
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
     }
