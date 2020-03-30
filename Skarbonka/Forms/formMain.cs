@@ -56,9 +56,13 @@ namespace Skarbonka
             File.AppendAllText(txtprzych, "");
             File.AppendAllText(txtwyd, "");
             File.AppendAllText(txtlog, "");
-            //     new Helper.Popup.transparentBg(this, new Forms.login());
+           new Helper.Popup.transparentBg(this, new Forms.login());
 
             InitializeComponent();
+
+            ////////////////////////
+            
+            /////////////////////////
 
             ApplyGridTheme(gridPrzychody);
             ApplyGridTheme(gridWydatki);
@@ -92,7 +96,8 @@ namespace Skarbonka
             lblWaluta2.Text = "[" + wal1 + "]";
             comboBox1.Text = wal1;
             exchangerates();
-
+            lista();
+            lista2();
 
 
 
@@ -1240,7 +1245,7 @@ namespace Skarbonka
 
            lblWaluta.Text = "[" + comboBox1.Text + "]";
            lblWaluta2.Text = "[" + comboBox1.Text + "]";
-
+                       
         }
 
         private void bunifuFlatButton7_Click(object sender, EventArgs e)
@@ -1259,6 +1264,194 @@ namespace Skarbonka
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuFlatButton8_Click(object sender, EventArgs e)
+        {
+            Dashboard.BackColor = Color.FromArgb(27, 38, 44);
+            tabPage1.BackColor = Color.FromArgb(27, 38, 44);
+            tabPage2.BackColor = Color.FromArgb(27, 38, 44);
+            tabPage3.BackColor = Color.FromArgb(27, 38, 44);
+            tabPage4.BackColor = Color.FromArgb(27, 38, 44);
+            tabPage5.BackColor = Color.FromArgb(27, 38, 44);
+            tabPage6.BackColor = Color.FromArgb(27, 38, 44);
+            panelNaglowek.BackColor = Color.FromArgb(27, 38, 44);
+            panelTytul.BackColor = Color.FromArgb(27, 38, 44);
+            bunifuDataViz1.BackColor = Color.FromArgb(27, 38, 44);
+            bunifuDataViz2.BackColor = Color.FromArgb(27, 38, 44);
+            bunifuDataViz3.BackColor = Color.FromArgb(27, 38, 44);
+            bunifuDropdown2.BackColor = Color.FromArgb(27, 38, 44);
+            bunifuDropdown3.BackColor = Color.FromArgb(27, 38, 44);
+            bunifuDropdown4.BackColor = Color.FromArgb(27, 38, 44);
+            bunifuDropdown5.BackColor = Color.FromArgb(27, 38, 44);
+            label1.BackColor = Color.FromArgb(27, 38, 44);
+            label10.BackColor = Color.FromArgb(27, 38, 44);
+            label11.BackColor = Color.FromArgb(27, 38, 44);
+            label12.BackColor = Color.FromArgb(27, 38, 44);
+            label13.BackColor = Color.FromArgb(27, 38, 44);
+            label14.BackColor = Color.FromArgb(27, 38, 44);
+            label15.BackColor = Color.FromArgb(27, 38, 44);
+            label16.BackColor = Color.FromArgb(27, 38, 44);
+            label17.BackColor = Color.FromArgb(27, 38, 44);
+            label18.BackColor = Color.FromArgb(27, 38, 44);
+            label19.BackColor = Color.FromArgb(27, 38, 44);
+            label2.BackColor = Color.FromArgb(27, 38, 44);
+            label20.BackColor = Color.FromArgb(27, 38, 44);
+            label21.BackColor = Color.FromArgb(27, 38, 44);
+            label22.BackColor = Color.FromArgb(27, 38, 44);
+            label23.BackColor = Color.FromArgb(27, 38, 44);
+            label24.BackColor = Color.FromArgb(27, 38, 44);
+            label25.BackColor = Color.FromArgb(27, 38, 44);
+            label26.BackColor = Color.FromArgb(27, 38, 44);
+            label27.BackColor = Color.FromArgb(27, 38, 44);
+            label28.BackColor = Color.FromArgb(27, 38, 44);
+            label29.BackColor = Color.FromArgb(27, 38, 44);
+            label3.BackColor = Color.FromArgb(27, 38, 44);
+            label31.BackColor = Color.FromArgb(27, 38, 44);
+            label30.BackColor = Color.FromArgb(27, 38, 44);
+            label32.BackColor = Color.FromArgb(27, 38, 44);
+            label33.BackColor = Color.FromArgb(27, 38, 44);
+            label34.BackColor = Color.FromArgb(27, 38, 44);
+            label35.BackColor = Color.FromArgb(27, 38, 44);
+            label36.BackColor = Color.FromArgb(27, 38, 44);
+            label38.BackColor = Color.FromArgb(27, 38, 44);
+            label4.BackColor = Color.FromArgb(27, 38, 44);
+            label5.BackColor = Color.FromArgb(27, 38, 44);
+            label6.BackColor = Color.FromArgb(27, 38, 44);
+            label7.BackColor = Color.FromArgb(27, 38, 44);
+            label8.BackColor = Color.FromArgb(27, 38, 44);
+            label9.BackColor = Color.FromArgb(27, 38, 44);
+            label39.BackColor = Color.FromArgb(27, 38, 44);
+            label37.BackColor = Color.FromArgb(27, 38, 44);
+            lblEuro.BackColor = Color.FromArgb(27, 38, 44);
+            lblGBP.BackColor = Color.FromArgb(27, 38, 44);
+            lblTotoIncome.BackColor = Color.FromArgb(27, 38, 44);
+            lblUSD.BackColor = Color.FromArgb(27, 38, 44);
+            lblWaluta.BackColor = Color.FromArgb(27, 38, 44);
+            lblWaluta2.BackColor = Color.FromArgb(27, 38, 44);
+            lblWitaj.BackColor = Color.FromArgb(27, 38, 44);
+            bunifuFlatButton7.BackColor = Color.FromArgb(27, 38, 44);
+            bunifuFlatButton7.OnHovercolor = Color.FromArgb(27, 38, 44);
+            bunifuFlatButton7.Normalcolor = Color.FromArgb(27, 38, 44);
+            bunifuFlatButton9.BackColor = Color.FromArgb(27, 38, 44);
+            bunifuFlatButton9.OnHovercolor = Color.FromArgb(27, 38, 44);
+            bunifuFlatButton9.Normalcolor = Color.FromArgb(27, 38, 44);
+            przDashboard.BackColor = Color.FromArgb(27, 38, 44);
+            przDashboard.OnHovercolor = Color.FromArgb(27, 38, 44);
+            przDashboard.Normalcolor = Color.FromArgb(27, 38, 44);
+            przPrzychody.BackColor = Color.FromArgb(27, 38, 44);
+            przPrzychody.OnHovercolor = Color.FromArgb(27, 38, 44);
+            przPrzychody.Normalcolor = Color.FromArgb(27, 38, 44);
+            przRaporty.BackColor = Color.FromArgb(27, 38, 44);
+            przRaporty.OnHovercolor = Color.FromArgb(27, 38, 44);
+            przRaporty.Normalcolor = Color.FromArgb(27, 38, 44);
+            przUstawienia.BackColor = Color.FromArgb(27, 38, 44);
+            przUstawienia.OnHovercolor = Color.FromArgb(27, 38, 44);
+            przUstawienia.Normalcolor = Color.FromArgb(27, 38, 44);
+            przWydatki.BackColor = Color.FromArgb(27, 38, 44);
+            przWydatki.OnHovercolor = Color.FromArgb(27, 38, 44);
+            przWydatki.Normalcolor = Color.FromArgb(27, 38, 44);
+            panel2.BackColor = Color.FromArgb(27, 38, 44);
+            bunifuTileButton1.BackColor = Color.FromArgb(27, 38, 44);
+            bunifuTileButton2.BackColor = Color.FromArgb(27, 38, 44);
+            bunifuTileButton3.BackColor = Color.FromArgb(27, 38, 44);
+            bunifuTileButton4.BackColor = Color.FromArgb(27, 38, 44);
+            bunifuTileButton5.BackColor = Color.FromArgb(27, 38, 44);
+            bunifuTileButton6.BackColor = Color.FromArgb(27, 38, 44);
+            bunifuTileButton7.BackColor = Color.FromArgb(27, 38, 44);
+            bunifuTileButton8.BackColor = Color.FromArgb(27, 38, 44);
+            bunifuTileButton9.BackColor = Color.FromArgb(27, 38, 44);
+            gridPrzychody.BackgroundColor = Color.FromArgb(27, 38, 44);
+            gridWydatki.BackgroundColor = Color.FromArgb(27, 38, 44);
+            bunifuTileButton1.color = Color.FromArgb(27, 38, 44);
+            bunifuTileButton2.color = Color.FromArgb(27, 38, 44);
+            bunifuTileButton3.color = Color.FromArgb(27, 38, 44);
+            bunifuTileButton4.color = Color.FromArgb(27, 38, 44);
+            bunifuTileButton5.color = Color.FromArgb(27, 38, 44);
+            bunifuTileButton6.color = Color.FromArgb(27, 38, 44);
+            bunifuTileButton7.color = Color.FromArgb(27, 38, 44);
+            bunifuTileButton8.color = Color.FromArgb(27, 38, 44);
+            bunifuTileButton9.color = Color.FromArgb(27, 38, 44);
+            listView1.BackColor = Color.FromArgb(27, 38, 44);
+            listView2.BackColor = Color.FromArgb(27, 38, 44);
+
+        }
+
+        private void bunifuFlatButton9_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void bunifuFlatButton9_Click_1(object sender, EventArgs e)
+        {
+            MoveIndicator((Control)sender);
+            Strony.SetPage("Konta");
+        }
+        int sum32;
+
+        void lista()
+        {
+            int ix;
+            listView1.View = View.List;
+            String cura = System.Environment.CurrentDirectory;
+            DirectoryInfo d = new DirectoryInfo(cura);//Assuming Test is your Folder
+            FileInfo[] Files = d.GetFiles("*przychod.txt"); //Getting Text files
+            string str = "";
+            foreach (FileInfo file in Files)
+            {
+                str = str + "" + file.Name;
+
+                foreach (string line in File.ReadLines(str))
+                {
+                string lastWord = line.Split(';').Last();
+                ix = System.Convert.ToInt32(lastWord);
+                    sum32 += ix;
+                }
+
+
+                str = str.Replace("przychod.txt", "");
+                str = str + "                   " + sum32;
+                ix = 0;
+                sum32 = 0;
+                //sum32 = 0;
+                listView1.Items.Add(str);
+                str = "";
+                }
+        }
+
+        void lista2()
+        {
+            int ix;
+            listView2.View = View.List;
+            String cura = System.Environment.CurrentDirectory;
+            DirectoryInfo d = new DirectoryInfo(cura);//Assuming Test is your Folder
+            FileInfo[] Files = d.GetFiles("*wydatek.txt"); //Getting Text files
+            string str = "";
+            foreach (FileInfo file in Files)
+            {
+                str = str + "" + file.Name;
+
+                foreach (string line in File.ReadLines(str))
+                {
+                    string lastWord = line.Split(';').Last();
+                    ix = System.Convert.ToInt32(lastWord);
+                    sum32 += ix;
+                }
+
+
+                str = str.Replace("wydatek.txt", "");
+                str = str + "                   " + sum32;
+                ix = 0;
+                sum32 = 0;
+                //sum32 = 0;
+                listView2.Items.Add(str);
+                str = "";
+            }
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

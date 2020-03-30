@@ -155,6 +155,12 @@
             this.label17 = new System.Windows.Forms.Label();
             this.bunifuSeparator8 = new Bunifu.Framework.UI.BunifuSeparator();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.lblUSD = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.lblGBP = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.lblEuro = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
@@ -169,12 +175,15 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.timer3 = new System.Windows.Forms.Timer(this.components);
-            this.label34 = new System.Windows.Forms.Label();
-            this.lblEuro = new System.Windows.Forms.Label();
-            this.lblGBP = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
-            this.lblUSD = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
+            this.bunifuFlatButton8 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.label35 = new System.Windows.Forms.Label();
+            this.bunifuSeparator13 = new Bunifu.Framework.UI.BunifuSeparator();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.bunifuFlatButton9 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.listView2 = new System.Windows.Forms.ListView();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
             this.panelTytul.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelNaglowek.SuspendLayout();
@@ -199,6 +208,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            this.tabPage6.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelTytul
@@ -259,6 +269,7 @@
             // panelNaglowek
             // 
             this.panelNaglowek.BackColor = System.Drawing.Color.White;
+            this.panelNaglowek.Controls.Add(this.bunifuFlatButton9);
             this.panelNaglowek.Controls.Add(this.bunifuFlatButton7);
             this.panelNaglowek.Controls.Add(this.przUstawienia);
             this.panelNaglowek.Controls.Add(this.przRaporty);
@@ -328,7 +339,7 @@
             this.przUstawienia.IconVisible = true;
             this.przUstawienia.IconZoom = 90D;
             this.przUstawienia.IsTab = false;
-            this.przUstawienia.Location = new System.Drawing.Point(813, 6);
+            this.przUstawienia.Location = new System.Drawing.Point(940, 6);
             this.przUstawienia.Name = "przUstawienia";
             this.przUstawienia.Normalcolor = System.Drawing.Color.White;
             this.przUstawienia.OnHovercolor = System.Drawing.Color.White;
@@ -503,14 +514,15 @@
             this.Strony.Controls.Add(this.tabPage1);
             this.Strony.Controls.Add(this.tabPage2);
             this.Strony.Controls.Add(this.tabPage5);
+            this.Strony.Controls.Add(this.tabPage6);
             this.Strony.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Strony.Location = new System.Drawing.Point(0, 115);
             this.Strony.Multiline = true;
             this.Strony.Name = "Strony";
-            this.Strony.Page = this.tabPage5;
-            this.Strony.PageIndex = 5;
-            this.Strony.PageName = "tabPage5";
-            this.Strony.PageTitle = "Waluty";
+            this.Strony.Page = this.tabPage6;
+            this.Strony.PageIndex = 6;
+            this.Strony.PageName = "tabPage6";
+            this.Strony.PageTitle = "Konta";
             this.Strony.SelectedIndex = 0;
             this.Strony.Size = new System.Drawing.Size(1173, 749);
             this.Strony.TabIndex = 2;
@@ -620,9 +632,9 @@
             this.bunifuSeparator3.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator3.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(211)))), ((int)(((byte)(211)))));
             this.bunifuSeparator3.LineThickness = 1;
-            this.bunifuSeparator3.Location = new System.Drawing.Point(60, 537);
+            this.bunifuSeparator3.Location = new System.Drawing.Point(75, 534);
             this.bunifuSeparator3.Name = "bunifuSeparator3";
-            this.bunifuSeparator3.Size = new System.Drawing.Size(830, 18);
+            this.bunifuSeparator3.Size = new System.Drawing.Size(877, 18);
             this.bunifuSeparator3.TabIndex = 16;
             this.bunifuSeparator3.Transparency = 255;
             this.bunifuSeparator3.Vertical = false;
@@ -649,7 +661,7 @@
             0});
             this.bunifuDataViz3.BackColor = System.Drawing.Color.White;
             this.bunifuDataViz3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuDataViz3.Location = new System.Drawing.Point(412, 604);
+            this.bunifuDataViz3.Location = new System.Drawing.Point(428, 603);
             this.bunifuDataViz3.Name = "bunifuDataViz3";
             this.bunifuDataViz3.Size = new System.Drawing.Size(293, 297);
             this.bunifuDataViz3.TabIndex = 13;
@@ -664,7 +676,7 @@
             this.label12.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 15F);
             this.label12.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label12.Location = new System.Drawing.Point(59, 552);
+            this.label12.Location = new System.Drawing.Point(75, 551);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(182, 28);
             this.label12.TabIndex = 12;
@@ -691,7 +703,7 @@
             0});
             this.bunifuDataViz2.BackColor = System.Drawing.Color.White;
             this.bunifuDataViz2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuDataViz2.Location = new System.Drawing.Point(64, 604);
+            this.bunifuDataViz2.Location = new System.Drawing.Point(80, 603);
             this.bunifuDataViz2.Name = "bunifuDataViz2";
             this.bunifuDataViz2.Size = new System.Drawing.Size(287, 297);
             this.bunifuDataViz2.TabIndex = 11;
@@ -706,7 +718,7 @@
             this.label11.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 15F);
             this.label11.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label11.Location = new System.Drawing.Point(407, 552);
+            this.label11.Location = new System.Drawing.Point(423, 551);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(201, 28);
             this.label11.TabIndex = 10;
@@ -802,7 +814,7 @@
             this.bunifuDataViz1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuDataViz1.Location = new System.Drawing.Point(80, 231);
             this.bunifuDataViz1.Name = "bunifuDataViz1";
-            this.bunifuDataViz1.Size = new System.Drawing.Size(792, 297);
+            this.bunifuDataViz1.Size = new System.Drawing.Size(872, 297);
             this.bunifuDataViz1.TabIndex = 3;
             this.bunifuDataViz1.Theme = Bunifu.DataViz.WinForms.BunifuDataViz._theme.theme1;
             this.bunifuDataViz1.Title = "";
@@ -825,7 +837,7 @@
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Location = new System.Drawing.Point(80, 81);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(792, 89);
+            this.panel2.Size = new System.Drawing.Size(872, 89);
             this.panel2.TabIndex = 1;
             // 
             // label6
@@ -836,7 +848,7 @@
             this.label6.BackColor = System.Drawing.Color.White;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label6.Location = new System.Drawing.Point(706, 40);
+            this.label6.Location = new System.Drawing.Point(786, 40);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(39, 20);
             this.label6.TabIndex = 12;
@@ -850,7 +862,7 @@
             this.label7.BackColor = System.Drawing.Color.White;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.label7.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label7.Location = new System.Drawing.Point(706, 18);
+            this.label7.Location = new System.Drawing.Point(786, 18);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(55, 21);
             this.label7.TabIndex = 11;
@@ -862,7 +874,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.BackgroundImage")));
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.Location = new System.Drawing.Point(618, 18);
+            this.pictureBox4.Location = new System.Drawing.Point(698, 18);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(58, 56);
             this.pictureBox4.TabIndex = 10;
@@ -874,7 +886,7 @@
             this.bunifuSeparator2.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
             this.bunifuSeparator2.LineThickness = 1;
-            this.bunifuSeparator2.Location = new System.Drawing.Point(559, 19);
+            this.bunifuSeparator2.Location = new System.Drawing.Point(599, 19);
             this.bunifuSeparator2.Name = "bunifuSeparator2";
             this.bunifuSeparator2.Size = new System.Drawing.Size(36, 55);
             this.bunifuSeparator2.TabIndex = 9;
@@ -888,7 +900,7 @@
             this.label4.BackColor = System.Drawing.Color.White;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label4.Location = new System.Drawing.Point(412, 39);
+            this.label4.Location = new System.Drawing.Point(452, 39);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(39, 20);
             this.label4.TabIndex = 8;
@@ -901,7 +913,7 @@
             this.label5.BackColor = System.Drawing.Color.White;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.label5.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label5.Location = new System.Drawing.Point(412, 18);
+            this.label5.Location = new System.Drawing.Point(452, 18);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(136, 21);
             this.label5.TabIndex = 7;
@@ -912,7 +924,7 @@
             this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(324, 18);
+            this.pictureBox3.Location = new System.Drawing.Point(364, 18);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(58, 56);
             this.pictureBox3.TabIndex = 6;
@@ -924,7 +936,7 @@
             this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
             this.bunifuSeparator1.LineThickness = 1;
-            this.bunifuSeparator1.Location = new System.Drawing.Point(258, 18);
+            this.bunifuSeparator1.Location = new System.Drawing.Point(298, 18);
             this.bunifuSeparator1.Name = "bunifuSeparator1";
             this.bunifuSeparator1.Size = new System.Drawing.Size(36, 55);
             this.bunifuSeparator1.TabIndex = 5;
@@ -1932,6 +1944,9 @@
             // 
             this.tabPage2.AutoScroll = true;
             this.tabPage2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPage2.Controls.Add(this.bunifuFlatButton8);
+            this.tabPage2.Controls.Add(this.label35);
+            this.tabPage2.Controls.Add(this.bunifuSeparator13);
             this.tabPage2.Controls.Add(this.comboBox1);
             this.tabPage2.Controls.Add(this.bunifuFlatButton6);
             this.tabPage2.Controls.Add(this.bunifuFlatButton5);
@@ -2306,6 +2321,90 @@
             this.tabPage5.TabIndex = 7;
             this.tabPage5.Text = "Waluty";
             // 
+            // lblUSD
+            // 
+            this.lblUSD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblUSD.AutoSize = true;
+            this.lblUSD.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lblUSD.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.lblUSD.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblUSD.Location = new System.Drawing.Point(212, 616);
+            this.lblUSD.Name = "lblUSD";
+            this.lblUSD.Size = new System.Drawing.Size(42, 20);
+            this.lblUSD.TabIndex = 52;
+            this.lblUSD.Text = "Euro:";
+            // 
+            // label38
+            // 
+            this.label38.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label38.AutoSize = true;
+            this.label38.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label38.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.label38.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label38.Location = new System.Drawing.Point(72, 616);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(134, 20);
+            this.label38.TabIndex = 51;
+            this.label38.Text = "Dolar amerykański:";
+            // 
+            // lblGBP
+            // 
+            this.lblGBP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblGBP.AutoSize = true;
+            this.lblGBP.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lblGBP.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.lblGBP.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblGBP.Location = new System.Drawing.Point(212, 583);
+            this.lblGBP.Name = "lblGBP";
+            this.lblGBP.Size = new System.Drawing.Size(42, 20);
+            this.lblGBP.TabIndex = 50;
+            this.lblGBP.Text = "Euro:";
+            // 
+            // label36
+            // 
+            this.label36.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label36.AutoSize = true;
+            this.label36.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label36.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.label36.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label36.Location = new System.Drawing.Point(72, 583);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(98, 20);
+            this.label36.TabIndex = 49;
+            this.label36.Text = "Funt brytyjski:";
+            // 
+            // lblEuro
+            // 
+            this.lblEuro.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblEuro.AutoSize = true;
+            this.lblEuro.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lblEuro.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.lblEuro.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblEuro.Location = new System.Drawing.Point(212, 550);
+            this.lblEuro.Name = "lblEuro";
+            this.lblEuro.Size = new System.Drawing.Size(42, 20);
+            this.lblEuro.TabIndex = 48;
+            this.lblEuro.Text = "Euro:";
+            // 
+            // label34
+            // 
+            this.label34.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label34.AutoSize = true;
+            this.label34.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label34.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.label34.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label34.Location = new System.Drawing.Point(72, 550);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(42, 20);
+            this.label34.TabIndex = 47;
+            this.label34.Text = "Euro:";
+            // 
             // label33
             // 
             this.label33.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -2468,89 +2567,165 @@
             this.timer3.Enabled = true;
             this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
             // 
-            // label34
+            // bunifuFlatButton8
             // 
-            this.label34.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.bunifuFlatButton8.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.bunifuFlatButton8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.bunifuFlatButton8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton8.BorderRadius = 0;
+            this.bunifuFlatButton8.ButtonText = "Ciemny";
+            this.bunifuFlatButton8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton8.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton8.Font = new System.Drawing.Font("Mistral", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.bunifuFlatButton8.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton8.Iconimage = null;
+            this.bunifuFlatButton8.Iconimage_right = null;
+            this.bunifuFlatButton8.Iconimage_right_Selected = null;
+            this.bunifuFlatButton8.Iconimage_Selected = null;
+            this.bunifuFlatButton8.IconMarginLeft = 0;
+            this.bunifuFlatButton8.IconMarginRight = 0;
+            this.bunifuFlatButton8.IconRightVisible = false;
+            this.bunifuFlatButton8.IconRightZoom = 0D;
+            this.bunifuFlatButton8.IconVisible = false;
+            this.bunifuFlatButton8.IconZoom = 90D;
+            this.bunifuFlatButton8.IsTab = false;
+            this.bunifuFlatButton8.Location = new System.Drawing.Point(104, 606);
+            this.bunifuFlatButton8.Margin = new System.Windows.Forms.Padding(6);
+            this.bunifuFlatButton8.Name = "bunifuFlatButton8";
+            this.bunifuFlatButton8.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.bunifuFlatButton8.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.bunifuFlatButton8.OnHoverTextColor = System.Drawing.Color.White;
+            this.bunifuFlatButton8.selected = false;
+            this.bunifuFlatButton8.Size = new System.Drawing.Size(143, 57);
+            this.bunifuFlatButton8.TabIndex = 48;
+            this.bunifuFlatButton8.Text = "Ciemny";
+            this.bunifuFlatButton8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuFlatButton8.Textcolor = System.Drawing.Color.White;
+            this.bunifuFlatButton8.TextFont = new System.Drawing.Font("Segoe UI", 15F);
+            this.bunifuFlatButton8.Click += new System.EventHandler(this.bunifuFlatButton8_Click);
+            // 
+            // label35
+            // 
+            this.label35.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label34.AutoSize = true;
-            this.label34.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label34.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.label34.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label34.Location = new System.Drawing.Point(72, 550);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(42, 20);
-            this.label34.TabIndex = 47;
-            this.label34.Text = "Euro:";
+            this.label35.AutoSize = true;
+            this.label35.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label35.Font = new System.Drawing.Font("Segoe UI", 15F);
+            this.label35.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label35.Location = new System.Drawing.Point(104, 553);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(191, 28);
+            this.label35.TabIndex = 46;
+            this.label35.Text = "Zmień na tryb nocny";
             // 
-            // lblEuro
+            // bunifuSeparator13
             // 
-            this.lblEuro.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.bunifuSeparator13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblEuro.AutoSize = true;
-            this.lblEuro.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lblEuro.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.lblEuro.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblEuro.Location = new System.Drawing.Point(212, 550);
-            this.lblEuro.Name = "lblEuro";
-            this.lblEuro.Size = new System.Drawing.Size(42, 20);
-            this.lblEuro.TabIndex = 48;
-            this.lblEuro.Text = "Euro:";
+            this.bunifuSeparator13.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator13.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(211)))), ((int)(((byte)(211)))));
+            this.bunifuSeparator13.LineThickness = 1;
+            this.bunifuSeparator13.Location = new System.Drawing.Point(104, 504);
+            this.bunifuSeparator13.Name = "bunifuSeparator13";
+            this.bunifuSeparator13.Size = new System.Drawing.Size(476, 57);
+            this.bunifuSeparator13.TabIndex = 45;
+            this.bunifuSeparator13.Transparency = 255;
+            this.bunifuSeparator13.Vertical = false;
             // 
-            // lblGBP
+            // tabPage6
             // 
-            this.lblGBP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblGBP.AutoSize = true;
-            this.lblGBP.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lblGBP.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.lblGBP.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblGBP.Location = new System.Drawing.Point(212, 583);
-            this.lblGBP.Name = "lblGBP";
-            this.lblGBP.Size = new System.Drawing.Size(42, 20);
-            this.lblGBP.TabIndex = 50;
-            this.lblGBP.Text = "Euro:";
+            this.tabPage6.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPage6.Controls.Add(this.label39);
+            this.tabPage6.Controls.Add(this.label37);
+            this.tabPage6.Controls.Add(this.listView2);
+            this.tabPage6.Controls.Add(this.listView1);
+            this.tabPage6.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.tabPage6.Location = new System.Drawing.Point(4, 4);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage6.Size = new System.Drawing.Size(1165, 723);
+            this.tabPage6.TabIndex = 8;
+            this.tabPage6.Text = "Konta";
             // 
-            // label36
+            // bunifuFlatButton9
             // 
-            this.label36.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label36.AutoSize = true;
-            this.label36.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label36.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.label36.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label36.Location = new System.Drawing.Point(72, 583);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(98, 20);
-            this.label36.TabIndex = 49;
-            this.label36.Text = "Funt brytyjski:";
+            this.bunifuFlatButton9.Activecolor = System.Drawing.Color.White;
+            this.bunifuFlatButton9.BackColor = System.Drawing.Color.White;
+            this.bunifuFlatButton9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton9.BorderRadius = 0;
+            this.bunifuFlatButton9.ButtonText = "Konta";
+            this.bunifuFlatButton9.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton9.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton9.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton9.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton9.Iconimage")));
+            this.bunifuFlatButton9.Iconimage_right = null;
+            this.bunifuFlatButton9.Iconimage_right_Selected = null;
+            this.bunifuFlatButton9.Iconimage_Selected = null;
+            this.bunifuFlatButton9.IconMarginLeft = 0;
+            this.bunifuFlatButton9.IconMarginRight = 0;
+            this.bunifuFlatButton9.IconRightVisible = true;
+            this.bunifuFlatButton9.IconRightZoom = 0D;
+            this.bunifuFlatButton9.IconVisible = true;
+            this.bunifuFlatButton9.IconZoom = 90D;
+            this.bunifuFlatButton9.IsTab = false;
+            this.bunifuFlatButton9.Location = new System.Drawing.Point(799, 6);
+            this.bunifuFlatButton9.Name = "bunifuFlatButton9";
+            this.bunifuFlatButton9.Normalcolor = System.Drawing.Color.White;
+            this.bunifuFlatButton9.OnHovercolor = System.Drawing.Color.White;
+            this.bunifuFlatButton9.OnHoverTextColor = System.Drawing.Color.SeaGreen;
+            this.bunifuFlatButton9.selected = false;
+            this.bunifuFlatButton9.Size = new System.Drawing.Size(120, 53);
+            this.bunifuFlatButton9.TabIndex = 11;
+            this.bunifuFlatButton9.Text = "Konta";
+            this.bunifuFlatButton9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bunifuFlatButton9.Textcolor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton9.TextFont = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.bunifuFlatButton9.Click += new System.EventHandler(this.bunifuFlatButton9_Click_1);
             // 
-            // lblUSD
+            // listView1
             // 
-            this.lblUSD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblUSD.AutoSize = true;
-            this.lblUSD.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lblUSD.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.lblUSD.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblUSD.Location = new System.Drawing.Point(212, 616);
-            this.lblUSD.Name = "lblUSD";
-            this.lblUSD.Size = new System.Drawing.Size(42, 20);
-            this.lblUSD.TabIndex = 52;
-            this.lblUSD.Text = "Euro:";
+            this.listView1.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(80, 67);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(432, 371);
+            this.listView1.TabIndex = 0;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
-            // label38
+            // listView2
             // 
-            this.label38.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label38.AutoSize = true;
-            this.label38.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label38.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.label38.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label38.Location = new System.Drawing.Point(72, 616);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(134, 20);
-            this.label38.TabIndex = 51;
-            this.label38.Text = "Dolar amerykański:";
+            this.listView2.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.listView2.HideSelection = false;
+            this.listView2.Location = new System.Drawing.Point(616, 67);
+            this.listView2.Name = "listView2";
+            this.listView2.Size = new System.Drawing.Size(432, 371);
+            this.listView2.TabIndex = 1;
+            this.listView2.UseCompatibleStateImageBehavior = false;
+            // 
+            // label37
+            // 
+            this.label37.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label37.AutoSize = true;
+            this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label37.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label37.Location = new System.Drawing.Point(76, 24);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(90, 20);
+            this.label37.TabIndex = 13;
+            this.label37.Text = "Przychody";
+            // 
+            // label39
+            // 
+            this.label39.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label39.AutoSize = true;
+            this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label39.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label39.Location = new System.Drawing.Point(612, 24);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(72, 20);
+            this.label39.TabIndex = 14;
+            this.label39.Text = "Wydatki";
             // 
             // formMain
             // 
@@ -2598,6 +2773,8 @@
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            this.tabPage6.ResumeLayout(false);
+            this.tabPage6.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2741,6 +2918,15 @@
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.Label lblGBP;
         private System.Windows.Forms.Label label36;
+        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton8;
+        private System.Windows.Forms.Label label35;
+        private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator13;
+        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton9;
+        private System.Windows.Forms.TabPage tabPage6;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView listView2;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Label label37;
     }
 }
 

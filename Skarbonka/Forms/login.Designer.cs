@@ -99,7 +99,7 @@
             this.btnZaloguj.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnZaloguj.selected = false;
             this.btnZaloguj.Size = new System.Drawing.Size(183, 48);
-            this.btnZaloguj.TabIndex = 6;
+            this.btnZaloguj.TabIndex = 4;
             this.btnZaloguj.Text = "Zaloguj";
             this.btnZaloguj.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnZaloguj.Textcolor = System.Drawing.Color.White;
@@ -141,7 +141,7 @@
             this.txtHas.Margin = new System.Windows.Forms.Padding(4);
             this.txtHas.Name = "txtHas";
             this.txtHas.Size = new System.Drawing.Size(496, 44);
-            this.txtHas.TabIndex = 4;
+            this.txtHas.TabIndex = 3;
             this.txtHas.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtHas.OnValueChanged += new System.EventHandler(this.txtDla1_OnValueChanged);
             // 
@@ -258,7 +258,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "login";
+            this.Text = "]";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
