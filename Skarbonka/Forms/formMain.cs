@@ -60,7 +60,7 @@ namespace Skarbonka
             File.AppendAllText(txtprzych, "");
             File.AppendAllText(txtwyd, "");
             File.AppendAllText(txtlog, "");
-          // new Helper.Popup.transparentBg(this, new Forms.login());
+           new Helper.Popup.transparentBg(this, new Forms.login());
 
             InitializeComponent();
 
