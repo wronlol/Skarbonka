@@ -35,6 +35,10 @@ namespace Skarbonka
         string txtwyd = "wydatek.txt";
         string txtlog = "login.txt";
 
+
+
+
+
         public formMain()
         {
             //files needed to start the program
@@ -56,12 +60,13 @@ namespace Skarbonka
             File.AppendAllText(txtprzych, "");
             File.AppendAllText(txtwyd, "");
             File.AppendAllText(txtlog, "");
-           new Helper.Popup.transparentBg(this, new Forms.login());
+          // new Helper.Popup.transparentBg(this, new Forms.login());
 
             InitializeComponent();
 
             ////////////////////////
-            
+
+
             /////////////////////////
 
             ApplyGridTheme(gridPrzychody);
@@ -83,6 +88,12 @@ namespace Skarbonka
             txtprzych = curs + "przychod.txt";
             txtwyd = curs + "wydatek.txt";
 
+
+
+
+
+
+
             File.AppendAllText(txtprzych, "");
             File.AppendAllText(txtwyd, "");
             File.AppendAllText(txtlog, "");
@@ -98,13 +109,34 @@ namespace Skarbonka
             exchangerates();
             lista();
             lista2();
-
+          //  pusty();
 
 
         }
         string euro = "";
         string gbp = "";
         string usd = "";
+
+
+
+        public void pusty()
+        {
+            System.Threading.Thread.Sleep(1000);
+            if (new FileInfo(txtprzych).Length == 0)
+            {
+                MessageBox.Show("Brak wpisów o przychodach, proszę uzłupełnić dane", "Info");
+            }
+
+   
+
+
+
+            if (new FileInfo(txtwyd).Length == 0)
+            {
+                MessageBox.Show("Brak wpisów o wydatkach, proszę uzłupełnić dane", "Info");
+            }
+            webBrowser2.Navigate("http://free.timeanddate.com/clock/i79kkv8q/n1460/szw110/szh110/hbw0/hfc000/cf100/hgr0/fav0/fiv0/mqcfff/mql15/mqw4/mqd94/mhcfff/mhl15/mhw4/mhd94/mmv0/hhcbbb/hmcddd/hsceee/");
+        }
 
 
         public void exchangerates()
@@ -142,6 +174,7 @@ namespace Skarbonka
             }
 
 
+
         }
         public void klik()
         {
@@ -161,6 +194,9 @@ namespace Skarbonka
                 }
                 gridWydatki.Rows.Add(row);
             }
+
+
+
 
 
 
@@ -187,6 +223,10 @@ namespace Skarbonka
             }
             ReverseDGVRows(gridPrzychody);
         }
+
+
+
+
 
         private void buttonImport2_Click(object sender, EventArgs e)
         {
@@ -231,6 +271,22 @@ namespace Skarbonka
         {
 
         }
+
+        private void formMain_Resize(object sender, EventArgs e)
+        {
+            //if the form is minimized  
+            //hide it from the task bar  
+            //and show the system tray icon (represented by the NotifyIcon control)  
+            if (this.WindowState == FormWindowState.Minimized)
+            {
+                Hide();
+                notifyIcon1.Visible = true;
+            }
+        }
+
+
+
+
 
         private void panelTytul_Paint(object sender, PaintEventArgs e)
         {
@@ -422,7 +478,12 @@ namespace Skarbonka
 
         private void Timer1_Tick(object sender, EventArgs e)
         {
+
+            
+
+            czas.Text = DateTime.Now.ToString("HH:mm", System.Globalization.DateTimeFormatInfo.InvariantInfo);
             timer1.Interval = 2000;
+
             RenderMonthChart();
             RenderPrzychodChart();
             RenderWydatkiChart();
@@ -509,6 +570,7 @@ namespace Skarbonka
             gridPrzychody.Rows.AddRange(rows.ToArray());
         }
 
+        int pusto = 0;
 
         private void Timer2_Tick(object sender, EventArgs e)
         {
@@ -542,6 +604,12 @@ namespace Skarbonka
             label4.Text = sum1.ToString();
             label6.Text = (sum - sum1).ToString();
 
+
+            if (pusto == 0)
+            {
+                pusty();
+                pusto++;
+            }
 
 
 
@@ -641,6 +709,7 @@ namespace Skarbonka
             klik();
 
             timer3.Enabled = false;
+
 
         }
 
@@ -1455,5 +1524,163 @@ namespace Skarbonka
         {
 
         }
+
+        private void bunifuFlatButton10_Click(object sender, EventArgs e)
+        {
+            przDashboard.Text = "Dashboard";
+            przPrzychody.Text = "Income";
+            przRaporty.Text = "Reports";
+            przUstawienia.Text = "Settings";
+            przWydatki.Text = "Expense";
+            bunifuFlatButton7.Text = "Currencies";
+            bunifuFlatButton9.Text = "Accounts";
+            label8.Text = "Income";
+            label9.Text = "Expense";
+            label12.Text = "Expense overview";
+            label11.Text = "Income overview";
+            label2.Text = "All income";
+            label5.Text = "All expenses";
+            label7.Text = "Balance";
+            podajDate.Visible = false;
+            lblWitaj.Text = "Hello";
+        }
+
+        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            Show();
+            this.WindowState = FormWindowState.Normal;
+            notifyIcon1.Visible = false;
+        }
+
+        private void czas_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer4_Tick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+
+        }
+
+        private void webBrowser2_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+
+        }
+
+        private void pictureBox11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        public void redfont()
+        {
+            label1.ForeColor = Color.FromArgb(206, 86, 86);
+            label10.ForeColor = Color.FromArgb(206, 86, 86);
+            label11.ForeColor = Color.FromArgb(206, 86, 86);
+            label12.ForeColor = Color.FromArgb(206, 86, 86);
+            label13.ForeColor = Color.FromArgb(206, 86, 86);
+            label14.ForeColor = Color.FromArgb(206, 86, 86);
+            label15.ForeColor = Color.FromArgb(206, 86, 86);
+            label16.ForeColor = Color.FromArgb(206, 86, 86);
+            label17.ForeColor = Color.FromArgb(206, 86, 86);
+            label18.ForeColor = Color.FromArgb(206, 86, 86);
+            label19.ForeColor = Color.FromArgb(206, 86, 86);
+            label2.ForeColor = Color.FromArgb(206, 86, 86);
+            label20.ForeColor = Color.FromArgb(206, 86, 86);
+            label21.ForeColor = Color.FromArgb(206, 86, 86);
+            label22.ForeColor = Color.FromArgb(206, 86, 86);
+            label23.ForeColor = Color.FromArgb(206, 86, 86);
+            label24.ForeColor = Color.FromArgb(206, 86, 86);
+            label25.ForeColor = Color.FromArgb(206, 86, 86);
+            label26.ForeColor = Color.FromArgb(206, 86, 86);
+            label27.ForeColor = Color.FromArgb(206, 86, 86);
+            label28.ForeColor = Color.FromArgb(206, 86, 86);
+            label29.ForeColor = Color.FromArgb(206, 86, 86);
+            label3.ForeColor = Color.FromArgb(206, 86, 86);
+            label31.ForeColor = Color.FromArgb(206, 86, 86);
+            label30.ForeColor = Color.FromArgb(206, 86, 86);
+            label32.ForeColor = Color.FromArgb(206, 86, 86);
+            label33.ForeColor = Color.FromArgb(206, 86, 86);
+            label34.ForeColor = Color.FromArgb(206, 86, 86);
+            label35.ForeColor = Color.FromArgb(206, 86, 86);
+            label36.ForeColor = Color.FromArgb(206, 86, 86);
+            label38.ForeColor = Color.FromArgb(206, 86, 86);
+            label4.ForeColor = Color.FromArgb(206, 86, 86);
+            label5.ForeColor = Color.FromArgb(206, 86, 86);
+
+
+            label42.ForeColor = Color.FromArgb(206, 86, 86);
+            label40.ForeColor = Color.FromArgb(206, 86, 86);
+
+            label6.ForeColor = Color.FromArgb(206, 86, 86);
+            label7.ForeColor = Color.FromArgb(206, 86, 86);
+            label8.ForeColor = Color.FromArgb(206, 86, 86);
+            label9.ForeColor = Color.FromArgb(206, 86, 86);
+            label39.ForeColor = Color.FromArgb(206, 86, 86);
+            label37.ForeColor = Color.FromArgb(206, 86, 86);
+        }
+
+        public void greenfont()
+        {
+            label1.ForeColor = Color.FromArgb(0, 153, 0);
+            label10.ForeColor = Color.FromArgb(0, 153, 0);
+            label11.ForeColor = Color.FromArgb(0, 153, 0);
+            label12.ForeColor = Color.FromArgb(0, 153, 0);
+            label13.ForeColor = Color.FromArgb(0, 153, 0);
+            label14.ForeColor = Color.FromArgb(0, 153, 0);
+            label15.ForeColor = Color.FromArgb(0, 153, 0);
+            label16.ForeColor = Color.FromArgb(0, 153, 0);
+            label17.ForeColor = Color.FromArgb(0, 153, 0);
+            label18.ForeColor = Color.FromArgb(0, 153, 0);
+            label19.ForeColor = Color.FromArgb(0, 153, 0);
+            label2.ForeColor = Color.FromArgb(0, 153, 0);
+            label20.ForeColor = Color.FromArgb(0, 153, 0);
+            label21.ForeColor = Color.FromArgb(0, 153, 0);
+            label22.ForeColor = Color.FromArgb(0, 153, 0);
+            label23.ForeColor = Color.FromArgb(0, 153, 0);
+            label24.ForeColor = Color.FromArgb(0, 153, 0);
+            label25.ForeColor = Color.FromArgb(0, 153, 0);
+            label26.ForeColor = Color.FromArgb(0, 153, 0);
+            label27.ForeColor = Color.FromArgb(0, 153, 0);
+            label28.ForeColor = Color.FromArgb(0, 153, 0);
+            label29.ForeColor = Color.FromArgb(0, 153, 0);
+            label3.ForeColor = Color.FromArgb(0, 153, 0);
+            label31.ForeColor = Color.FromArgb(0, 153, 0);
+            label30.ForeColor = Color.FromArgb(0, 153, 0);
+            label32.ForeColor = Color.FromArgb(0, 153, 0);
+            label33.ForeColor = Color.FromArgb(0, 153, 0);
+            label34.ForeColor = Color.FromArgb(0, 153, 0);
+            label35.ForeColor = Color.FromArgb(0, 153, 0);
+            label36.ForeColor = Color.FromArgb(0, 153, 0);
+            label38.ForeColor = Color.FromArgb(0, 153, 0);
+            label4.ForeColor = Color.FromArgb(0, 153, 0);
+            label5.ForeColor = Color.FromArgb(0, 153, 0);
+            label6.ForeColor = Color.FromArgb(0, 153, 0);
+            label7.ForeColor = Color.FromArgb(0, 153, 0);
+            label8.ForeColor = Color.FromArgb(0, 153, 0);
+            label9.ForeColor = Color.FromArgb(0, 153, 0);
+
+            label42.ForeColor = Color.FromArgb(0, 153, 0);
+            label40.ForeColor = Color.FromArgb(0, 153, 0);
+
+            label39.ForeColor = Color.FromArgb(0, 153, 0);
+            label37.ForeColor = Color.FromArgb(0, 153, 0);
+        }
+
+        private void bunifuFlatButton11_Click(object sender, EventArgs e)
+        {
+            redfont();
+        }
+
+        private void bunifuFlatButton12_Click(object sender, EventArgs e)
+        {
+            greenfont();
+        }
     }
+
 }
